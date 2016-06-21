@@ -6,6 +6,7 @@
   "license": "GPL-3.0",
   "repository": "https://github.com/siennamw/music-crash-courses.git",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-nunjucks-render": "^2.0.0"
   }
 }

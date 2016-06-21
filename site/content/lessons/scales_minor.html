@@ -1,0 +1,177 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Minor Scales - Natural Minor</h1>
+<p>There are several different versions of the minor scale: natural (or modal) minor, <a
+    href="scales_minor_mel_har.html">harmonic minor</a>, and <a href="scales_minor_mel_har.html">melodic
+    minor</a>. The latter are really variations of the <b>natural minor</b> scale, so we will consider that
+    version first.</p>
+<p>The natural minor scale uses the same pattern of whole and half steps as the major scale, but begins in a
+    different place in the sequence. To put it another way, if you play a major scale, but begin and end on the
+    6th scale degree, you will find yourself playing a natural minor scale. Our first example of a minor scale
+    will be the A minor scale because it uses only the white keys on the piano (like the C major scale), but the
+    pattern of whole and half steps is the same in <a href="transposition.html">all 12 minor scales</a>.</p>
+<div align="center"><img src="../images/keyboard/keyboard_w_intervals.png" alt="piano keyboard" border="0"/>
+</div>
+<table align="center">
+    <tr>
+        <td class="label">Major Scale:</td>
+        <td>W</td>
+        <td>W</td>
+        <td>h</td>
+        <td>W</td>
+        <td>W</td>
+        <td>W</td>
+        <td>h</td>
+    </tr>
+    <tr>
+        <td colspan="6" class="label">Natural Minor Scale:</td>
+        <td>W</td>
+        <td>h</td>
+        <td>W</td>
+        <td>W</td>
+        <td>h</td>
+        <td>W</td>
+        <td>W</td>
+    </tr>
+</table>
+
+<div id="AMinScale"><h1>Minor Scale</h1>
+    <h2>A minor scale with note names and whole and half steps</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#AMinScale', '../scores/AMinScale.png', '../scores/AMinScale.mp3');
+    });
+</script>
+
+<p>Since scale degree 7 is a whole step below the tonic note, it is called the <b>subtonic</b>. When it is
+    raised by a half step so that it is only a half step below the tonic (which happens in the <a
+        href="scales_minor_mel_har.html">melodic minor</a> version of hte scale), then it is called the <b>leading
+        tone</b> just as the 7<sup>th</sup> scale degree of a major scale is a leading tone.</p>
+<h2>Relative and Parallel Scales</h2>
+<p>The C major and A minor scales share the <i>same collection of pitches</i>. They are therefore considered to
+    be <b>relative</b> scales. For example:</p>
+<table>
+    <tr>
+        <td class="label">C major:</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td colspan="6" class="label">A natural minor:</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+    </tr>
+</table>
+<br/>
+<table>
+    <tr>
+        <td class="label">B-flat major:</td>
+        <td>B-flat</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E-flat</td>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+        <td>B-flat</td>
+    </tr>
+    <tr>
+        <td colspan="6" class="label">G natural minor:</td>
+        <td>G</td>
+        <td>A</td>
+        <td>B-flat</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E-flat</td>
+        <td>F</td>
+        <td>G</td>
+    </tr>
+</table>
+<p>But there is another way that scales can be related to each other. Major and minor scales are considered
+    <b>parallel</b>
+    if they <i>share the same tonic</i>. In these cases, the two scales will not share the same collection of
+    pitches: the 3rd, 6th, and 7th scale degrees will differ. For example:</p>
+<table>
+    <tr>
+        <td class="label">Scale Degree:</td>
+        <td>1</td>
+        <td>2</td>
+        <td class="highlight">3</td>
+        <td>4</td>
+        <td>5</td>
+        <td class="highlight">6</td>
+        <td class="highlight">7</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td class="label">C major:</td>
+        <td>C</td>
+        <td>D</td>
+        <td class="highlight">E</td>
+        <td>F</td>
+        <td>G</td>
+        <td class="highlight">A</td>
+        <td class="highlight">B</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td class="label">C natural minor:</td>
+        <td>C</td>
+        <td>D</td>
+        <td class="highlight">E-flat</td>
+        <td>F</td>
+        <td>G</td>
+        <td class="highlight">A-flat</td>
+        <td class="highlight">B-flat</td>
+        <td>C</td>
+    </tr>
+</table>
+<br/>
+<table>
+    <tr>
+        <td class="label">Scale Degree:</td>
+        <td>1</td>
+        <td>2</td>
+        <td class="highlight">3</td>
+        <td>4</td>
+        <td>5</td>
+        <td class="highlight">6</td>
+        <td class="highlight">7</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td class="label">B-flat major:</td>
+        <td>B-flat</td>
+        <td>C</td>
+        <td class="highlight">D</td>
+        <td>E-flat</td>
+        <td>F</td>
+        <td class="highlight">G</td>
+        <td class="highlight">A</td>
+        <td>B-flat</td>
+    </tr>
+    <tr>
+        <td class="label">B-flat natural minor:</td>
+        <td>B-flat</td>
+        <td>C</td>
+        <td class="highlight">D-flat</td>
+        <td>B-flat</td>
+        <td>F</td>
+        <td class="highlight">G-flat</td>
+        <td class="highlight">A-flat</td>
+        <td>B-flat</td>
+    </tr>
+</table>
+{% endblock %}

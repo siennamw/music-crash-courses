@@ -1,0 +1,23 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>List of Lessons</h1>
+<p class="placeholder">Please see the navigation menu above for a complete list of lessons.</p>
+<div class="eight columns alpha" id="lessons_list1"></div>
+<div class="eight columns omega" id="lessons_list2"></div>
+<div class="clearfix"></div>
+<script>
+    // Copy list of lessons from navigation to populate an index page for lessons
+    clonelist("#pitch", "#lessons_list1");
+    clonelist("#time", "#lessons_list2");
+    clonelist("#form", "#lessons_list2");
+    clonelist("#genre", "#lessons_list2");
+    clonelist("#exp", "#lessons_list2");
+    clonelist("#inst", "#lessons_list2");
+    clonelist("#advanced", "#lessons_list2");
+
+    // Hide .placeholder items
+    $(document).find("p.placeholder").each(function () {
+        $(this).addClass("hide_me");
+    })
+</script>
+{% endblock %}

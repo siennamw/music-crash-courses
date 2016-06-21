@@ -1,0 +1,140 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Minor Scales - Melodic and Harmonic Minor</h1>
+<p>The <b>melodic</b> and <b>harmonic minor</b> scales occur when the <a href="scales_minor.html">natural
+    minor</a> scale is altered to improve melodic movement or to make additional harmonies available.</p>
+<h2>Melodic Minor Scale</h2>
+<p>The <b>melodic minor</b> scale is unique because it is different going up (ascending) than it is going
+    down (descending). The ascending melodic minor scale has a raised 6<sup>th</sup> and 7<sup>th</sup>
+    scale degree. The 7<sup>th</sup> degree is raised by a half step to make the interval between it and the
+    tonic into a half step, which creates a stronger melodic pull towards the tonic. When it is raised in
+    this way, the 7<sup>th</sup> scale degree of a minor scale is called the <b>leading tone</b> instead of
+    the subtonic. The submediant (6<sup>th</sup> degree) is raised because otherwise the interval between
+    scale degrees 6 and 7 would be a minor third rather than a whole or half step, which might make a melody
+    sound disjointed. Descending, the melodic minor scale is identical to the <a href="scales_minor.html">natural
+        minor</a> scale because the need to create drive upwards (ascending) to the tonic is not necessary
+    when a melody is descending.</p>
+<table>
+    <tr>
+        <td class="label"></td>
+        <td colspan="7" class="labeltop highlight">ascending</td>
+        <td class="label"></td>
+        <td colspan="8" class="labeltop">descending (same)</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree:</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td class="highlight">6</td>
+        <td class="highlight">7</td>
+        <td>1</td>
+        <td>7</td>
+        <td>6</td>
+        <td>5</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td class="label">A natural minor:</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td class="highlight">F</td>
+        <td class="highlight">G</td>
+        <td>A</td>
+        <td>G</td>
+        <td>F</td>
+        <td>E</td>
+        <td>D</td>
+        <td>C</td>
+        <td>B</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td class="label">A melodic minor:</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td class="highlight">F-sharp</td>
+        <td class="highlight">G-sharp</td>
+        <td>A</td>
+        <td>G</td>
+        <td>F</td>
+        <td>E</td>
+        <td>D</td>
+        <td>C</td>
+        <td>B</td>
+        <td>A</td>
+    </tr>
+</table>
+<div id="min_scale_melodic"><h1>A Melodic Minor Scale</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#min_scale_melodic', '../scores/min_scale_melodic.png', '../scores/min_scale_melodic.mp3');
+    });
+</script>
+<h2>Harmonic Minor Scale</h2>
+<p>The <b>harmonic minor</b> scale comes from composers raising the 7<sup>th</sup> scale degree in order to
+    have all the pitches needed for the most common and important <a href="harmony.html">harmonies</a>. By
+    raising the 7<sup>th</sup> degree, the <a href="chords.html">quality of the chords</a> built on the
+    5<sup>th</sup> and 7<sup>th</sup> scale degrees is changed, resulting in a major V chord and a
+    diminished vii&deg; chord, which are very useful chords in <a href="chord_progressions.html">harmonic
+        progressions</a> because they both have a strong drive towards the tonic chord. Raising the
+    7<sup>th</sup> scale degree also changes the chord built on the 3<sup>rd</sup> scale degree from minor
+    (iii) to major (III), but III is not used as often as V and vii&deg;. Because it is used for harmony
+    rather than melody, the minor 3<sup>rd</sup> created between the 6<sup>th</sup> and 7<sup>th</sup> scale
+    degrees is not avoided as in the melodic minor scale (above). See <a href="chords.html">Chords</a> for
+    more information about chord qualities and <a href="chord_analysis.html">Chord Analysis - Roman
+        Numerals</a> for more about the harmonic analysis below.</p>
+<table>
+    <tr>
+        <td class="label">Scale Degree:</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td class="highlight">7</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td class="label">A natural minor:</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td class="highlight">G</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td class="label">A harmonic minor:</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td class="highlight">G-sharp</td>
+        <td>A</td>
+    </tr>
+</table>
+
+<div id="min_scale_harmonic"><h1>A Harmonic Minor Scale</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#min_scale_harmonic', '../scores/min_scale_harmonic.png', '../scores/min_scale_harmonic.mp3');
+    });
+</script>
+{% endblock %}

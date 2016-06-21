@@ -1,0 +1,29 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Chord Analysis - Roman Numerals</h1>
+<p>In order to discuss the ways chords interact with each other, we must first give them names. If we begin with
+    a major or minor scale, a triad can be built on each scale degree using the pitches that are available in
+    that scale:</p>
+
+<div id="chords_maj_scale"><h1>C Major Scale with Chords and Roman Numerals</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#chords_maj_scale', '../scores/chords_maj_scale.png', '../scores/chords_maj_scale.mp3');
+    });
+</script>
+
+<div id="chords_min_scale"><h1>A Minor Scale with Chords and Roman Numerals</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#chords_min_scale', '../scores/chords_min_scale.png', '../scores/chords_min_scale.mp3');
+    });
+</script>
+
+<p>Just as the scale degrees are numbered, so are the chords built on these scale degrees. Instead of Arabic
+    numbers (1, 2, 3...), we use Roman numerals (I, II, III...) to mark these chords. For major triads we use
+    upper case (I, IV, V in major), for minor triads we use lower case (ii, iii, vi in major), for diminished
+    triads we use lower case and a small circle (example: vii&deg;), and for augmented triads we use upper case
+    and a plus sign (example: VI+).</p>
+<p>Notice that the chord built on the tonic note in a major scale is major (I), and in a minor scale it is minor
+    (i).</p>
+{% endblock %}

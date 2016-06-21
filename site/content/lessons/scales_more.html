@@ -1,0 +1,110 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>More Scales</h1>
+<h2>Whole-Tone Scale</h2>
+<p>Just as the <a href="chromatic.html">chromatic scale</a> is built using only half steps, the <b>whole-tone
+    scale</b> uses only whole steps. Because the distance between each successive pair of notes is the same,
+    there are no aural cues that let the listener know which note is the tonic. This makes the whole-tone scale
+    <b>tonally ambiguous</b>. The same is true of the <a href="chromatic.html">chromatic scale</a>.</p>
+<p>There are only two possible collections of notes that can be used to create whole tone scales. Any further
+    transpositions will only duplicate one of these collections. For our purposes, we will call these the C and
+    C-sharp whole-tone scales.</p>
+
+<div id="whole_tone"><h1>Whole-Tone Scale</h1>
+    <h2>whole-tone scale on C</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#whole_tone', '../scores/whole_tone.png', '../scores/whole_tone.mp3');
+    });
+</script>
+
+<div id="whole_tone_c_sharp"><h1>Whole-Tone Scale</h1>
+    <h2>whole-tone scale on C-sharp</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#whole_tone_c_sharp', '../scores/whole_tone_c_sharp.png', '../scores/whole_tone_c_sharp.mp3');
+    });
+</script>
+
+<p>The tonal ambiguity of the whole-tone scale makes it appealing to composers who wish to avoid traditional
+    tonality or who want to communicate the idea of disorientation or vagueness.</p>
+<h2>Octatonic Scale</h2>
+<p>The <b>octatonic scale</b> alternates between whole and half steps, and is therefore a combination of the
+    principles behind the <a href="chromatic.html">chromatic scale</a> and the whole-tone scale. In the examples
+    below, the scale begins with a half step, but beginning with a whole step is also possible. Whichever
+    interval comes first, there are only three collections of pitches that can be used to create octatonic
+    scales. Like the whole-tone scale, any further transpositions will only duplicate an existing collection.
+</p>
+
+<div id="octatonic"><h1>Octatonic Scale</h1>
+    <h2>the three transpositions of the octatonic scale</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#octatonic', '../scores/octatonic.png', '../scores/octatonic.mp3');
+    });
+</script>
+
+<h2>Pentatonic Scale</h2>
+<p>The word '<b>pentatonic</b>' can refer to any scale or system of music that uses only five pitches, but is
+    generally understood to indicate the scale pattern shown here, which is by far the most common five-note
+    scale. The pattern is made up of whole steps (major seconds) and minor thirds (between E and G as well as A
+    and C, in this case).</p>
+<table>
+    <tr>
+        <td class="label">Pitches:</td>
+        <td>C</td>
+        <td class="label"></td>
+        <td>D</td>
+        <td class="label"></td>
+        <td>E</td>
+        <td class="label"></td>
+        <td>G</td>
+        <td class="label"></td>
+        <td>A</td>
+        <td class="label"></td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td class="labeltop">Intervals:</td>
+        <td class="label"></td>
+        <td>M2</td>
+        <td class="label"></td>
+        <td>M2</td>
+        <td class="label"></td>
+        <td>m3</td>
+        <td class="label"></td>
+        <td>M2</td>
+        <td class="label"></td>
+        <td>m3</td>
+    </tr>
+</table>
+
+<div id="pentatonic"><h1>Pentatonic Scale</h1>
+    <h2>the (common) pentatonic scale</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#pentatonic', '../scores/pentatonic.png', '../scores/pentatonic.mp3');
+    });
+</script>
+
+<p>To the western ear this scale often seems exotic, but it functions more similarly to <a
+    href="scales_major.html">major</a> and <a href="scales_minor.html">minor scales</a> than the whole-tone or
+    octatonic scales. In the video below Bobby McFerrin demonstrates the universality of the pentatonic scale.
+</p>
+<div class="video">
+    <h1>World Science Festival 2009: Bobby McFerrin Demonstrates the Power of the Pentatonic Scale</h1>
+    <div class="link"><a href="http://youtu.be/ne6tB2KiZuk" target="new"><img src="../images/layout/youtube.png"
+                                                                              alt="YouTube"></a></div>
+</div>
+<p>For more fun with the pentatonic scale, check out <a href="http://tonematrix.audiotool.com/"
+                                                        target="new">ToneMatrix</a>,
+    a beautiful flash app that allows you to compose using the pentatonic scale.</p>
+<div class="look">
+    <h1>ToneMatrix</h1>
+    <div class="links">
+        <a href="http://tonematrix.audiotool.com/" target="new" title="Go to ToneMatrix"><img
+            src="../images/layout/external.png" alt="External Link"></a>
+    </div>
+    <div class="clearfloat"></div>
+</div>
+{% endblock %}

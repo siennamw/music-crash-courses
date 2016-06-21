@@ -1,0 +1,15 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>List of Courses</h1>
+<p class="placeholder">Please see the navigation menu above for a complete list of courses.</p>
+<div id="courses_list"></div>
+<script>
+    // Copy list of lessons from navigation to populate an index page for lessons
+    clonelist("#courses", "#courses_list");
+
+    // Hide .placeholder items
+    $(document).find("p.placeholder").each(function () {
+        $(this).addClass("hide_me");
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Texture</h1>
+<p>A texture describes the way that <a href="melody.html">melodies</a> behave and interact with each other in a
+    piece. There are three textures that account for the majority of western music: <b>monophony</b>, <b>polyphony</b>,
+    and <b>homophony</b>.</p>
+<h2>Monophony</h2>
+<p>When a piece of music is nothing more than a melody, this texture is called <b>monophony</b>. There may be
+    only one voice or instrument (monophony literally means "one sounding") or there may be several, all
+    performing the same line of music. When all the performers are playing or singing the same notes, they are
+    performing <b>in unison</b>. When a room full of people sings "Happy Birthday", the men are usually singing
+    the melody an octave lower than the women, so they are no longer singing in unison but <b>at the octave</b>.
+    However, due to octave equivalence (see the section on <a href="pitch.html">pitch</a>), the same melody sung
+    in a different octave still sounds the same, so singing at the octave is also considered monophony.</p>
+<p>The body of Medieval religious chant known as "Gregorian" chant is largely monophonic.</p>
+<div class="video">
+    <h1>Gregorian Chant</h1>
+    <div class="links"><a href="http://youtu.be/UiRpXsWlZK4" target="new"><img
+        src="../images/layout/youtube.png" alt="YouTube"></a></div>
+</div>
+<h2>Polyphony</h2>
+<p>Polyphony, meaning "many sounding", refers to music in which several independent melodies occur
+    simultaneously. These melodies intermingle and overlap, and are generally designed to sound good
+    together.</p>
+<p>Another term that is closely related to polyphony is <b>counterpoint.</b> Counterpoint is a style and method
+    of writing polyphony that was used from the 15th through 17th centuries. So, a discussion of counterpoint is
+    really a discussion of a specific type of polyphony. In many cases the two terms can be used like synonyms
+    (example: contrapuntal texture = polyphonic texture).</p>
+<p>There are two subtypes of polyphony: imitative and free. <b>Imitative polyphony</b> occurs when the melody of
+    the first voice is copied by subsequent voices. The most strict form of this type of imitation is the <b>canon</b>.
+    In a canon, the original melody is emulated precisely and without variant in every voice. Perhaps the most
+    well-known canon is "Row, Row, Row Your Boat": (if the image is too small, click to view it larger)</p>
+
+<div id="row_your_boat_score"><h1>Round</h1>
+    <h2>"Row, Row, Row Your Boat"</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#row_your_boat_score', '../scores/row_your_boat_score.png', '../scores/row_your_boat_score.mp3');
+    });
+</script>
+
+<p>A <b>fugue</b> is another imitative polyphonic form. Fugues are less strict than canons: the different voices
+    begin by imitating each other, but gradually diverge and become unique. Bach's "Little" G Minor Fugue is an
+    example of this type of imitative polyphony. The video below allows you to follow the basic contours of the
+    different parts without needing music notation. For more on the fugue, see the section on <a
+        href="form_archetypes.html">form in popular and art music</a>.</p>
+<div class="video">
+    <h1>J.S. Bach, "Little" G Minor Fugue</h1>
+    <iframe class="noprint" width="480" height="390"
+            src="http://www.youtube.com/embed/pVadl4ocX0M?rel=0&showinfo=0" frameborder="0"
+            allowfullscreen></iframe>
+    <div class="links show_when_narrow"><a href="http://youtu.be/pVadl4ocX0M" target="new"><img
+        src="../images/layout/youtube.png" alt="YouTube"></a></div>
+</div>
+<p><b>Free polyphony</b>, on the other hand, can be found in traditional New Orleans jazz and in the early
+    polyphony of the late Medieval and early Renaissance periods. In this texture, the independent voices are
+    each unique and do not copy each other. "Hotter Than That" performed by Louis Armstrong and His Hot Five, is
+    an example of New Orleans jazz that begins with a section of free polyphony followed by improvised solos
+    (trumpet, clarinet, voice, then trombone).</p>
+<div class="video">
+    <h1>"Hotter Than That" performed by Louis Armstrong and His Hot Five</h1>
+    <iframe class="noprint" width="480" height="390"
+            src="http://www.youtube.com/embed/tAlrpx40UnE?rel=0&showinfo=0" frameborder="0"
+            allowfullscreen></iframe>
+    <div class="links show_when_narrow"><a href="http://youtu.be/tAlrpx40UnE" target="new"><img
+        src="../images/layout/youtube.png" alt="YouTube"></a></div>
+</div>
+<h2>Homophony</h2>
+<p>When there is one melody, and the other parts are designed to support and accompany the melody (the
+    <b>accompaniment</b>),
+    then the texture is <b>homophony</b>. The majority of western music falls into this category. For our
+    purposes, any music that is <i>not</i> monophonic and <i>not</i> polyphonic can be considered homophonic.
+</p>
+<p>There are two main types of homophony: <b>melody-and-accompaniment</b>, and <b>chorale-type</b>
+    (homorhythmic) homophony. The majority of popular music, art song, and opera falls into the first category.
+    To be considered chorale-type homophony, all the voices (or instruments) must be <b>homorhythmic</b> - all
+    executing the same rhythm at the same time. The different parts will be singing different notes (otherwise
+    it would be monophony), but they will say the lyrics at the same time and move with the same rhythm.</p>
+<p>The beginning of Queen's "Bohemian Rhapsody" is a good example of chorale-type homophony. The rest of the
+    song is predominantly the melody-and-accompaniment type of homophony.</p>
+<div class="video">
+    <h1>Queen's "Bohemian Rhapsody"</h1>
+    <div class="links"><a href="http://youtu.be/irp8CNj9qBI" target="new"><img
+        src="../images/layout/youtube.png" alt="YouTube"></a></div>
+</div>
+{% endblock %}

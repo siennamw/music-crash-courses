@@ -1,0 +1,171 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Relationships Between Keys - The Circle of Fifths</h1>
+<div class="pic fltlft"><a href="../images/notation/circle_of_fifths_colors.png" target="_blank"><img
+    src="../images/notation/circle_of_fifths_colors.png" alt="circle of fifths" width="500"
+    border="0"/></a><br/>
+    the circle of fifths (click to view larger)<br/>
+    <a href="../images/notation/circle_of_fifths_colors_bass.png" target="_blank">click here for bass clef
+        circle of fifths</a></div>
+<p>This is the <b>circle of fifths</b>. It shows all 12 major keys and 12 minor keys possible in the western
+    system. The name "circle of fifths" comes from the fact that the tonic pitch of a key (which is the same as
+    the name of the key) changes by a <a href="intervals.html">perfect 5th</a> each time you add or remove an <a
+        href="intervals.html">accidental</a>: it goes <i>up</i> a 5th each time you add a sharp or remove a
+    flat, and it goes <i>down</i> a fifth each time you add a flat or remove a sharp. That is, if we start at C,
+    which has no sharps or flats, and go <i>up</i> a perfect 5th, we get G, and the key of G has one sharp. It
+    should be noted that <a href="keys_adv.html">flats and sharps are always added in a specific order</a>.</p>
+<p>Just as there are 12 discreet pitches in the western system (and thus, in the <a href="chromatic.html">chromatic
+    scale</a>), there are 12 major and 12 minor keys possible in the western system. On this particular circle
+    of fifths, the major keys are listed on the outer circle, and the minor keys are on the inner circle. It is
+    important to note that when discussing keys, if major or minor is not stated explicitly, the major key is
+    assumed. That is, when something is described simply as being in the key of C, that is understood to mean
+    that it is in the key of C <i>major</i>.</p>
+<h2 class="clearfloat">Enharmonic Keys</h2>
+<div class="pic fltlft"><img src="../images/keyboard/keyboard.png" alt="piano keyboard" border="0"/></div>
+<p>The keys at the bottom of the circle of fifths have two names because they are <a href="intervals.html"><b>enharmonic
+    equivalents</b></a>. The principle of <a href="intervals.html">enharmonic equivalence</a> is the same for
+    keys and scales as it is for <a href="intervals.html">individual pitches</a>. Enharmonic keys occur when the
+    same set of pitches can be indicated with either sharps or flats. For example, the key of D-flat has 5 flats
+    and the key of C-sharp has 7 sharps. Just as the pitch D-flat is the same as C-sharp, so are the sets of
+    pitches in their respective keys. If we look at each note in the D-flat and C-sharp major scales, we can see
+    that each scale degree is enharmonically equivalent.</p>
+<table align="center">
+    <tr>
+        <td class="label">Scale Degree:</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8(1)</td>
+    </tr>
+    <tr>
+        <td class="label">D-flat Major Scale:</td>
+        <td id="dflat">D-flat</td>
+        <td id="eflat">E-flat</td>
+        <td id="f">F</td>
+        <td id="fsharp">G-flat</td>
+        <td id="aflat">A-flat</td>
+        <td id="bflat">B-flat</td>
+        <td id="c">C</td>
+        <td id="dflat">D-flat</td>
+    </tr>
+    <tr>
+        <td class="label">C-sharp Major Scale:</td>
+        <td id="dflat">C-sharp</td>
+        <td id="eflat">D-sharp</td>
+        <td id="f">E-sharp</td>
+        <td id="fsharp">F-sharp</td>
+        <td id="aflat">G-sharp</td>
+        <td id="bflat">A-sharp</td>
+        <td id="c">B-sharp</td>
+        <td id="dflat">C-sharp</td>
+    </tr>
+</table>
+<h2>Parallel and Relative Keys</h2>
+<p>We learned about the concept of <b>relative</b> and <b>parallel</b> relationships in the section on <a
+    href="scales_minor.html">scales</a>, and these relationships apply equally to keys. In the circle of fifths
+    above, the keys are aligned in slices according to their key signatures. Since two keys are considered
+    relative if they share the same collection of pitches, the major and minor keys that are aligned in each
+    slice are <b>relative keys</b> (examples: G major and E minor, E-flat major and C minor).</p>
+<table align="center">
+    <tr>
+        <td class="label">Key Signature:</td>
+        <td>no sharps or flats</td>
+        <td>1 sharp</td>
+        <td>2 sharps</td>
+        <td>3 sharps</td>
+        <td>4 sharps</td>
+        <td>5 sharps or 7 flats</td>
+        <td>6 sharps or 6 flats</td>
+        <td>5 flats or 7 sharps</td>
+        <td>4 flats</td>
+        <td>3 flats</td>
+        <td>2 flats</td>
+        <td>1 flat</td>
+    </tr>
+    <tr>
+        <td class="label">Major Keys:</td>
+        <td id="c">C</td>
+        <td id="g">G</td>
+        <td id="d">D</td>
+        <td id="a">A</td>
+        <td id="e">E</td>
+        <td id="b">B or C-flat</td>
+        <td id="fsharp">F-sharp or G-flat</td>
+        <td id="dflat">D-flat or C-sharp</td>
+        <td id="aflat">A-flat</td>
+        <td id="eflat">E-flat</td>
+        <td id="bflat">B-flat</td>
+        <td id="f">F</td>
+    </tr>
+    <tr>
+        <td class="label">Minor Keys:</td>
+        <td id="a">A</td>
+        <td id="e">E</td>
+        <td id="b">B</td>
+        <td id="fsharp">F-sharp</td>
+        <td id="dflat">C-sharp</td>
+        <td id="aflat">G-sharp or A-flat</td>
+        <td id="eflat">D-sharp or E-flat</td>
+        <td id="bflat">B-flat or A-sharp</td>
+        <td id="f">F</td>
+        <td id="c">C</td>
+        <td id="g">G</td>
+        <td id="d">D</td>
+    </tr>
+</table>
+<p>Keys in the circle of fifths that have the same tonic pitch are <b>parallel keys</b>. In the table below, you
+    will see the key signatures required to have a major or minor key for each tonic pitch.</p>
+<table align="center">
+    <tr>
+        <td class="label">Tonic Pitch (Key Name):</td>
+        <td id="c">C</td>
+        <td id="g">G</td>
+        <td id="d">D</td>
+        <td id="a">A</td>
+        <td id="e">E</td>
+        <td id="b">B or<br/>
+            C-flat
+        </td>
+        <td id="fsharp">F-sharp or G-flat</td>
+        <td id="dflat">D-flat or C-sharp</td>
+        <td id="aflat">G-sharp or A-flat</td>
+        <td id="eflat">D-sharp or E-flat</td>
+        <td id="bflat">B-flat or A-sharp</td>
+        <td id="f">F</td>
+    </tr>
+    <tr>
+        <td class="label">Key Signature for Major Key:</td>
+        <td>no sharps or flats</td>
+        <td>1 sharp</td>
+        <td>2 sharps</td>
+        <td>3 sharps</td>
+        <td>4 sharps</td>
+        <td>5 sharps or 7 flats</td>
+        <td>6 sharps or 6 flats</td>
+        <td>5 flats or 7 sharps</td>
+        <td>4 flats</td>
+        <td>3 flats</td>
+        <td>2 flats</td>
+        <td>1 flat</td>
+    </tr>
+    <tr>
+        <td class="label">Key Signature for Minor Key:</td>
+        <td>3 flats</td>
+        <td>2 flats</td>
+        <td>1 flat</td>
+        <td>no sharps or flats</td>
+        <td>1 sharp</td>
+        <td>2 sharps</td>
+        <td>3 sharps</td>
+        <td>4 sharps</td>
+        <td>5 sharps or 7 flats</td>
+        <td>6 sharps or 6 flats</td>
+        <td>5 flats or 7 sharps</td>
+        <td>4 flats</td>
+    </tr>
+</table>
+{% endblock %}

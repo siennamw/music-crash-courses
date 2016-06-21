@@ -1,0 +1,11 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>404 Error File Not Found</h1>
+<p><b>Sorry! The page you are looking for might have been removed, had its name changed, or is temporarily
+    unavailable.</b></p>
+<ul class="disc">
+    <li>If you typed in the URL, please check the spelling</li>
+    <li>You can click the 'Back' button and try another link, or <a href="http://www.musiccrashcourses.com/">click
+        here to return to the home page.</a></li>
+</ul>
+{% endblock %}

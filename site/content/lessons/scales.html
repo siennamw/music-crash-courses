@@ -1,0 +1,61 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Introduction to Scales</h1>
+<p>A <b>scale</b> is a collection of several pitches presented in either ascending or descending order. We will
+    look at the <a href="scales_major.html">major</a>, <a href="scales_minor.html">minor</a>, and <a
+        href="chromatic.html">chromatic</a> scales, which are the most common scales in western music. You can
+    also read about the <a href="scales_more.html">whole-tone, octatonic, and pentatonic scales</a> which play
+    smaller, but important roles in western music.</p>
+<h2>Diatonic Scales: Major and Minor</h2>
+<p>The <a href="scales_major.html"><b>major</b></a> and <a href="scales_minor.html"><b>minor</b></a> scales are
+    used in the vast majority of western music written since the 17<sup>th</sup> century. These scales are
+    considered <b>diatonic</b>, as opposed to chromatic (see below), as are melodies and harmonies that use the
+    collection of pitches available in a major or minor scale.</p>
+<p>Both major and minor scales use seven discreet <b>pitch classes</b> (named pitches) in a specific pattern of
+    whole and half steps. To modern listeners, the major scale communicates a mood of happiness, triumph, joy,
+    or contentment, whereas the minor scale can sound sad, sinister, and restless. The reason that these scales
+    sound so different is surprisingly simple: the whole and half steps are in a different order.</p>
+<h2>Scale Degrees</h2>
+<p>Before we consider major and minor scales, we must establish some new terminology that is necessary for
+    comparing them. A <b>scale degree</b> is a number or name unique to each note in a scale. Note names (letter
+    names such as C and F-sharp) are different from scale degrees because a C may be the 3rd scale degree in one
+    scale, but the 1st scale degree in another. The most important scale degrees to remember are <b>tonic</b>
+    (1st [and 8th]), <b>dominant</b> (5th), and <b>leading tone</b> (7th).</p>
+<table>
+    <tr>
+        <td class="label">Scale Degree Number:</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8 (1)</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree Name:</td>
+        <td>Tonic</td>
+        <td>Supertonic</td>
+        <td>Mediant</td>
+        <td>Subdominant</td>
+        <td>Dominant</td>
+        <td>Submediant</td>
+        <td>Leading Tone</td>
+        <td>Tonic</td>
+    </tr>
+</table>
+
+<div id="CMajScaleDegrees"><h1>Scale Degrees</h1>
+    <h2>C major scale with scale degree numbers and names</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#CMajScaleDegrees', '../scores/CMajScaleDegrees.png', '../scores/CMajScaleDegrees.mp3');
+    });
+</script>
+
+<p>Since scale degrees 1 and 8 are the same note name and scale degree name, we will use 'tonic' to refer to
+    these equally from here on. These numbers and names apply to both major and minor scales except that the 7th
+    scale degree is a leading tone only when it is a half step away from the tonic. Otherwise the 7th scale
+    degree is called the '<b>subtonic</b>.'</p>
+{% endblock %}

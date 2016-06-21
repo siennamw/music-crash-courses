@@ -1,0 +1,20 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Syncopation</h1>
+<p>Syncopation occurs when rhythms do not follow the regular pattern of emphasis in a measure. To the ear,
+    it sounds similar to when the natural emphasis of language is not followed (for example, in English we
+    say EM-pha-sis, not em-PHA-sis). Instead of following the expected pattern, sympcopated rhythms
+    emphasize <b>off-beats</b>, the halfway points between two beats. Since eighth notes usually divide the
+    beat in half, it is common for syncopation to occur in rhythms that use eighth notes.</p>
+
+<div id="the_best"><h1>Syncopation</h1>
+    <h2>excerpt from the jazz standard "The Best is Yet to Come" showing syncopated rhythms</h2>
+    <h2>the sound clip
+        includes a percussion track to help demonstrate the relationship between the beat and the
+        rhythms</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#the_best', '../scores/the_best_is_yet_to_come.png', '../scores/the_best_is_yet_to_come.mp3');
+    });
+</script>
+{% endblock %}

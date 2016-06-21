@@ -1,0 +1,40 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<div class="stripe">Lessons and Resources for Beginners and Musicians of All Kinds</div>
+<!--
+    <h1>Courses</h1>
+    <p>A course is a group of lessons organized around a theme. </p>
+    <p class="placeholder">Please see the navigation menu above for a complete list of courses.</p>
+    <div id="courses_list"></div>
+    -->
+<h1>Lessons</h1>
+<p class="placeholder">Please see the navigation menu above for a complete list of lessons.</p>
+<div class="row">
+    <div class="six columns" id="lessons_list1"></div>
+    <div class="six columns" id="lessons_list2"></div>
+    <div class="clearfix"></div>
+</div>
+<h1>Resources</h1>
+<div class="pic fltrt"><a class="hide_when_narrow noprint" href="resources/help.html"><img
+    src="../images/other/question_mark.png" alt="question mark" width="150"/></a></div>
+<p class="placeholder">Please see the navigation menu above for a complete list of resources.</p>
+<div id="resources_list"></div>
+<script>
+    // Copy links from navigation as content of page
+
+    //clonelist("#courses", "#courses_list");
+    clonelist("#pitch", "#lessons_list1");
+    clonelist("#time", "#lessons_list2");
+    clonelist("#form", "#lessons_list2");
+    clonelist("#genre", "#lessons_list2");
+    clonelist("#exp", "#lessons_list2");
+    clonelist("#inst", "#lessons_list2");
+    clonelist("#advanced", "#lessons_list2");
+    clonelist("#resources", "#resources_list");
+
+    // Hide .placeholder items
+    $(document).find("p.placeholder").each(function () {
+        $(this).addClass("hide_me");
+    })
+</script>
+{% endblock %}

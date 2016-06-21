@@ -1,0 +1,37 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Notating and Naming Pitches</h1>
+<div class="pic fltlft"><img src="../images/notation/pitch.png" alt="pitches on a staff" border="0"/></div>
+<p>Different pitches are indicated in musical notation by moving notes up and down on the <b>staff</b> (five
+    horizontal lines). The higher the note, the higher it is placed on the staff.</p>
+<div class="pic fltrt"><img src="../images/notation/bassclef.png" alt="bass clef" border="0"/><br/>
+    bass clef
+</div>
+<div class="pic fltrt"><img src="../images/notation/trebleclef.png" alt="treble clef" border="0"/><br/>
+    treble clef
+</div>
+<p>When an instrument can play a very wide range of pitches (like a piano), it requires two staves, or a <b>grand
+    staff</b>. At the far left of the two staves are two different <b>clefs</b> - on top is a <b>treble clef</b>,
+    and on the bottom is a <b>bass clef</b>. Clefs tell us the range of pitches that can be represented on the
+    staff lines. A treble clef is used for high pitches and a bass clef is used for low pitches.</p>
+
+<div id="grand_staff"><h1>Grand Staff</h1>
+    <h2>two octaves of the C major scale on the grand staff</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#grand_staff', '../scores/grand_staff.png', '../scores/grand_staff.mp3');
+    });
+</script>
+
+<p><b>Middle C</b> falls between the treble and bass clefs. It can be notated above the bass clef or below the
+    treble clef on its own little line, a <b>ledger line</b>. Ledger lines can be used for pitches that fall
+    above or below the staff, but notes on ledger lines can be more difficult to read than notes within the
+    staff, so it is best to use the clef that allows the majority of pitches to be notated within the staff.</p>
+<p>Middle C is also used as a reference point to compare the highness or lowness of other pitches. Middle C
+    falls in the middle of a piano keyboard, and is towards the bottom range of a high female voice (a soprano),
+    and in the upper range of a low male voice (a bass). See the page on <a href="voices.html">voices</a> for
+    more on voice parts.</p>
+<p>For instruments with smaller ranges, a single staff with one clef is sufficient. Lower instruments that tend
+    to play below middle C (like the cello or tuba) will use the bass clef, while higher instruments that
+    usually play above middle C (like the flute or violin) will use the treble clef.</p>
+{% endblock %}

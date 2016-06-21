@@ -1,0 +1,84 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Introduction to Harmony</h1>
+<p>We have already learned that <a href="melody.html">melody</a> refers to pitches played in sequence. <b>Harmony</b>,
+    on the other hand, deals with pitches sounded simultaneously. To put it another way, melody is the
+    horizontal aspect of pitch, and harmony is the vertical aspect.</p>
+<p>Harmonies can be used to add support and depth to a melody, or sometimes harmony is simply the result of many
+    melodies overlapping each other (as in <a href="texture.html">polyphony</a>). Harmony is also important for
+    the <a href="form_principles.html">form</a> (large-scale organization) of musical works and can be used to
+    give long pieces a sense of unity and structure.</p>
+<h2>Consonance and Dissonance</h2>
+<p>Some harmonies sound pleasing and stable, while others clash and seem unstable. The stable harmonies are
+    called <b>consonant</b>, while the unstable harmonies are called <b>dissonant</b>. Consonant harmonies give
+    a sense of serenity and rest to a piece, while dissonant harmonies create tension and anxiety. Each style of
+    music has its own conventions about how consonance and dissonance are managed and therefore which harmonies
+    are preferred.</p>
+<p>The perfect <a href="intervals.html">intervals</a> (unison, octave, perfect 4<sup>th</sup>, and perfect
+    5<sup>th</sup>) are considered the most <span class="highlight">consonant</span> <a
+        href="intervals.html">intervals</a>.
+    The most <span class="lowlight">dissonant</span> <a href="intervals.html">intervals</a> are a half step away
+    from the perfect <a href="intervals.html">intervals</a>: minor 2<sup>nd</sup>, major 5<sup>th</sup>, and
+    tritone (also called augmented 4<sup>th</sup> or diminished 5<sup>th</sup>). The other intervals fall
+    somewhere inbetween, with the major 2<sup>nd</sup> and the minor 5<sup>th</sup> being <span
+        class="lowlight2">somewhat dissonant</span>, and the major and minor 3<sup>rds</sup> and
+    6<sup>ths</sup> being <span class="highlight2">somewhat consonant</span>.</p>
+<table>
+    <tr>
+        <td class="labeltop">Interval Name</td>
+    </tr>
+    <tr>
+        <td class="highlight">(Perfect) Unison</td>
+    </tr>
+    <tr>
+        <td class="lowlight">minor 2<sup>nd</sup>, half step</td>
+    </tr>
+    <tr>
+        <td class="lowlight2">Major 2<sup>nd</sup>, whole step</td>
+    </tr>
+    <tr>
+        <td class="highlight2">minor 3<sup>rd</sup></td>
+    </tr>
+    <tr>
+        <td class="highlight2">Major 3<sup>rd</sup></td>
+    </tr>
+    <tr>
+        <td class="highlight">Perfect 4<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="lowlight">tritone (augmented 4<sup>th</sup>, diminished 5<sup>th</sup>)</td>
+    </tr>
+    <tr>
+        <td class="highlight">Perfect 5<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="highlight2">minor 6<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="highlight2">Major 6<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="lowlight2">minor 7<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="lowlight">Major 7<sup>th</sup></td>
+    </tr>
+    <tr>
+        <td class="highlight">(Perfect) Octave</td>
+    </tr>
+</table>
+<p>Dissonant harmonies can make listeners feel unsettled and tense. This tension makes listeners wish for the
+    release and resolution of consonant harmonies. When dissonant harmonies change to consonant ones, it is
+    called <b>resolution</b>. Longing for resolution can give music a sense of forward momentum, and the way
+    that resolutions are granted or withheld can make listeners feel either satisfied or frustrated. Just as
+    some stories are left unresolved, so are some harmonies. For more about harmonic resolution, see <a
+        href="cadences.html">Cadences</a>.</p>
+
+<div id="harmony"><h1>Consonant and Dissonant Harmonies</h1></div>
+
+<script>
+    $(document).ready(function () {
+        scoreInsert('#harmony', '../scores/consonance_dissonance.png', '../scores/consonance_dissonance.mp3');
+    });
+</script>
+{% endblock %}

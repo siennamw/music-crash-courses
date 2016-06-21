@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Search Music Crash Courses</h1>
+<div class="google">
+	<script>
+		(function () {
+			var cx = '002233124692880807825:zboplnt0aaq';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+				'//cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		})();
+	</script>
+	<gcse:search></gcse:search>
+</div>
+{% endblock %}

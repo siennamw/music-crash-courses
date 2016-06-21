@@ -1,0 +1,152 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Introduction to Intervals</h1>
+<p>An <b>interval</b> is the distance between two pitches. Intervals can occur between pitches sounded one after
+    another (<b>melodic intervals</b>) or between pitches sounded simultaneously (<b>harmonic intervals</b>). We
+    will cover <a href="melody.html" target="_self">melody</a> and <a href="harmony.html"
+                                                                      target="_self">harmony</a> specifically in
+    a later section, but for now we will consider the basic principles of intervals.</p>
+<h2 class="clearfloat">Accidentals, Half Steps, and Whole Steps</h2>
+<div class="fltrt" align="center">Accidentals<br/>
+    <div class="pic fltrt">Natural<br/>
+        <img src="../images/notation/natural.png" alt="natural" border="0"/></div>
+    <div class="pic fltrt">Flat<br/>
+        <img src="../images/notation/flat.png" alt="flat" border="0"/></div>
+    <div class="pic fltrt">Sharp<br/>
+        <img src="../images/notation/sharp.png" alt="sharp" border="0"/></div>
+</div>
+<p>Sharps, flats, and natural signs (naturals) are collectively called <b>accidentals</b>. Accidentals alter
+    pitches by moving them up or down by the smallest interval in the Western system: a <b>half step</b>. A <b>sharp</b>
+    raises a pitch by a half step, a <b>flat</b> lowers a pitch by a half step, and a <b>natural</b> negates the
+    effect of a sharp or flat sign, returning the note to its default pitch.</p>
+<div class="pic fltlft"><img src="../images/keyboard/keyboard_w_intervals.png" alt="piano keyboard" border="0"/><br/>
+    'h' stands for a half step, and 'W' stands for a whole step
+</div>
+<p>Let's look more closely at the half step. Using the keys of a piano as an example, notice that the interval
+    between any white key and an adjacent black key is one half step (example: C and C-sharp ). But be careful!
+    The interval between two white keys that do <i>not</i> have a black key between them (B and C , E and F ) is
+    <i>also a half step</i>. In order to create a <b>whole step</b>, we need to go two half steps (example: C to
+    D, E to F-sharp).</p>
+<p>Half steps and whole steps are the building blocks for <a href="scales.html">scales</a>, which we will cover
+    in a later section.</p>
+<h2 class="clearfloat">Enharmonic Equivalence</h2>
+<div class="pic fltlft"><img src="../images/keyboard/keyboard.png" alt="piano keyboard" border="0"/></div>
+<p>You may have noticed on the keyboard that all of the black keys are labeled with two pitch names (example:
+    C-sharp/D-flat). This is a result of <b>enharmonic equivalence</b>, which is the principle that any pitch
+    can have more than one name. C-sharp and D-flat, for example, are the same pitch. It is easy to think of
+    them as musical homophones - they may be spelled differently, but they sound the same. Although they are not
+    indicated on the keyboard shown here, it is also possible to have C-flat (same as B), B-sharp (same as C),
+    F-flat (same as E), and E-sharp (same as F), but these are not very common. Double flats and sharps are also
+    possible, and they simply raise or lower a pitch by <i>two</i> half steps (one whole step), but double
+    accidentals are also uncommon.</p>
+<h2 class="clearfloat">Octaves</h2>
+<div class="pic fltrt"><img src="../images/keyboard/keyboard.png" alt="piano keyboard" border="0"/></div>
+<p>On the keyboard you can see that the pitches are named with seven letters of the alphabet: A, B, C, D, E, F,
+    and G. There are only seven because they repeat, as on the white keys of the keyboard. An <b>octave</b> is
+    the distance between any pitch and the next highest or lowest pitch of the same name (examples: D to D,
+    F-sharp to F-sharp).</p>
+<p>At first it may seem confusing that some pitches share the same name, but there is an acoustic principle
+    recognized in all cultures that keeps the system orderly: <b>octave equivalence</b>. This is the principle
+    that every pitch with the same name sounds like a higher or lower duplication of every pitch of that name.
+    That is, every C sounds like a duplication of every other C, just higher or lower. This is because the
+    frequencies of these notes are related by a 2:1 ratio. For example, the A above middle C occurs at 440 Hz,
+    therefore the A one octave higher occurs at 880 Hz, and the A one octave lower occurs at 220 Hz.</p>
+<p>In the example below you will hear examples of octave equivalence. First will be three examples of notes an
+    octave apart, then you will hear a phrase from the American National Anthem played in two different octaves,
+    first separately, then simultaneously. As you listen to the excerpt, notice that the melody from the
+    National Anthem sounds equivalent - not <i>identical</i> but <i>equivalent</i> - in either octave. When both
+    the higher and lower octave versions of the melody are played simultaneously, they are almost
+    indistinguishable from each other.</p>
+
+<div id="intervals"><h1>Octaves</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#intervals', '../scores/octaves_anthem.png', '../scores/octaves_anthem.mp3');
+    });
+</script>
+
+<div class="clearfloat"></div>
+<h2>More Intervals</h2>
+<div class="fltrt">
+    <table>
+        <tr>
+            <td class="labeltop">Half Steps</td>
+            <td class="labeltop">Interval Name</td>
+            <td class="labeltop">Abbreviation</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>(Perfect) Unison</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>minor 2nd, half step</td>
+            <td>m2, h</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Major 2nd, whole step</td>
+            <td>M2, W</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>minor 3rd</td>
+            <td>m3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Major 3rd</td>
+            <td>M3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Perfect 4th</td>
+            <td>P4</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>tritone</td>
+            <td>tt</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Perfect 5th</td>
+            <td>P5</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>minor 6th</td>
+            <td>m6</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Major 6th</td>
+            <td>M6</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>minor 7th</td>
+            <td>m7</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Major 7th</td>
+            <td>M7</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>(Perfect) Octave</td>
+            <td>Oct, 8ve</td>
+        </tr>
+    </table>
+</div>
+<p>So far, we have discussed the half step, the whole step, and the octave. It is important to note that there
+    are many other intervals that can be made between two pitches. For the sake of completeness, here is a chart
+    showing the names and sizes (in half steps) of all the intervals that can occur within an octave. Note that
+    the 4th and 5th are called 'perfect' rather than major or minor. In addition to the 4th and 5th, unisons and
+    octaves are also considered <b>perfect intervals</b>. The reason for this label has to do with the <a
+        href="harmonic_series.html">harmonic series</a>, so we will cover that in a later section.</p>
+<p>For more on intervals, see <a href="intervals_maj_min.html">intervals in major and minor scales</a> and <a
+    href="intervals_adv.html">intervals in the chromatic scale</a>.</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Cadences</h1>
+<p><b>Cadences</b> are musical formulas that function like punctuation marks in a sentence. These formulas are
+    conventions that have developed over time to signal the end of a musical unit such as a phrase. Cadences
+    involve the interaction of melody, harmony, rhythm, and meter, and usually mark the end of a phrase. Some
+    cadences sound conclusive, complete, and resolved (like a period), while others sound incomplete (like a
+    comma or colon). The most complete type of cadence is the <b>full cadence</b>, which moves from V to I. In a
+    <b>half cadence</b> the progression is stopped on V, which makes it feel unfinished.</p>
+<p>Sometimes composers will even start a cadential formula, but instead of arriving at the cadence as expected,
+    they will interrupt or change the formula with <b>deceptive motion</b>.</p>
+
+<div id="cadence"><h1>Cadences</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#cadence', '../scores/cadences.mei', '../scores/cadences.mp3', false);
+    });
+</script>
+{% endblock %}

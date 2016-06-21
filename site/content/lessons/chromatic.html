@@ -1,0 +1,25 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Chromatic Scale</h1>
+<div class="pic fltrt"><img src="../images/keyboard/keyboard.png" alt="piano keyboard" border="0"/></div>
+<p>The 12 discreet pitches within an octave are C, C-sharp/D-flat, D, D-sharp/E-flat, E, F, F-sharp/G-flat, G,
+    G-sharp/A-flat, A, A-sharp/B-flat, and B. That pattern is the <b>chromatic scale</b>, and it is created by
+    simply ascending (or descending) by half-steps and thus playing all possible pitches.</p>
+<p>Since the pattern and collection of notes are the same no matter which is the starting pitch, the chromatic
+    scale cannot be <a href="transposition.html">transposed</a>. There is only one chromatic scale.</p>
+<p>Melodies and harmonies that use pitches that cannot be contained by a single <a href="scales.html">diatonic
+    (major or minor) scale</a> are often considered chromatic. Using the chromatic scale in a piece of music can
+    make it sound exotic. Chromatic melodies can seem sinuous or elusive.</p>
+<p>In the example of the chromatic scale below, notice that it is notated using sharps when it is ascending, but
+    when it is descending the sharped notes are replaced with their <a href="intervals.html">enharmonic
+        equivalents</a> so that only flats are used. This is a common convention for notating chromatic scales.
+</p>
+
+<div id="chrom-scale"><h1>Chromatic Scale</h1>
+    <h2>notated with sharps ascending and flats descending</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#chrom-scale', '../scores/ChromScale.png', '../scores/ChromScale.mp3', true);
+    });
+</script>
+{% endblock %}

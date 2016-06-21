@@ -1,0 +1,143 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Advanced Intervals</h1>
+<p>Now that we have looked at the <a href="intervals_maj_min.html">intervals in the major and minor scales</a>,
+    we have covered almost all of the intervals possible within an octave. The chart below includes the <b>minor
+        2nd</b> and <b>tritone</b> to round out the collection.</p>
+<p>A <b>minor second</b> is simply one half step away from the starting note, and a <b>tritone</b> is an
+    interval of three whole steps (or three tones, hence the name 'tritone'). The tritone falls between the
+    perfect 4th and perfect 5th, so it can also be called an <b>augmented 4th</b> or <b>diminished 5th</b>.
+    Also, the tritone is significant because it is 6 half steps and thus divides the octave exactly in half.</p>
+<table>
+    <tr>
+        <td class="labeltop">Half Steps</td>
+        <td class="labeltop">Interval Name</td>
+        <td class="labeltop">Abbreviation</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>(Perfect) Unison</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>minor 2nd, half step</td>
+        <td>m2, h</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Major 2nd, whole step</td>
+        <td>M2, W</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>minor 3rd</td>
+        <td>m3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Major 3rd</td>
+        <td>M3</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Perfect 4th</td>
+        <td>P4</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>tritone<br/>
+            (augmented 4th, diminished 5th)
+        </td>
+        <td>tt<br/>
+            (aug4, dim5)
+        </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Perfect 5th</td>
+        <td>P5</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>minor 6th</td>
+        <td>m6</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Major 6th</td>
+        <td>M6</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>minor 7th</td>
+        <td>m7</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Major 7th</td>
+        <td>M7</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>(Perfect) Octave</td>
+        <td>Oct, 8ve</td>
+    </tr>
+</table>
+<p>When intervals occur that are greater than an octave, you simply keep counting up as if the scale continued.
+    The trick is that you can't simply add intervals together numerically by the interval names: an octave plus
+    a major 3rd is not a major 11th as you might expect, but a major 10th. But, you <i>can</i> add intervals if
+    you think of them in half steps: 12 half steps + 4 half steps = 16 half steps.</p>
+<table>
+    <tr>
+        <td class="labeltop">Half Steps</td>
+        <td class="labeltop">Interval Name</td>
+        <td class="labeltop">Abbreviation</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>(Perfect) Octave</td>
+        <td>Oct, 8ve</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>minor 9th</td>
+        <td>m9</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Major 9th</td>
+        <td>M9</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>minor 10th</td>
+        <td>m10</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Major 10th</td>
+        <td>M10</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+</table>
+<h2>Complimentary Intervals</h2>
+<p><b>Two intervals are considered complimentary when they add up to an octave</b>. If you think of the
+    intervals in terms of their half-steps, any two intervals that add up to 12 are considered complimentary. On
+    the other hand, if you think of them in terms of their scale degrees, they should add up to 9, and minor
+    intervals should be paired with major intervals. For example, a minor 3rd (3 half steps) and a major 6th (9
+    half steps) are complimentary, as are a major 7th (11 half steps) and a minor 2nd (1 half step). A perfect
+    4th and a perfect 5th are complimentary, and the tritone is its own compliment because it divides the octave
+    in half.</p>
+
+<div id="complimentary"><h1>Complimentary Intervals</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#complimentary', '../scores/complimentary.png', '../scores/complimentary.mp3', false);
+    });
+</script>
+{% endblock %}

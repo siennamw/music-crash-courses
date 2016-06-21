@@ -1,0 +1,31 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Transposition</h1>
+<div class="pic fltrt"><img src="../images/keyboard/keyboard.png" alt="piano keyboard" border="0"/></div>
+<p><b>Transposition</b> occurs when a segment of music is raised or lowered by a given interval, keeping all the
+    internal intervals the same.</p>
+<p>For example, when the pattern of whole and half steps of the C major scale is preserved, but we begin on
+    C-sharp instead of C, we have transposed the C major scale into a C-sharp major scale. There are 12 possible
+    transpositions of the major and minor scales because there are 12 discreet pitches in the Western system.
+    Here are all 12 major scales:</p>
+
+<div id="AllMajScales"><h1>Major Scales</h1>
+    <h2>with note names</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#AllMajScales', '../scores/AllMajScales.png', '../scores/AllMajScales.mp3');
+    });
+</script>
+
+<p>Here are all 12 natural minor scales:</p>
+
+<div id="AllMinScales"><h1>Natural Minor Scales</h1>
+    <h2>with note names</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#AllMinScales', '../scores/AllMinScales.png', '../scores/AllMinScales.mp3');
+    });
+</script>
+<p>These <a href="scales.html">scales</a> form the basis for the system of <a href="keys.html">keys</a> which we
+    will discuss in a later section.</p>
+{% endblock %}

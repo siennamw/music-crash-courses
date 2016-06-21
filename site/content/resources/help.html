@@ -1,0 +1,16 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Listening to Audio Examples</h1>
+<p>Many of these pages include emedded audio examples. Most web browsers (Internet Explorer, Google Chrome,
+	Firefox, Safari,...) will automatically download any plugins needed to play these examples. I recommend
+	updating your browser to the most recent version to ensure that it is capable of playing the embedded
+	examples. If everything is set up correctly, you will see an embedded example below. Click the play (arrow)
+	button to hear the example.</p>
+
+<div id="twinkle"><h1>"Twinkle, Twinkle Little Star"</h1></div>
+<script>
+	$(document).ready(function () {
+		scoreInsert('#twinkle', '../scores/twinkle_twinkle.png', '../scores/twinkle_twinkle.mp3');
+	});
+</script>
+{% endblock %}

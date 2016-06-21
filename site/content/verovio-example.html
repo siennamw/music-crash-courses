@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<div class="twelve columns">
+    <div id="chopin"></div>
+    <div id="chopin2"></div>
+
+    <script>
+        $(document).ready(function () {
+            var score = 'scores/Chopin_Etude_op.10_no.9.mei';
+            var audio = 'scores/cadences.mp3';
+
+            scoreInsert('#chopin', score, audio, true);
+            scoreInsert('#chopin2', score, audio, true);
+
+        });
+    </script>
+    <div class="clearfix"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,272 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Intervals in Major and Minor Scales</h1>
+<p>We already know the intervals between adjacent notes in major and minor scales (whole and half steps), but
+    what about the intervals formed by different combinations? In this section we will deepen our understanding
+    of intervals by looking at those that are formed going up from the tonic to each of the other notes of major
+    and minor scales.</p>
+<h2>Intervals in Major Scales</h2>
+<p>When measured up from the tonic, <a href="scales_major.html">major scales</a> use only major intervals (2nd,
+    3rd, 6th, and 7th) and perfect intervals (unison, 4th, 5th, and octave). Also, the names of the intervals in
+    the major scale correspond to the scale degree numbers. That is, for example, the interval between C (scale
+    degree 1) and A (scale degree 6) is a major 6th.</p>
+<table>
+    <tr>
+        <td class="label">Note Names:</td>
+        <td>C to C</td>
+        <td>C to D</td>
+        <td>C to E</td>
+        <td>C to F</td>
+        <td>C to G</td>
+        <td>C to A</td>
+        <td>C to B</td>
+        <td>C to C</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree Names:</td>
+        <td>Tonic</td>
+        <td>Tonic to Supertonic</td>
+        <td>Tonic to Mediant</td>
+        <td>Tonic to Subdominant</td>
+        <td>Tonic to Dominant</td>
+        <td>Tonic to Submediant</td>
+        <td>Tonic to Leading Tone</td>
+        <td>Tonic to Tonic</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree Numbers:</td>
+        <td>1 to 1</td>
+        <td>1 to 2</td>
+        <td>1 to 3</td>
+        <td>1 to 4</td>
+        <td>1 to 5</td>
+        <td>1 to 6</td>
+        <td>1 to 7</td>
+        <td>1 to 1 (8)</td>
+    </tr>
+    <tr>
+        <td class="label">Interval Name:</td>
+        <td>Unison</td>
+        <td>Major 2nd</td>
+        <td>Major 3rd</td>
+        <td>Perfect 4th</td>
+        <td>Perfect 5th</td>
+        <td>Major 6th</td>
+        <td>Major 7th</td>
+        <td>Octave</td>
+    </tr>
+    <tr>
+        <td class="label">Abbreviation:</td>
+        <td>-</td>
+        <td>M2</td>
+        <td>M3</td>
+        <td>P4</td>
+        <td>P5</td>
+        <td>M6</td>
+        <td>M7</td>
+        <td>Oct, 8ve</td>
+    </tr>
+    <tr>
+        <td class="label">Half Steps:</td>
+        <td>0</td>
+        <td>2</td>
+        <td>4</td>
+        <td>5</td>
+        <td>7</td>
+        <td>9</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+</table>
+
+<div id="diatonic_intervals"><h1>Harmonic Intervals</h1>
+    <h2>formed between the tonic (C) and the other pitches in a C major scale</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#diatonic_intervals', '../scores/diatonic_intervals.png', '../scores/diatonic_intervals.mp3');
+    });
+</script>
+
+<h2>Intervals in Minor Scales</h2>
+<h3>Natural Minor</h3>
+<p>Now let's look at the intervals created in minor scales, beginning with A <a
+    href="scales_minor_mel_har.html">natural minor</a>. The places where the pattern differs from the major
+    scale are highlighted.</p>
+<table>
+    <tr>
+        <td class="label">Note Names:</td>
+        <td>A to A</td>
+        <td>A to B</td>
+        <td class="highlight">A to C</td>
+        <td>A to D</td>
+        <td>A to E</td>
+        <td class="highlight">A to F</td>
+        <td class="highlight">A to G</td>
+        <td>A to high A</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree Names:</td>
+        <td>Tonic</td>
+        <td>Tonic to Supertonic</td>
+        <td class="highlight">Tonic to Mediant</td>
+        <td>Tonic to Subdominant</td>
+        <td>Tonic to Dominant</td>
+        <td class="highlight">Tonic to Submediant</td>
+        <td class="highlight">Tonic to Subtonic</td>
+        <td>Tonic to Tonic</td>
+    </tr>
+    <tr>
+        <td class="label">Scale Degree Numbers:</td>
+        <td>1 to 1</td>
+        <td>1 to 2</td>
+        <td class="highlight">1 to 3</td>
+        <td>1 to 4</td>
+        <td>1 to 5</td>
+        <td class="highlight">1 to 6</td>
+        <td class="highlight">1 to 7</td>
+        <td>1 to 1 (8)</td>
+    </tr>
+    <tr>
+        <td class="label">Interval Name:</td>
+        <td>Unison</td>
+        <td>Major 2nd</td>
+        <td class="highlight">Minor 3rd</td>
+        <td>Perfect 4th</td>
+        <td>Perfect 5th</td>
+        <td class="highlight">Minor 6th</td>
+        <td class="highlight">Minor 7th</td>
+        <td>Octave</td>
+    </tr>
+    <tr>
+        <td class="label">Abbreviation:</td>
+        <td>-</td>
+        <td>M2</td>
+        <td class="highlight">m3</td>
+        <td>P4</td>
+        <td>P5</td>
+        <td class="highlight">m6</td>
+        <td class="highlight">m7</td>
+        <td>Oct, 8ve</td>
+    <tr>
+        <td class="label">Half Steps:</td>
+        <td>0</td>
+        <td>2</td>
+        <td class="highlight">3</td>
+        <td>5</td>
+        <td>7</td>
+        <td class="highlight">8</td>
+        <td class="highlight">10</td>
+        <td>12</td>
+    </tr>
+    </tr>
+
+</table>
+<p>Many of the intervals in the natural minor scale are the same as intervals found in the major scale: major
+    2nd, perfect 4th, perfect 5th, and octave. However, the natural minor scale contains a minor 3rd, 6th, and
+    7th, whereas the major scale contains a major 3rd, 6th, and 7th. It should be noted that while the pitches
+    of the major scale create only major and perfect intervals with the tonic, the pitches of the minor scale
+    create minor, major, and perfect intervals with the tonic.</p>
+<h3>Melodic Minor</h3>
+<p>Compared to the natural minor scale, the <a href="scales_minor_mel_har.html"><b>melodic minor scale</b></a>
+    has a raised 6th and 7th degree, but only when it is ascending. Descending, the melodic minor scale is the
+    same as the natural minor scale.</p>
+<p>Here are the intervals in the <i>ascending</i> melodic minor scale (the places where the pattern differs from
+    the natural minor scale are highlighted):</p>
+<table>
+    <tr>
+        <td class="label">Note Names:</td>
+        <td>A to A</td>
+        <td>A to B</td>
+        <td>A to C</td>
+        <td>A to D</td>
+        <td>A to E</td>
+        <td class="highlight">A to F-sharp</td>
+        <td class="highlight">A to G-sharp</td>
+        <td>A to high A</td>
+    </tr>
+    <tr>
+        <td class="label">Interval Name:</td>
+        <td>Unison</td>
+        <td>Major 2nd</td>
+        <td>Minor 3rd</td>
+        <td>Perfect 4th</td>
+        <td>Perfect 5th</td>
+        <td class="highlight">Major 6th</td>
+        <td class="highlight">Major 7th</td>
+        <td>Octave</td>
+    </tr>
+    <tr>
+        <td class="label">Abbreviation:</td>
+        <td>-</td>
+        <td>M2</td>
+        <td>m3</td>
+        <td>P4</td>
+        <td>P5</td>
+        <td class="highlight">M6</td>
+        <td class="highlight">M7</td>
+        <td>Oct, 8ve</td>
+    </tr>
+    <tr>
+        <td class="label">Half Steps:</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+        <td>5</td>
+        <td>7</td>
+        <td class="highlight">9</td>
+        <td class="highlight">11</td>
+        <td>12</td>
+    </tr>
+</table>
+<h3>Harmonic Minor</h3>
+<p>The <a href="scales_minor_mel_har.html"><b>harmonic minor scale</b></a> differs from the natural minor scale
+    because it has a raised 7th scale degree. The harmonic minor scale is the same ascending and descending.</p>
+<p>Here are the intervals in the harmonic minor scale (the places where the pattern differs from the natural
+    minor scale are highlighted):</p>
+<table>
+    <tr>
+        <td class="label">Note Names:</td>
+        <td>A to A</td>
+        <td>A to B</td>
+        <td>A to C</td>
+        <td>A to D</td>
+        <td>A to E</td>
+        <td>A to F</td>
+        <td class="highlight">A to G-sharp</td>
+        <td>A to high A</td>
+    </tr>
+    <tr>
+        <td class="label">Interval Name:</td>
+        <td>Unison</td>
+        <td>Major 2nd</td>
+        <td>Minor 3rd</td>
+        <td>Perfect 4th</td>
+        <td>Perfect 5th</td>
+        <td>Minor 6th</td>
+        <td class="highlight">Major 7th</td>
+        <td>Octave</td>
+    </tr>
+    <tr>
+        <td class="label">Abbreviation:</td>
+        <td>-</td>
+        <td>M2</td>
+        <td>m3</td>
+        <td>P4</td>
+        <td>P5</td>
+        <td>M6</td>
+        <td class="highlight">M7</td>
+        <td>Oct, 8ve</td>
+    </tr>
+    <tr>
+        <td class="label">Half Steps:</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+        <td>5</td>
+        <td>7</td>
+        <td>8</td>
+        <td class="highlight">11</td>
+        <td>12</td>
+    </tr>
+</table>
+{% endblock %}

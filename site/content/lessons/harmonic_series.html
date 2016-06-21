@@ -1,0 +1,156 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Harmonic Series</h1>
+<p>Every <b>tone</b> (sustained pitch) is actually a composite of several different pitches. These 'extra'
+    pitches, called <b>overtones</b>, are resonant frequencies occurring above the main pitch, called the
+    <b>fundamental</b>.
+    Most overtones are <b>harmonics</b>, which are simple fractional vibrations of the fundamental pitch (
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+        </mfrac>
+    </math>
+    ,
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mn>3</mn>
+        </mfrac>
+    </math>
+    ,
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mn>4</mn>
+        </mfrac>
+    </math>
+    , and so on). Since dividing a string in half causes it to vibrate twice as fast, the frequencies of
+    harmonics can found by multiplying the frequency of the fundamental pitch by 2, 3, 4, and so on.
+</p>
+<table>
+    <tr>
+        <td class="labeltop">Harmonic Number</td>
+        <td class="labeltop">Frequency in Hz</td>
+        <td class="labeltop">Pitch Name</td>
+        <td class="labeltop">Interval from Previous Harmonic</td>
+    </tr>
+    <tr>
+        <td>1 (fundamental)</td>
+        <td><a onclick="togglePlay('110hz');">110</a>
+            <audio id="110hz">
+                <source src="../scores/tones/110hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>A</td>
+        <td>unison</td>
+    </tr>
+    <tr class="highlight">
+        <td>2</td>
+        <td><a onclick="togglePlay('220hz');">220</a>
+            <audio id="220hz">
+                <source src="../scores/tones/220hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>A</td>
+        <td>octave</td>
+    </tr>
+    <tr class="highlight">
+        <td>3</td>
+        <td><a onclick="togglePlay('330hz');">330</a>
+            <audio id="330hz">
+                <source src="../scores/tones/330hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>E</td>
+        <td>perfect fifth</td>
+    </tr>
+    <tr class="highlight">
+        <td>4</td>
+        <td><a onclick="togglePlay('440hz');">440</a>
+            <audio id="440hz">
+                <source src="../scores/tones/440hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>A</td>
+        <td>perfect fourth</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><a onclick="togglePlay('550hz');">550</a>
+            <audio id="550hz">
+                <source src="../scores/tones/550hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>C<span class="music-symbol">♯</span></td>
+        <td>major third</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><a onclick="togglePlay('660hz');">660</a>
+            <audio id="660hz">
+                <source src="../scores/tones/660hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>E</td>
+        <td>minor third</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><a onclick="togglePlay('770hz');">770</a>
+            <audio id="770hz">
+                <source src="../scores/tones/770hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>almost G</td>
+        <td>small minor third</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><a onclick="togglePlay('880hz');">880</a>
+            <audio id="880hz">
+                <source src="../scores/tones/880hz.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        <td>A</td>
+        <td>large major second</td>
+    </tr>
+</table>
+<p class="center_text">
+    <small>Audio examples are triangle waveforms downloaded from <a href="http://onlinetonegenerator.com/"
+                                                                    target="new">OnlineToneGenerator.com</a>.
+    </small>
+</p>
+<p>Note that the first three intervals created by successive pitches in the harmonic series are an octave, a
+    perfect fifth, and a perfect fourth. Because of this relationship, these intervals sound particularly
+    consonant and are called the 'perfect' intervals. The later harmonics create intervals that are gradually
+    smaller (thirds, then seconds) and more and more dissonant.</p>
+<p>These simple ratios became the basis of several different <a href="tuning_systems.html">tuning systems</a>,
+    which are ways to determine the precise frequencies of named pitches.</p>
+<h2>Timbre and the Harmonic Series</h2>
+<p>The harmonic series affects timbre because each type of instrument produces a distinctive pattern of loud and
+    soft overtones. As we move farther from the fundamental pitch, overtones have a tendency to become more
+    quiet, but on some instruments particular overtones are more or less powerful than this tendency suggests.
+    The graphs below are frequency power spectrums that show the strengths of the first eight harmonics of a D
+    (294 Hz) at the same volume on a flute and on a violin.</p>
+<div class="pic"><img src="../images/other/fourier_flute_violin.png"
+                      alt="frequency power spectrum of harmonics for D 294 Hz on a flute and a violin"
+                      border="0"/><br/>
+    strengths of the first eight harmonics on a flute and a violin<br/>
+    (frequency power spectrums of D at 294 Hz)
+</div>
+<p>The first two harmonics on the flute are very strong, but the remaining harmonics are quite weak. This is
+    what gives the flute its characteristic pure timbre. On the violin, the second harmonic is much weaker than
+    the flute's second harmonic, but the 3<sup>rd</sup> through 8<sup>th</sup> harmonics are much stronger than
+    the flute's. This pattern makes the timbre of the violin sound much more complex and rich than that of the
+    flute.</p>
+{% endblock %}
+

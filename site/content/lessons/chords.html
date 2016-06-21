@@ -1,0 +1,72 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Chords</h1>
+<p><b>Chords</b> are the basic units of <a href="harmony.html">harmony</a>. A chord is an organized group of
+    three or more simultaneous <a href="notating_naming_pitches.html">pitches</a>. Any combination of pitches
+    sounded simultaneously can be considered <a href="harmony.html">harmony</a>, but chords are organized
+    according to the <a href="intervals.html">intervals</a> they contain and by the way they behave in relation
+    to each other.</p>
+<h2>Triads</h2>
+<p>A <b>triad</b> is the most basic chord. A triad consists of three <a href="notating_naming_pitches.html">pitches</a>
+    (no more, no less) and is built by stacking major and/or minor thirds. The bottom note of a basic triad is
+    known as the <b>root</b>. The middle note is the <b>third</b> because it is a 3rd above the root, and the
+    top one is the <b>fifth</b> because it is a 5th above the root.</p>
+<div class="center"><img src="../images/notation/triad.png" alt="root, 3rd, and 5th in triad"></div>
+<p>The <b>qualities</b> of the thirds (major or minor) used to build a triad determine the quality of the chord
+    itself. The interval between the lowest note and the highest note of a major or minor triad is a perfect
+    fifth, but the inner intervals differ. A <b>major triad</b> has a major third on the bottom and a minor
+    third on the top, whereas a <b>minor triad</b> has a minor third on the bottom and a major third on the top.
+    A triad that consists of two minor thirds is a <b>diminished triad</b>, and the interval between the lowest
+    and highest notes is a diminished fifth. A triad that uses two major thirds is an <b>augmented triad</b>,
+    and the interval between the lowest and highest notes of this triad is an augmented fifth.</p>
+<table>
+    <tr>
+        <td class="labeltop" colspan="2">Major Triad</td>
+        <td class="label" rowspan="3"></td>
+        <td class="labeltop" colspan="2">Minor Triad</td>
+        <td class="label" rowspan="3"></td>
+        <td class="labeltop" colspan="2">Diminished Triad</td>
+        <td class="label" rowspan="3"></td>
+        <td class="labeltop" colspan="2">Augmented Triad</td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="vmiddle">perfect fifth</td>
+        <td>minor third</td>
+        <td rowspan="2" class="vmiddle">perfect fifth</td>
+        <td>major third</td>
+        <td rowspan="2" class="vmiddle">diminished fifth</td>
+        <td>minor third</td>
+        <td rowspan="2" class="vmiddle">augmented fifth</td>
+        <td>major third</td>
+    </tr>
+    <tr>
+        <td>major third</td>
+        <td>minor third</td>
+        <td>minor third</td>
+        <td>major third</td>
+    </tr>
+</table>
+
+<div id="triad_qualities"><h1>Triad Qualities</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#triad_qualities', '../scores/triad_qualities.png', '../scores/triad_qualities.mp3', true);
+    });
+</script>
+
+<h2>Arpeggios</h2>
+<p>When the notes of a chord are played in sequence rather than simultaneously, we call this an <b>arpeggio</b>.
+    Arpeggios are used in place of block chords (where all pitches are played simultaneously) in order to add
+    rhythmic movement in a place that is harmonically static. Composers often give arpeggios to <a
+        href="instrument_families.html">instruments</a> that are not able to sustain pitches for a long period
+    of time (examples: harpsichord, harp, guitar) because the pattern they create allows the same note to be
+    sounded over and over again, giving the impression of a sustained pitch. This illusion of sustain allows the
+    sequential pitches in arpeggios to imply a simultaneous chord.</p>
+
+<div id="arpeggio"><h1>Arpeggiated Chords</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#arpeggio', '../scores/arpeggio.png', '../scores/arpeggio.mp3', true);
+    });
+</script>
+{% endblock %}

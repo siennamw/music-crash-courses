@@ -1,0 +1,59 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Pitch Interactions with Beat and Meter</h1>
+<div class="pic fltrt"><img src="../images/notation/fermata.png" alt="fermata"/><br/>
+    fermata markings
+</div>
+<p>Pitch elements (such as <a href="melody.html">melodies</a> and <a href="harmony.html">harmonies</a>)
+    interact with the <a href="beat.html">beat</a> and <a href="meter.html">meter</a> in particular ways.
+    For example, a <b>fermata</b> indicates that a note or rest should be continued longer than its notated
+    duration, which means that the beat must be paused for a brief time.</p>
+<p>When a soloist is permitted to use <a href="beat.html">rubato</a>, he will often slow down the tempo on
+    the peak (highest note) of a <a href="melody.html">phrase</a> to emphasize the climax, or will slow down
+    just before a <a href="cadences.html">cadence</a> to prolong the listeners' anticipation of a harmonic
+    and melodic resolution. When his melody descends, a soloist will sometimes speed up, emulating the way
+    an object will gain momentum as it falls.</p>
+<p>In terms of <a href="meter.html">meter</a>, both <a href="melody.html">melodies</a> and <a
+    href="harmony.html">harmonies</a> follow certain patterns. Melodies often fit neatly within the measures
+    defined by the meter. To put it another way, the lengths of the melodic phrases are compatible with the
+    meter of the piece. Particularly in <a href="voices.html">vocal</a> music, it is very common to find
+    4-measure phrases, one after the other.</p>
+
+<div id="twinkle"><h1>Meter and Phrase Length</h1>
+    <h2>melody of "Twinkle, Twinkle Little Star" showing 4-measure phrase lengths</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#twinkle', '../scores/twinkle_twinkle.png', '../scores/twinkle_twinkle.mp3');
+    });
+</script>
+
+<h2>Harmonic Rhythm and Lead Sheets</h2>
+<p>Harmonies also fit with meters in certain ways. The rate at which harmonies change is known as <b>harmonic
+    rhythm</b>. Just as the rhythms of melodies can fit into the meter, harmonic rhythms often do too.
+    Harmonic rhythm is particularly clear on a lead sheet. A <b>lead sheet</b> is a type of sheet music that
+    shows the melody of a tune as well as the harmonies that should accompany that melody. Lead sheets are
+    very common in jazz and are occasionally used in popular music and elsewhere.</p>
+
+<div id="summertime"><h1>Lead Sheet</h1>
+    <h2>excerpt from "Summertime" by George Gershwin</h2></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#summertime', '../scores/lead_summertime.png', '../scores/lead_summertime.mp3');
+    });
+</script>
+
+<p>As you can see in the example above, the melody is notated on the <a href="notating_naming_pitches.html">staff</a>
+    and <b>chord symbols</b> are placed above the staff to indicate harmonies. The chord symbols used in
+    lead sheets are different from the <a href="chord_analysis.html">Roman numeral system</a> that is often used
+    to analyze <a href="chord_progressions.html">chord progressions</a>. The Roman numeral system is used to
+    show the
+    relationships between chords (i and V, for example), but does not tell us which specific pitches appear
+    in those chords (although you can figure this out if you know the key of the piece). For lead sheets,
+    the name of the <a href="chords.html">root</a> pitch is given, which allows us to determine all the
+    specific pitches of the chord (E = E major chord, which consists of E, G-sharp, and B). The other numbers,
+    letters,
+    and symbols that appear in chord symbols tell us the <a href="chords.html">quality of the chord (major,
+        minor, augmented, diminished)</a>, additional notes that should be added to the chord (often the
+    pitch that is a 7th above the root), and alterations that should be made to the pitches in the chord
+    (inserting <a href="intervals.html">sharps, flats, or naturals</a>).</p>
+{% endblock %}
