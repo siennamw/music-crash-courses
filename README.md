@@ -1,2 +1,2 @@
 # music-crash-courses
-Music Crash Courses website
+Source files for [Music Crash Courses](http://www.musiccrashcourses.com)
