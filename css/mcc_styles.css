@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* LESS/CSS Document by Sienna M. Wood for Music Crash Courses
- * 7 June 2016 */
+ * 21 June 2016 */
 /*--------------------------------------------------------------
 # Imports and Fonts
 --------------------------------------------------------------*/
@@ -1142,13 +1142,14 @@ footer p a.active,
 --------------------------------------------------------------*/
 body {
   color: #FFF;
-  background: #888 url('/mcc//images/layout/grey_wash_wall.png') center;
+  background: #888 url('/images/layout/grey_wash_wall.png') center;
 }
 header {
   text-align: center;
 }
 #logo {
-  background: #666 url('/mcc//images/layout/grey_wash_wall.png') center;
+  color: #FFF;
+  background: #888 url('/images/layout/grey_wash_wall.png') center;
   padding: 1px 0;
 }
 #logo img {
@@ -1187,7 +1188,7 @@ header {
 }
 footer {
   color: #e1e1e1;
-  background: #111 url('/mcc//images/layout/black_denim.png');
+  background: #111 url('/images/layout/black_denim.png');
   padding: 1rem;
   margin-bottom: 2rem;
   font-size: 90%;
@@ -1223,7 +1224,7 @@ input[type="button"] {
 --------------------------------------------------------------*/
 nav {
   color: #e1e1e1;
-  background: #111 url('/mcc//images/layout/black_denim.png');
+  background: #111 url('/images/layout/black_denim.png');
 }
 nav button.nav-toggle {
   color: #FFF;
@@ -1616,23 +1617,23 @@ iframe {
   border: none;
 }
 .listen {
-  background-image: url('/mcc//images/layout/listen.png');
+  background-image: url('/images/layout/listen.png');
 }
 .look {
-  background-image: url('/mcc//images/layout/look.png');
+  background-image: url('/images/layout/look.png');
 }
 .video {
-  background-image: url('/mcc//images/layout/video.png');
+  background-image: url('/images/layout/video.png');
   padding: 15px 10px 10px 85px;
 }
 .website {
-  background-image: url('/mcc//images/layout/website.png');
+  background-image: url('/images/layout/website.png');
 }
 .book {
-  background-image: url('/mcc//images/layout/book.png');
+  background-image: url('/images/layout/book.png');
 }
 .mobile {
-  background-image: url('/mcc//images/layout/mobile.png');
+  background-image: url('/images/layout/mobile.png');
 }
 .listen a,
 .look a,

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* LESS/CSS Document by Sienna M. Wood for Music Crash Courses
- * 7 June 2016 */
+ * 21 June 2016 */
 /*--------------------------------------------------------------
 # Imports and Fonts
 --------------------------------------------------------------*/
@@ -24,7 +24,7 @@
 @dark-gray: #333;
 @black: #000;
 
-@base-url: "/mcc/";
+@base-url: "";
 
 .font-sans () {
     font-family: @font-sans;
@@ -125,7 +125,7 @@ header {
 }
 
 #logo {
-    background: #666 url('@{base-url}/images/layout/grey_wash_wall.png') center;
+    .body-bkgnd();
     padding: 1px 0;
 
     img {
