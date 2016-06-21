@@ -1,0 +1,971 @@
+@charset "UTF-8";
+
+/* LESS/CSS Document by Sienna M. Wood for Music Crash Courses
+ * 7 June 2016 */
+/*--------------------------------------------------------------
+# Imports and Fonts
+--------------------------------------------------------------*/
+@import url('sienna-grid-base.less');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+@import url('font-awesome.css');
+
+/*--------------------------------------------------------------
+# Variables and Mixins
+--------------------------------------------------------------*/
+@primary: #f6ad1e;
+@secondary: lighten(@primary, 20%);
+@tertiary: lighten(@secondary, 15%);
+@border-color: #bbb;
+@link-color: #904e00;
+@font-color: @dark-gray;
+@white: #FFF;
+@light-gray: #e1e1e1;
+@gray: #888;
+@dark-gray: #333;
+@black: #000;
+
+@base-url: "/mcc/";
+
+.font-sans () {
+    font-family: @font-sans;
+    font-weight: normal;
+}
+
+.font-serif() {
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+.font-display() {
+    font-family: "Dancing Script", @font-sans;
+}
+
+.font-monospace() {
+    font-family: @font-mono;
+}
+
+.font-unicode() {
+    font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', @font-mono;
+}
+
+.body-bkgnd() {
+    color: @white;
+    background: @gray url('@{base-url}/images/layout/grey_wash_wall.png') center;
+}
+
+.main-bkgnd() {
+    color: @black;
+    background: @white;
+}
+
+.accent-bkgnd() {
+    color: @light-gray;
+    background: #111 url('@{base-url}/images/layout/black_denim.png');
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    .font-serif();
+}
+
+h1 {
+    margin-top: 1rem;
+    border-bottom: solid @secondary 2px;
+}
+
+h2 {
+    border-bottom: solid #f8e4bb 2px;
+}
+
+h3 {
+    border-bottom: solid #CCC 1px;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    color: #EEE;
+    border-color: @primary;
+    font-size: 150%;
+    .font-display();
+
+    a {
+        color: inherit;
+
+        &:hover, &:focus, &.focus, &.active {
+            color: inherit;
+        }
+    }
+}
+
+footer h1 {
+    font-size: 160%;
+}
+
+/* Links */
+
+footer p a, #attr a {
+    color: @secondary;
+
+    &:hover, &:focus, &.focus, &.active {
+        color: @secondary;
+    }
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+body {
+    .body-bkgnd();
+}
+
+header {
+    text-align: center;
+}
+
+#logo {
+    background: #666 url('@{base-url}/images/layout/grey_wash_wall.png') center;
+    padding: 1px 0;
+
+    img {
+        margin: 0 auto;
+        z-index: 99999;
+
+        &.logo-narrow {
+            display: block;
+        }
+
+        &.logo-wide {
+            display: none;
+        }
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+
+    #logo img {
+
+        &.logo-wide {
+            display: block;
+        }
+
+        &.logo-narrow {
+            display: none;
+        }
+    }
+}
+
+.container {
+}
+
+.stripe {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 1rem;
+    background-color: @secondary;
+    font-family: 'Dancing Script', cursive;
+    font-size: 200%;
+    font-weight: normal;
+    text-align: center;
+}
+
+#main_content {
+    .main-bkgnd();
+    padding: 1rem;
+    text-align: left;
+}
+
+footer {
+    .accent-bkgnd();
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 90%;
+    text-align: center;
+}
+
+#attr {
+    color: #FFF;
+    text-align: center;
+    padding: 2rem 0 8rem 0;
+}
+
+/* Marquee */
+#marquee, #marquee_placeholder {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: center;
+}
+
+#marquee p {
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    color: #FFF;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    color: @dark-gray;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+// override colors from sienna-grid-base
+nav {
+    .accent-bkgnd();
+
+    button.nav-toggle {
+        color: @white;
+
+        &:focus, &:hover { // toggle menu button hover
+            color: @secondary;
+        }
+    }
+
+    ul {
+        ul a { // style text of submenus
+            font-size: 1.5rem;
+            font-weight: normal;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        li {
+            color: @light-gray; // narrow menu color
+
+            &.current-menu-item > a {
+                color: @secondary; // narrow menu current page
+            }
+
+            &:hover, &:focus, &.focus, &.active {
+                color: @secondary; // narrow menu active
+
+                > a {
+                    &:hover, &:focus, &.focus, &.active {
+                        color: @white; // narrow menu hover
+                        background-color: @primary;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+
+    // override colors from sienna-grid-base
+    nav {
+
+        ul > li > a.active, ul:first-child > li.current-menu-item > a {
+            color: @white; // base menu current page
+        }
+
+        ul > li {
+            color: @light-gray; // base menu color
+
+            &:hover, &:focus, &.focus, &.active {
+                color: @white; // base menu active
+
+                > a {
+                    &:hover, &:focus, &.focus, &.active {
+                        color: @white; // base menu hover
+                        background-color: @primary;
+                    }
+                }
+            }
+        }
+
+        ul > li > ul li {
+            color: @dark-gray; // submenu color
+
+            a.active, &.current-menu-item > a {
+                color: @link-color; // submenu current page
+            }
+
+            &:hover, &:focus, &.focus, &.active {
+                color: @link-color; // submenu active
+
+                > a {
+                    &:hover, &:focus, &.focus, &.active {
+                        color: @white; // submenu hover
+                        background-color: @primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Add This and ReCaptcha
+--------------------------------------------------------------*/
+.addthis {
+    text-align: center;
+    padding: 0;
+    margin: 10px auto;
+    border-top: solid @primary 2px;
+}
+
+.addthis img {
+    vertical-align: middle;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.addthis h1, .addthis h2, .addthis h3 {
+    border-bottom: none;
+}
+
+.g-recaptcha {
+    display: inline-block;
+    margin: 1rem auto 2rem auto;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+
+table {
+    .center();
+
+    td, td:last-child, td:first-child {
+        background-color: #ffffff;
+        padding: 3px 10px;
+        border: solid #999 1px;
+        text-align: center;
+    }
+
+    th, th:first-child, th:last-child, td.label, td.labeltop {
+        background-color: #ffffff;
+        padding: 3px 10px;
+        border: none;
+        font-weight: bold;
+    }
+
+    th, th:first-child, th:last-child, td.labeltop {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    td.label {
+        text-align: right;
+    }
+
+    td.vmiddle {
+        vertical-align: middle;
+    }
+}
+
+.duration td {
+    text-align: left;
+}
+
+.poem {
+    width: 85%;
+    counter-reset: stanza;
+
+    tr.stanza {
+        counter-increment: stanza;
+    }
+
+    td.stanza:before {
+        content: counter(stanza);
+    }
+}
+
+/*--------------------------------------------------------------
+# Media: Images, Scores, Audio, and Video
+--------------------------------------------------------------*/
+
+.pic {
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 90%;
+    max-width: 90%;
+
+    img {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+iframe {
+    margin: 0 auto 10px auto;
+}
+
+/* Verovio Scores and Audio Playback */
+
+.score {
+    margin: 0 auto 10px auto;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 90%;
+    max-width: 90%;
+    border: solid @secondary 2px;
+    clear: both;
+    padding: 0 0 10px 0;
+
+    img { // for scores that are images, not Verovio-rendered svg
+        background-color: #FFFFFF;
+        border: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        .center();
+        margin: 0;
+        padding: 1rem;
+        border: none;
+        font-size: 1.5rem;
+        color: @dark-gray;
+        background-color: @secondary;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .score-controls {
+        background-color: @secondary;
+        .center();
+
+        .page-nav, .playback-controls {
+            .center();
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            width: 90%;
+
+            .pgcount {
+                .center();
+                display: inline-block;
+                vertical-align: top;
+                box-sizing: border-box;
+                margin: 2rem 1rem;
+                font-size: 1.25rem;
+                line-height: 2rem;
+            }
+
+            button {
+                box-sizing: border-box;
+                color: @secondary;
+                background: @white;
+                border-color: transparent;
+                font-size: 2rem;
+                line-height: normal;
+                margin: 1rem;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                &:hover, &:focus {
+                    color: @primary;
+                }
+                /*.fa-play {
+                    padding-left: .5rem;
+                }*/
+            }
+
+            /*.play-button {
+                display: none;
+            }*/
+
+            audio {
+                height: 3.2rem;
+                width: 90%;
+                margin: 1rem auto;
+            }
+
+        }
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: @bp-larger-than-tablet), print {
+    .score .score-controls {
+        // if both .page-nav and .playback-controls are visible, .half-width class is added with js
+        .page-nav.half-width {
+            width: 60%;
+        }
+
+        .playback-controls.half-width {
+            width: 40%;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Pitch Class Colors
+--------------------------------------------------------------*/
+
+#c {
+    background-color: #f5989d;
+}
+
+#g {
+    background-color: #f9ad81;
+}
+
+#d {
+    background-color: #fdc689;
+}
+
+#a {
+    background-color: #fff799;
+}
+
+#e {
+    background-color: #c4df9b;
+}
+
+#b {
+    background-color: #82ca9c;
+}
+
+#fsharp, #gflat {
+    background-color: #7accc8;
+}
+
+#dflat, #csharp {
+    background-color: #6dcff6;
+}
+
+#aflat, #gsharp {
+    background-color: #7da7d9;
+}
+
+#eflat, #dsharp {
+    background-color: #8781bd;
+}
+
+#bflat, #asharp {
+    background-color: #bd8cbf;
+}
+
+#f {
+    background-color: #f49ac1;
+}
+
+/*--------------------------------------------------------------
+# Listen, Look, Video, Links, Upcoming
+--------------------------------------------------------------*/
+
+.listen, .look, .video, .website, .book, .mobile, .upcoming {
+    text-align: center;
+    background-color: @secondary;
+    background-position: 15px;
+    background-repeat: no-repeat;
+    color: #222;
+    padding: 5px 10px 5px 85px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.listen, .look, .video, .website, .book, .mobile {
+    clear: both;
+}
+
+.listen h1, .look h1, .video h1, .website h1, .book h1, .mobile h1 {
+    font-size: 150%;
+    margin-top: 20px;
+    border: none;
+}
+
+.listen {
+    background-image: url('@{base-url}/images/layout/listen.png');
+}
+
+.look {
+    background-image: url('@{base-url}/images/layout/look.png');
+}
+
+.video {
+    background-image: url('@{base-url}/images/layout/video.png');
+    padding: 15px 10px 10px 85px;
+}
+
+.website {
+    background-image: url('@{base-url}/images/layout/website.png');
+}
+
+.book {
+    background-image: url('@{base-url}/images/layout/book.png');
+}
+
+.mobile {
+    background-image: url('@{base-url}/images/layout/mobile.png');
+}
+
+.listen a, .look a, .upcoming a {
+    color: #000;
+}
+
+.listen p, .look p {
+    margin: 25px 5px;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.links a {
+}
+
+.links img {
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.upcoming:before {
+    content: "Coming Soon: ";
+}
+
+/*--------------------------------------------------------------
+# Page-specific styles
+--------------------------------------------------------------*/
+
+/* Extra styles for contact.html */
+#contact_form_parent {
+    text-align: left;
+}
+
+/* Extra styles for duration.html */
+#main_content div.equals {
+    text-align: center;
+}
+
+#main_content div.equals div {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Extra Styles for notation glossary */
+#main_content ul.definitions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#main_content ul.definitions ul {
+    list-style: none;
+    margin-left: 30px;
+}
+
+#main_content ul.definitions li {
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+    clear: both;
+}
+
+#main_content ul.definitions img {
+    display: block;
+    float: left;
+    margin: -10px 10px 5px 0;
+}
+
+/*--------------------------------------------------------------
+# Miscellaneous Classes for Reuse
+--------------------------------------------------------------*/
+
+.music-symbol {
+    .font-unicode();
+}
+
+/* Visibility */
+
+.hide_me {
+    display: none !important;
+}
+
+.show_me {
+    display: inherit;
+}
+
+.hide_when_narrow {
+    display: none;
+}
+
+.show_when_narrow {
+    display: block;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+
+    .hide_when_narrow {
+        display: block;
+    }
+
+    .show_when_narrow {
+        display: none;
+    }
+
+}
+
+.forprint {
+    display: none;
+}
+
+.noprint {
+}
+
+/* Highlighting */
+
+.highlight, td.highlight, .highlight td {
+    background-color: @secondary;
+}
+
+.highlight2, td.highlight2, .highlight2 td {
+    background-color: @tertiary;
+}
+
+.lowlight, td.lowlight {
+    background-color: @gray;
+}
+
+.lowlight2, td.lowlight2 {
+    background-color: @light-gray;
+}
+
+span.highlight, span.highlight2, span.lowlight, span.lowlight2 {
+    padding: 2px 5px;
+    margin: -2px 0;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.absmiddle {
+    vertical-align: middle;
+}
+
+.inlinebox, .inline {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    zoom: 1; /* for IE */
+    display: -moz-inline-box; /* for old Mozilla-based browsers */
+    display: inline-block;
+    *display: inline; /* for IE */
+}
+
+/* Typography */
+
+.center_text {
+    text-align: center;
+}
+
+.nobreak {
+    white-space: nowrap;
+}
+
+.quote {
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: #FFFFFF;
+    border: solid #f8e4bb 2px;
+    width: 600px;
+    clear: both;
+}
+
+/* Floating Boxes (Asides) and Subsections */
+
+.floatingbox {
+    padding: 10px 15px;
+    width: 11em;
+    background: #f8e4bb;
+    font-size: 85%;
+    color: #000;
+}
+
+.floatingbox p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.subsect {
+    border: solid #CCC 1px;
+    margin: 5px 10px 10px 10px;
+    padding: 15px 20px;
+    color: #000;
+    vertical-align: top;
+    .shadow();
+}
+
+.subsect h1 {
+    font-size: 140%;
+}
+
+.subsect h2, .subsect h3, .subsect h4, .subsect h5, .subsect h6 {
+    font-size: 130%;
+}
+
+.fancy_font {
+    .font-display();
+    font-size: 150%;
+}
+
+/* Tables of Contents */
+
+#toc {
+    display: none;
+}
+
+@media (min-width: @bp-larger-than-phablet), print {
+
+    #toc {
+        display: block;
+    }
+}
+
+/* Media */
+
+img {
+    max-width: 95%;
+}
+
+.photo {
+    text-align: center;
+    font-size: 90%;
+    padding: 5px;
+}
+
+.video iframe {
+    display: none;
+}
+
+.c_narrow {
+    display: block;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+
+    .video iframe {
+        display: block;
+    }
+
+    .c_narrow {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------------------
+# Print Styles
+--------------------------------------------------------------*/
+
+@media print {
+
+    /* Print-specific classes */
+    .forprint {
+        display: block;
+    }
+
+    .noprint {
+        display: none;
+    }
+
+    @page {
+        margin: 0.5cm 0.25cm;
+    }
+
+    /* Elements */
+    * {
+        color: #000;
+        background-color: #FFF;
+        background-image: none;
+        line-height: 1.5;
+        border-color: #333;
+    }
+
+    body {
+        font: 10pt Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #000;
+        background-color: #FFF;
+        background-image: none;
+        line-height: 1.5;
+    }
+
+    img, table {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: auto;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    #logo {
+        width: 300px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .stripe {
+        color: #333;
+        background-color: #FFF;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .score-controls, audio, video, object, embed {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #marquee, #marquee_placeholder {
+        display: none;
+    }
+
+    #attr {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    /* Links for Print */
+    a {
+        color: #333;
+        text-decoration: underline;
+    }
+
+    #main_content {
+        p a:after, blockquote a:after, .links a:after, ul a:after {
+            content: " [" attr(href) "] ";
+            font-weight: normal;
+            font-size: 80%;
+            word-wrap: break-word;
+        }
+
+        a[href^="#"]:after, #main_content a.emphasis:after, #main_content a.img_link:after, h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after, .score a:after {
+            content: "";
+        }
+    }
+}
