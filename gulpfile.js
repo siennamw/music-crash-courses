@@ -4,9 +4,9 @@
 
 var gulp = require('gulp');
 
-//////////////////////
-/* Nunjucks Scripts */
-//////////////////////
+/////////////////////
+/* Nunjucks Script */
+/////////////////////
 var nunjucksRender = require('gulp-nunjucks-render');
 gulp.task('nunjucks', function() {
     // Gets .html and .nunjucks files in pages
