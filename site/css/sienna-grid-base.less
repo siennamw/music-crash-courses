@@ -1,1 +1,1235 @@
-/Users/Sienna/Documents/Web Design/!sienna-grid-base/sienna-grid-base.less
+/*
+* Sienna's Grid and Base Styles
+*
+* Based on Skeleton v2.0.4 (www.getskeleton.com), Copyright 2014, Dave Gamache
+* Skeleton is distributed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+* Less Version of Skeleton v2.0.4 by Seth Coelen (https://github.com/whatsnewsaes)
+*
+* Copyright (C) Sienna M. Wood 2016
+* 8 March 2016
+*/
+/* Table of contents
+-------------------------------------
+- Variables and Mixins
+- Functions
+- Grid
+- Base Styles
+- Typography
+- Links
+- Navigation
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utility Classes
+- Clearing
+- Responsive and Media Queries
+*/
+// Variables and Mixins
+//-------------------------------------
+// Normalize
+@import url('normalize.css');
+
+// Breakpoints
+@bp-larger-than-mobile: 400px;
+@bp-larger-than-phablet: 650px; //originally 550px
+@bp-larger-than-tablet: 750px;
+@bp-larger-than-desktop: 1000px;
+@bp-larger-than-desktophd: 1200px;
+
+// Colors
+@primary: #32b975;
+@secondary: lighten(@dark-gray, 13.5%);
+@link-color: darken(@primary, 10%);
+@font-color: @dark-gray;
+@border-color: #bbb;
+@white: #FFF;
+@light-gray: #e1e1e1;
+@gray: #666;
+@dark-gray: #333;
+@black: #000;
+
+// Typography
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700italic,700&subset=latin,latin-ext");
+@font-sans: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-mono: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+// Grid Variables
+@container-width: 1080px;
+@container-width-larger-than-mobile: 90%;
+@container-width-larger-than-phablet: 85%;
+@total-columns: 12;
+@column-width: 100 / @total-columns; // calculates individual column width based off of # of columns
+@column-margin: 4%; // space between columns
+
+// Misc
+@global-radius: 4px;
+
+// Mixins
+.code-tag-styling {
+    font-family: @font-mono;
+    padding: .2rem .5rem;
+    margin-right: .2rem;
+    margin-left: .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: lighten(@light-gray, 6.4%);
+    border: 1px solid @light-gray;
+    border-radius: @global-radius;
+}
+
+.shadow () {
+    border: solid 1px @light-gray;
+    -webkit-box-shadow: 0 0 30px -5px rgb(red(@black), green(@black), blue(@black), .7);
+    -moz-box-shadow: 0 0 30px -5px rgb(red(@black), green(@black), blue(@black), .7);
+    box-shadow: 0 0 30px -5px rgb(red(@black), green(@black), blue(@black), .7);
+}
+
+.dimension() {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        -moz-border-radius: 100px / 10px;
+        border-radius: 100px / 10px;
+    }
+
+    &:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: skew(8deg) rotate(3deg);
+        -moz-transform: skew(8deg) rotate(3deg);
+        -ms-transform: skew(8deg) rotate(3deg);
+        -o-transform: skew(8deg) rotate(3deg);
+        transform: skew(8deg) rotate(3deg);
+    }
+}
+
+// Functions
+//-------------------------------------
+.grid-column-width(@n) {
+    width: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns);
+}
+
+.grid-offset-length(@n) {
+    margin-left: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns) + @column-margin;
+}
+
+// Grid
+//-------------------------------------
+.container {
+    position: relative;
+    width: 100%;
+    max-width: @container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: @bp-larger-than-mobile) {
+    .container {
+        width: @container-width-larger-than-mobile;
+        padding: 0;
+    }
+}
+
+/* For devices larger than 550px */
+@media (min-width: @bp-larger-than-phablet), print {
+    .container {
+        width: @container-width-larger-than-phablet;
+    }
+
+    .column,
+    .columns {
+        margin-left: @column-margin;
+    }
+
+    .column:first-child,
+    .columns:first-child {
+        margin-left: 0;
+    }
+
+    .one.column,
+    .one.columns {
+        .grid-column-width(1);
+    }
+
+    .two.columns {
+        .grid-column-width(2);
+    }
+
+    .three.columns {
+        .grid-column-width(3);
+    }
+
+    .four.columns {
+        .grid-column-width(4);
+    }
+
+    .five.columns {
+        .grid-column-width(5);
+    }
+
+    .six.columns {
+        .grid-column-width(6);
+    }
+
+    .seven.columns {
+        .grid-column-width(7);
+    }
+
+    .eight.columns {
+        .grid-column-width(8);
+    }
+
+    .nine.columns {
+        .grid-column-width(9);
+    }
+
+    .ten.columns {
+        .grid-column-width(10);
+    }
+
+    .eleven.columns {
+        .grid-column-width(11);
+    }
+
+    .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .one-third.column {
+        .grid-column-width(4);
+    }
+
+    .two-thirds.column {
+        .grid-column-width(8);
+    }
+
+    .one-half.column {
+        .grid-column-width(6);
+    }
+
+    /* Offsets */
+    .offset-by-one.column,
+    .offset-by-one.columns {
+        .grid-offset-length(1);
+    }
+
+    .offset-by-two.column,
+    .offset-by-two.columns {
+        .grid-offset-length(2);
+    }
+
+    .offset-by-three.column,
+    .offset-by-three.columns {
+        .grid-offset-length(3);
+    }
+
+    .offset-by-four.column,
+    .offset-by-four.columns {
+        .grid-offset-length(4);
+    }
+
+    .offset-by-five.column,
+    .offset-by-five.columns {
+        .grid-offset-length(5);
+    }
+
+    .offset-by-six.column,
+    .offset-by-six.columns {
+        .grid-offset-length(6);
+    }
+
+    .offset-by-seven.column,
+    .offset-by-seven.columns {
+        .grid-offset-length(7);
+    }
+
+    .offset-by-eight.column,
+    .offset-by-eight.columns {
+        .grid-offset-length(8);
+    }
+
+    .offset-by-nine.column,
+    .offset-by-nine.columns {
+        .grid-offset-length(9);
+    }
+
+    .offset-by-ten.column,
+    .offset-by-ten.columns {
+        .grid-offset-length(10);
+    }
+
+    .offset-by-eleven.column,
+    .offset-by-eleven.columns {
+        .grid-offset-length(11);
+    }
+
+    .offset-by-one-third.column,
+    .offset-by-one-third.columns {
+        .grid-offset-length(4);
+    }
+
+    .offset-by-two-thirds.column,
+    .offset-by-two-thirds.columns {
+        .grid-offset-length(8);
+    }
+
+    .offset-by-one-half.column,
+    .offset-by-one-half.column {
+        .grid-offset-length(6);
+    }
+
+}
+
+// Base Styles
+//-------------------------------------
+/* NOTE: html is set to 62.5% so that all the REM measurements throughout Skeleton are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.5em; /* currently ems because chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: @font-sans;
+    color: @font-color;
+}
+
+// Typography
+//-------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    clear: both;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.0rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2.0rem;
+}
+
+h5 {
+    font-size: 1.7rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+    h1 {
+        font-size: 4.2rem;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 3.0rem;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+    }
+
+    h5 {
+        font-size: 2.0rem;
+    }
+
+    h6 {
+        font-size: 1.7rem;
+    }
+}
+
+p {
+    margin-top: 0;
+}
+
+b, strong, dt {
+    font-weight: bold;
+}
+
+i, em, cite {
+    font-style: italic;
+}
+
+dd {
+    margin-left: 2rem;
+}
+
+q, blockquote {
+    display: inline-block;
+    margin: 0 .5rem;
+    padding: 0.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+
+    &:before, &:after {
+        display: block;
+        color: @light-gray;
+        font-size: 4rem;
+        margin: 1rem 0.25rem;
+        vertical-align: -1.5rem;
+        line-height: 1rem;
+    }
+    &:before {
+        margin-bottom: -2rem;
+        padding: 2rem 0 2.5rem 0;
+        border-top: solid 1px @light-gray;
+        text-align: left;
+        content: open-quote;
+    }
+
+    &:after {
+        margin-top: -2rem;
+        padding: 4.5rem 0 .5rem 0;
+        border-bottom: solid 1px @light-gray;
+        text-align: right;
+        content: close-quote;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    cite {
+        padding-top: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+}
+
+big {
+    font-size: 120%;
+}
+
+small {
+    font-size: 85%
+}
+
+// Links
+//-------------------------------------
+
+a {
+    color: @link-color;
+    &:hover {
+        color: darken(@link-color, 10%);
+    }
+    text-decoration: none;
+}
+
+// Navigation
+//-------------------------------------
+
+.nav-toggle, .menu-toggle {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+    .nav-toggle, .menu-toggle {
+        display: none;
+    }
+}
+
+nav ul {
+    display: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: left;
+    color: @dark-gray;
+    z-index: 99;
+
+    a, ul {
+        box-sizing: border-box;
+        display: block;
+        position: static;
+    }
+
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: inherit;
+        margin: 0;
+        padding: 1.5rem 3.5rem 1.5rem 3.5rem;
+        text-decoration: none;
+        letter-spacing: .1rem;
+        color: inherit;
+
+        &.active {
+            color: @primary; // current page for base menu
+        }
+    }
+
+    li {
+
+        /* style submenus */
+        > ul {
+            width: 90%;
+            margin: 0 0 0 10%;
+            padding: 0;
+
+            > li {
+                padding: 0;
+                margin: 0;
+
+                > a {
+                    margin: 0;
+                }
+            }
+        }
+
+        &:hover, &:focus, &.focus, &.active {
+            /* will be colored also when its submenu is :hover, :focus, or .active */
+            color: @link-color;
+
+            > a {
+                &:hover, &:focus, &.focus, &.active {
+                    color: @white;
+                    background-color: @primary;
+                }
+            }
+        }
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+
+    nav ul {
+        display: block;
+        text-align: center;
+        color: @dark-gray;
+
+        /* colors */
+        > li {
+            color: @dark-gray; // base menu color
+
+            &:hover, &:focus, &.focus, &.active {
+                color: @primary; // base menu active
+
+                > a {
+                    &:hover, &:focus, &.focus, &.active {
+                        color: @primary; // base menu hover
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        > li > ul li {
+            color: @dark-gray; // submenu color
+
+            &:hover, &:focus, &.focus, &.active {
+                color: @primary; // submenu active
+
+                > a {
+                    &:hover, &:focus, &.focus, &.active {
+                        color: @white; // submenu hover
+                        background-color: @primary;
+                    }
+                }
+            }
+        }
+
+        > li {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;
+
+            &:hover, &:focus, &.focus, &.active {
+                /* display first submenu */
+                > ul {
+                    position: absolute;
+                    left: -50%;
+                }
+            }
+
+            > ul > li {
+                &:hover, &:focus, &.focus, &.active {
+                    /* display second submenu */
+                    > ul {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                    }
+                    /* display second submenu.leftsubmenu */
+                    > ul.leftsubmenu {
+                        left: inherit;
+                        right: 100%;
+                    }
+                }
+
+                > ul > li {
+                    &:hover, &:focus, &.focus, &.active {
+                        /* display third submenu (left) */
+                        > ul {
+                            left: inherit;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+
+            /* style first submenu */
+            > ul {
+                position: absolute;
+                left: -9999rem;
+                width: 200%;
+                padding: 0;
+                margin: 0;
+                background: @white;
+                border: 1px solid @light-gray;
+                border-radius: @global-radius;
+                z-index: 99;
+                .shadow();
+
+                > li {
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+
+                    > a {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        border-bottom: 1px solid @light-gray;
+                        text-align: center;
+                    }
+
+                    &:last-child {
+                        > a {
+                            border-radius: 0 0 4px 4px;
+                            border-bottom-width: 0;
+                        }
+                    }
+
+                    &:first-child {
+                        > a {
+                            border-radius: 4px 4px 0 0;
+                        }
+
+                        /* first submenu triangle pointer */
+                        > a:before, > a:after {
+                            bottom: 100%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+                        > a:before {
+                            border-color: rgba(238, 238, 238, 0);
+                            border-bottom-color: @light-gray;
+                            border-width: 11px;
+                            margin-left: -11px;
+
+                        }
+                        > a:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-bottom-color: @white;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        > a:hover:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-bottom-color: @primary;
+                        }
+                    }
+                    /* style second submenu */
+                    > ul {
+                        position: absolute;
+                        top: 0;
+                        left: -9999rem;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        background: @white;
+                        border: 1px solid @light-gray;
+                        border-radius: @global-radius;
+                        z-index: 999;
+                        .shadow();
+
+                        > li {
+                            padding: 0;
+                            margin: 0;
+                            display: block;
+
+                            > a {
+                                position: relative;
+                                color: inherit;
+                                display: block;
+                                margin: 0;
+                                border-bottom: 1px solid @light-gray;
+                                text-align: center;
+                            }
+
+                            &:last-child {
+                                a {
+                                    border-radius: 0 0 4px 4px;
+                                    border-bottom-width: 0;
+                                }
+                            }
+
+                            &:first-child {
+                                > a {
+                                    border-radius: 4px 4px 0 0;
+                                }
+
+                                /* second submenu triangle pointer */
+                                > a:before, > a:after {
+                                    bottom: 50%;
+                                    border: solid transparent;
+                                    content: " ";
+                                    height: 0;
+                                    width: 0;
+                                    position: absolute;
+                                    pointer-events: none;
+                                }
+
+                                > a:before {
+                                    left: -11px;
+                                    border-color: rgba(238, 238, 238, 0);
+                                    border-right-color: @light-gray;
+                                    border-width: 11px;
+                                    margin-bottom: -11px;
+                                }
+
+                                > a:after {
+                                    left: -10px;
+                                    border-color: rgba(255, 255, 255, 0);
+                                    border-right-color: @white;
+                                    border-width: 10px;
+                                    margin-bottom: -10px;
+                                }
+
+                                > a:hover:after {
+                                    border-color: rgba(255, 255, 255, 0);
+                                    border-right-color: @primary;
+                                }
+                            }
+                        }
+                    }
+
+                    /* style third submenu (opens to left),
+                     * the .leftsubmenu class on a second-level submenu will also make it open to the left,
+                     * alternating left and right allows for many nested menus  */
+                    > ul > li > ul, ul.leftsubmenu {
+                        left: -9999rem;
+                        right: 100%;
+
+                        > li:first-child {
+                            /* third submenu (and .leftsubmenu) triangle pointer */
+                            > a:before {
+                                left: auto;
+                                right: -22px;
+                                border-color: rgba(238, 238, 238, 0);
+                                border-left-color: @light-gray;
+                            }
+
+                            > a:after {
+                                left: auto;
+                                right: -20px;
+                                border-color: rgba(255, 255, 255, 0);
+                                border-left-color: @white;
+                            }
+
+                            > a:hover:after {
+                                border-color: rgba(255, 255, 255, 0);
+                                border-left-color: @primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// Buttons
+//-------------------------------------
+
+.button,
+button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: @secondary;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: @global-radius;
+    border: 1px solid @border-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+input {
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"] {
+        display: inline-block;
+        height: 38px;
+        padding: 0 30px;
+        color: @secondary;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: @global-radius;
+        border: 1px solid @border-color;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+}
+
+.button:hover,
+button:hover {
+    color: @dark-gray;
+    border-color: lighten(@dark-gray, 33.3%);
+    outline: 0;
+}
+
+input {
+    &[type="submit"]:hover,
+    &[type="reset"]:hover,
+    &[type="button"]:hover {
+        color: @dark-gray;
+        border-color: lighten(@dark-gray, 33.3%);
+        outline: 0;
+    }
+}
+
+.button:focus,
+button:focus {
+    color: @dark-gray;
+    border-color: lighten(@dark-gray, 33.3%);
+    outline: 0;
+}
+
+input {
+    &[type="submit"]:focus,
+    &[type="reset"]:focus,
+    &[type="button"]:focus {
+        color: @dark-gray;
+        border-color: lighten(@dark-gray, 33.3%);
+        outline: 0;
+    }
+}
+
+.button.button-primary,
+button.button-primary {
+    color: #fff;
+    background-color: @primary;
+    border-color: darken(@primary, 10%);
+}
+
+input {
+    &[type="submit"].button-primary,
+    &[type="reset"].button-primary,
+    &[type="button"].button-primary {
+        color: #fff;
+        background-color: @primary;
+        border-color: darken(@primary, 10%);
+    }
+}
+
+.button.button-primary:hover,
+button.button-primary:hover {
+    color: #fff;
+    background-color: @link-color;
+    border-color: darken(@link-color, 10%);
+}
+
+input {
+    &[type="submit"].button-primary:hover,
+    &[type="reset"].button-primary:hover,
+    &[type="button"].button-primary:hover {
+        color: #fff;
+        background-color: @link-color;
+        border-color: darken(@link-color, 10%);
+    }
+}
+
+.button.button-primary:focus,
+button.button-primary:focus {
+    color: #fff;
+    background-color: @link-color;
+    border-color: darken(@link-color, 10%);
+}
+
+input {
+    &[type="submit"].button-primary:focus,
+    &[type="reset"].button-primary:focus,
+    &[type="button"].button-primary:focus {
+        color: #fff;
+        background-color: @link-color;
+        border-color: darken(@link-color, 10%);
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten(@border-color, 8.8%);
+        border-radius: @global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// Forms
+//-------------------------------------
+
+textarea,
+select {
+    height: 38px;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #fff;
+    border: 1px solid lighten(@border-color, 8.8%);
+    border-radius: @global-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    &:focus {
+        border: 1px solid @primary;
+        outline: 0;
+    }
+}
+
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input {
+    max-width: 100%;
+
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:focus {
+            border: 1px solid @primary;
+            outline: 0;
+        }
+    }
+}
+
+label,
+legend {
+    max-width: 100%;
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+fieldset {
+    max-width: 100%;
+    padding: 0;
+    border-width: 0;
+}
+
+input {
+    &[type="checkbox"],
+    &[type="radio"] {
+        display: inline;
+    }
+}
+
+label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+// Lists
+//-------------------------------------
+
+ul {
+    list-style: disc inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    ul, ol {
+        margin: 1.5rem 0 1.5rem 3rem;
+    }
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+// Code
+//-------------------------------------
+
+code {
+    .code-tag-styling();
+}
+
+pre > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+}
+
+// Tables
+//-------------------------------------
+
+table {
+    table-layout: fixed;
+    max-width: 100%;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid @light-gray;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+// Spacing
+//-------------------------------------
+
+button,
+.button {
+    margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+    margin-bottom: 2.5rem;
+}
+
+// Utility Classes
+//-------------------------------------
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.show {
+    display: block !important;
+}
+
+/* Floats */
+
+.fltrt, .fltlft, .u-pull-right, .u-pull-left {
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+    .fltrt, .u-pull-right {
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .fltlft, .u-pull-left {
+        float: left;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+}
+
+/* Float Clearing */
+.clearfloat, .u-cf {
+    content: "";
+    clear: both;
+}
+
+.clearright, .u-cfr {
+    clear: right;
+}
+
+.clearleft, .u-cfl {
+    clear: left;
+}
+
+div.clearfloat, div.u-cf, div.clearright, div.u-cfr, div.clearleft, div.cfl {
+    height: 0;
+    font-size: 1px;
+    line-height: 0;
+}
+
+
+// Misc
+//-------------------------------------
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid @light-gray;
+}
+
+// Grid Clearing
+//-------------------------------------
+
+/* Self Clearing Goodness */
+
+.container:after,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// Responsive and Media Queries
+//-------------------------------------
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Larger than mobile */
+@media (min-width: @bp-larger-than-mobile) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: @bp-larger-than-phablet), print {
+}
+
+/* Larger than tablet */
+@media (min-width: @bp-larger-than-tablet) {
+}
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: @bp-larger-than-desktophd) {
+}
