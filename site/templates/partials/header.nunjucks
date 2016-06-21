@@ -1,7 +1,7 @@
 <header class="row">
-    <div id="logo"><a href="/index.html" id="logo_link"><img class="logo-narrow" src="/site/images/layout/logo.svg"
+    <div id="logo"><a href="/index.html" id="logo_link"><img class="logo-narrow" src="/images/layout/logo.svg"
                                                                      alt="Music Crash Courses" border="0"/><img
-        class="logo-wide" class="center" src="/site/images/layout/logo_horiz.svg" alt="Music Crash Courses" border="0"/></a>
+        class="logo-wide" class="center" src="/images/layout/logo_horiz.svg" alt="Music Crash Courses" border="0"/></a>
     </div>
     <nav id="main-nav">
         <button class="nav-toggle" aria-expanded="false" onclick="toggleshow('#nav-menu');">Show/Hide Menu</button>

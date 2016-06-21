@@ -1,20 +1,20 @@
 <footer class="row">
     <div class="three columns">
-        <h1><a href="/site/content/resources/glossary.html">Music Notation Glossary</a></h1>
-        <p>This <a href="/site/content/resources/glossary.html">visual glossary</a> is a great resource for learning to read music.</p>
+        <h1><a href="/resources/glossary.html">Music Notation Glossary</a></h1>
+        <p>This <a href="/resources/glossary.html">visual glossary</a> is a great resource for learning to read music.</p>
     </div>
     <div class="six columns">
         <h1><a href="http://www.themeandvariations.org/" target="_blank">Companion Website</a></h1>
         <p><a href="/">Music Crash Courses</a> is the new home of the music theory pages from <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations: New Perspectives in Music History</a>. Visit <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations</a> to explore the history of western music!</p>
     </div>
     <div class="three columns">
-        <h1><a href="/site/content/contact.html">Contact</a></h1>
-        <p>If you're enjoying this site, if you find an error, or if you want more, <a href="/site/content/contact.html">let us know</a>!</p>
+        <h1><a href="/contact.html">Contact</a></h1>
+        <p>If you're enjoying this site, if you find an error, or if you want more, <a href="/contact.html">let us know</a>!</p>
     </div>
     <div class="twelve columns center"> <!-- AddThis BEGIN -->
         <div class="addthis noprint">
             <h3 class="inlinebox">Share :</h3>
-            <a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://www.musiccrashcourses.com" title="Share on Facebook" target="_blank"><img src="/site/images/icons/facebook.png" width="40" height="40" alt="Share on Facebook" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://www.musiccrashcourses.com" title="Share on Twitter" target="_blank"><img src="/site/images/icons/twitter.png" width="40" height="40" alt="Share on Twitter" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://www.musiccrashcourses.com" title="Share on Email" target="_blank"><img src="/site/images/icons/mail.png" width="40" height="40" alt="Share on Email" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/offer?url=http://www.musiccrashcourses.com" title="Share this Website" target="_blank"><img src="/site/images/icons/more.png" width="40" height="40" alt="Share this Website" border="0" /></a> </div>
+            <a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://www.musiccrashcourses.com" title="Share on Facebook" target="_blank"><img src="/images/icons/facebook.png" width="40" height="40" alt="Share on Facebook" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://www.musiccrashcourses.com" title="Share on Twitter" target="_blank"><img src="/images/icons/twitter.png" width="40" height="40" alt="Share on Twitter" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://www.musiccrashcourses.com" title="Share on Email" target="_blank"><img src="/images/icons/mail.png" width="40" height="40" alt="Share on Email" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/offer?url=http://www.musiccrashcourses.com" title="Share this Website" target="_blank"><img src="/images/icons/more.png" width="40" height="40" alt="Share this Website" border="0" /></a> </div>
         <!-- AddThis END -->
     </div>
 </footer>
