@@ -1,33 +1,35 @@
 <footer class="row">
     <div class="three columns">
         <h1><a href="/resources/glossary.html">Music Notation Glossary</a></h1>
-        <p>This <a href="/resources/glossary.html">visual glossary</a> is a great resource for learning to read music.</p>
+        <p>This <a href="/resources/glossary.html">visual glossary</a> is a great resource for learning to read music.
+        </p>
     </div>
     <div class="six columns">
         <h1><a href="http://www.themeandvariations.org/" target="_blank">Companion Website</a></h1>
-        <p><a href="/">Music Crash Courses</a> is the new home of the music theory pages from <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations: New Perspectives in Music History</a>. Visit <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations</a> to explore the history of western music!</p>
+        <p><a href="/">Music Crash Courses</a> is the new home of the music theory pages from <a
+            href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations: New Perspectives in Music
+            History</a>. Visit <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations</a>
+            to explore the history of western music!</p>
     </div>
     <div class="three columns">
         <h1><a href="/contact.html">Contact</a></h1>
-        <p>If you're enjoying this site, if you find an error, or if you want more, <a href="/contact.html">let us know</a>!</p>
-    </div>
-    <div class="twelve columns center"> <!-- AddThis BEGIN -->
-        <div class="addthis noprint">
-            <h3 class="inlinebox">Share :</h3>
-            <a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://www.musiccrashcourses.com" title="Share on Facebook" target="_blank"><img src="/images/icons/facebook.png" width="40" height="40" alt="Share on Facebook" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://www.musiccrashcourses.com" title="Share on Twitter" target="_blank"><img src="/images/icons/twitter.png" width="40" height="40" alt="Share on Twitter" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://www.musiccrashcourses.com" title="Share on Email" target="_blank"><img src="/images/icons/mail.png" width="40" height="40" alt="Share on Email" border="0" /></a> <a href="http://api.addthis.com/oexchange/0.8/offer?url=http://www.musiccrashcourses.com" title="Share this Website" target="_blank"><img src="/images/icons/more.png" width="40" height="40" alt="Share this Website" border="0" /></a> </div>
-        <!-- AddThis END -->
+        <p>If you're enjoying this site, if you find an error, or if you want more, <a href="/contact.html">let us
+            know</a>!</p>
     </div>
 </footer>
 <div id="attr" class="row">
     <div id="marquee_placeholder">
         <p><i>"Music is nothing else but wild sounds civilized into time and tune."</i> - Thomas Fuller</p>
     </div>
-    <div id="marquee" class="cycle-slideshow hide_me" data-cycle-fx="fade" data-cycle-timeout="10000" data-cycle-center-horz=true data-cycle-random=true data-cycle-slides="> p">
-        <p><i>"After silence, that which comes nearest to expressing the inexpressible is music."</i> - Aldous Huxley</p>
+    <div id="marquee" class="cycle-slideshow hide_me" data-cycle-fx="fade" data-cycle-timeout="10000"
+         data-cycle-center-horz=true data-cycle-random=true data-cycle-slides="> p">
+        <p><i>"After silence, that which comes nearest to expressing the inexpressible is music."</i> - Aldous Huxley
+        </p>
         <p><i>"Music in the soul can be heard by the universe."</i> - Lao Tzu</p>
         <p><i>"Music is a higher revelation than all wisdom and philosophy."</i> - Ludwig van Beethoven</p>
         <p><i>"Music is the movement of sound to reach the soul for the education of its virtue."</i> - Plato</p>
-        <p><i>"Music expresses that which cannot be said and on which it is impossible to be silent."</i> - Victor Hugo</p>
+        <p><i>"Music expresses that which cannot be said and on which it is impossible to be silent."</i> - Victor Hugo
+        </p>
         <p><i>"Music is nothing else but wild sounds civilized into time and tune."</i> - Thomas Fuller</p>
     </div>
     <p><a href="http://www.siennamwood.com/" target="_blank">Copyright &copy; Sienna M. Wood, 2015-2016</a></p>

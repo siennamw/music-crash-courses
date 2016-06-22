@@ -1,23 +1,19 @@
-<!--[if lt IE 7 ]>
-<html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>
-<html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en"><!-- InstanceBegin template="/templates/mcc.dwt" codeOutsideHTMLIsLocked="false" -->
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta name="description"
-          content="Self-paced lessons for beginners and musicians of all kinds - learn to read music, improve your music theory skills, understand musical instrument families, and more..."/>
+          content="Self-paced lessons for beginners and musicians of all kinds - learn to read music, improve your
+          music theory skills, understand musical instrument families, and more..."/>
     <meta name="keywords"
-          content="music, basics, learn, music theory, theory, scale, key, chord, western, reading music, how to read music, sienna, sienna's guide to music, sienna wood, sienna m. wood, guide to music, lesson, course, self-paced, reference, glossary"/>
-    <!-- InstanceBeginEditable name="doctitle" -->
+          content="music, basics, learn, music theory, theory, scale, key, chord, western, reading music, how to read
+          music, sienna, sienna's guide to music, sienna wood, sienna m. wood, guide to music, lesson, course,
+          self-paced, reference, glossary"/>
+
+    <!-- TODO: allow page title to change on individual pages -->
     <title>Music Crash Courses</title>
-    <!-- InstanceEndEditable -->
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,25 +45,25 @@
     <script src="/js/sienna-grid-base.js"></script>
     <script src="/js/mcc_scripts.js"></script>
 
+    <!-- TODO: allow page specific head material -->
     <!-- Page-Specific Head Material -->
 
 </head>
-
 <body>
-<div class="container">
+    <div class="container">
 
-    <!-- Header and Navigation -->
-    {% include "partials/header.nunjucks" %}
+        <!-- Header and Navigation -->
+        {% include "partials/header.nunjucks" %}
 
-    <!-- Content -->
-    <div id="main_content" class="row">
-        {% block content %}
-        {% endblock %}
-    </div><!-- end #main_content -->
+        <!-- Content -->
+        <div id="main_content" class="row">
+            {% block content %}
+            {% endblock %}
+        </div><!-- end #main_content -->
 
-    <!-- Footer -->
-    {% include "partials/footer.nunjucks" %}
+        <!-- Footer -->
+        {% include "partials/footer.nunjucks" %}
 
-</div><!-- end .container -->
+    </div><!-- end .container -->
 </body>
 </html>

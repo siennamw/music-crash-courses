@@ -1,13 +1,17 @@
 <header class="row">
-    <div id="logo"><a href="/index.html" id="logo_link"><img class="logo-narrow" src="/images/layout/logo.svg"
-                                                                     alt="Music Crash Courses" border="0"/><img
-        class="logo-wide" class="center" src="/images/layout/logo_horiz.svg" alt="Music Crash Courses" border="0"/></a>
+    <div id="logo">
+        <a href="/index.html" id="logo_link">
+            <img class="logo-narrow" src="/images/layout/logo.svg" alt="Music Crash Courses" border="0"/>
+            <img class="logo-wide" class="center" src="/images/layout/logo_horiz.svg" alt="Music Crash Courses"
+                 border="0"/>
+        </a>
     </div>
     <nav id="main-nav">
         <button class="nav-toggle" aria-expanded="false" onclick="toggleshow('#nav-menu');">Show/Hide Menu</button>
         <ul id="nav-menu">
             <li><a href="/index.html" target="_self">Home</a></li>
-            <!--<li class="has-children"><a href="#">Courses</a>
+            <!--
+            <li class="has-children"><a href="#">Courses</a>
                 <ul id="courses">
                     <li class="has-children"><a href="#"><b>Putting Sounds into Writing</b> - Music Reading for Beginners</a>
                         <ul>
@@ -23,19 +27,19 @@
                         </ul>
                     </li>
                 </ul>
-            </li>-->
-            <!-- End Courses Item -->
-            <!-- TODO: Make a separate menu for lessons in order to avoid too many submenu levels -->
-            <li class="has-children"><a href="#">Lessons</a><!-- Begin Lessons Item -->
+            </li>
+            -->
+            <!-- TODO: Make a separate menu for lessons in order to avoid too many levels of submenus -->
+            <li class="has-children"><a href="#">Lessons</a>
                 <ul id="lessons">
-                    <li id="pitch" class="has-children"><a href="#"><b>Pitch</b> - The Ups and Downs</a><!-- Begin -->
+                    <li id="pitch" class="has-children"><a href="#"><b>Pitch</b> - The Ups and Downs</a>
                         <ul>
                             <li><a href="/lessons/pitch.html">Introduction to Pitch</a></li>
                             <li><a href="/lessons/notation_principles.html">A First Look at Sheet Music -
                                 Principles of Music Notation</a></li>
                             <li><a href="/lessons/notating_naming_pitches.html">Notating and Naming Pitches</a>
                             </li>
-                            <li class="has-children"><a href="#"><b>Intervals</b> - The Space Between</a><!-- Begin -->
+                            <li class="has-children"><a href="#"><b>Intervals</b> - The Space Between</a>
                                 <ul>
                                     <li><a href="/lessons/intervals.html">Introduction to Intervals</a></li>
                                     <li><a href="/lessons/intervals_maj_min.html">Intervals in Major and Minor
@@ -45,9 +49,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!-- End -->
                             <li class="has-children"><a href="#"><b>Scales</b> - Putting Pitches in Order</a>
-                                <!-- Begin -->
                                 <ul>
                                     <li><a href="/lessons/scales.html">Introduction to Scales</a></li>
                                     <li><a href="/lessons/scales_major.html">Major Scale</a></li>
@@ -60,16 +62,13 @@
                                         and Pentatonic Scales</a></li>
                                 </ul>
                             </li>
-                            <!-- End -->
-                            <li class="has-children"><a href="#"><b>Melody</b> - Musical Sentences</a><!-- Begin -->
+                            <li class="has-children"><a href="#"><b>Melody</b> - Musical Sentences</a>
                                 <ul>
                                     <li><a href="/lessons/melody.html">Melody</a></li>
                                     <li class="last"><a href="/lessons/texture.html">Texture</a></li>
                                 </ul>
                             </li>
-                            <!-- End -->
                             <li class="has-children"><a href="#"><b>Harmony</b> - Pitches Sounding Together</a>
-                                <!-- Begin -->
                                 <ul>
                                     <li><a href="/lessons/harmony.html">Introduction to Harmony</a></li>
                                     <li><a href="/lessons/chords.html">Chords</a></li>
@@ -80,9 +79,7 @@
                                         Progressions</a></li>
                                 </ul>
                             </li>
-                            <!-- End -->
                             <li class="has-children last"><a href="#"><b>Keys</b> - Defining the Playing Field</a>
-                                <!-- Begin -->
                                 <ul>
                                     <li><a href="/lessons/keys.html">Introduction to Keys</a></li>
                                     <li><a href="/lessons/key_relationships.html">Relationships Between Keys -
@@ -92,9 +89,9 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- End -->
+
                     <li id="time" class="has-children"><a href="#"><b>Beat, Meter, and Rhythm</b> - Music in Time</a>
-                        <!-- Begin -->
+
                         <ul>
                             <li><a href="/lessons/rhythm.html">Principles of Rhythm</a></li>
                             <li><a href="/lessons/rhythm_reading.html">Reading Rhythms - Coming Soon!</a></li>
@@ -105,11 +102,10 @@
                             <li><a href="/lessons/rhythm_notation.html">Rhythms in Notation</a></li>
                             <li><a href="/lessons/time_signatures.html">Time Signatures</a></li>
                             <li class="last"><a href="/lessons/syncopation.html">Syncopation</a></li>
-                            <!--<li class="last"><a href="/lessons/rhythm_reading.html">Reading Rhythms</a></li>-->
                         </ul>
                     </li>
-                    <!-- End -->
-                    <li id="form" class="has-children"><a href="#"><b>Form</b> - The Big Picture</a><!-- Begin -->
+
+                    <li id="form" class="has-children"><a href="#"><b>Form</b> - The Big Picture</a>
                         <ul>
                             <li><a href="/lessons/form_principles.html">Principles of Form</a></li>
                             <li><a href="/lessons/form_archetypes.html">Formal Archetypes</a></li>
@@ -117,8 +113,8 @@
                             <li class="last"><a href="/lessons/form_art.html">Form in Art Music</a></li>
                         </ul>
                     </li>
-                    <!-- End -->
-                    <li id="genre" class="has-children"><a href="#"><b>Genre</b> - Music in Context</a><!-- Begin -->
+
+                    <li id="genre" class="has-children"><a href="#"><b>Genre</b> - Music in Context</a>
                         <ul>
                             <li><a href="/lessons/genre.html">Genre - The Difference Between a Symphony and a
                                 Song</a></li>
@@ -126,17 +122,17 @@
                             <li class="last"><a href="/lessons/genre_vocal.html">Vocal Genres</a></li>
                         </ul>
                     </li>
-                    <!-- End -->
+
                     <li id="exp" class="has-children"><a href="#"><b>Expression and Dynamics</b> - The 'How' of Music
-                        Performance</a><!-- Begin -->
+                        Performance</a>
                         <ul>
                             <li><a href="/lessons/expression.html">Expression Markings</a></li>
                             <li class="last"><a href="/lessons/dynamics.html">Dynamics</a></li>
                         </ul>
                     </li>
-                    <!-- End -->
+
                     <li id="inst" class="has-children"><a href="#"><b>Instruments and Voices</b> - Performing Forces</a>
-                        <!-- Begin -->
+
                         <ul>
                             <li><a href="/lessons/timbre.html">Timbre</a></li>
                             <li><a href="/lessons/instrument_families.html">Instrument Families</a></li>
@@ -144,19 +140,18 @@
                             <li class="last"><a href="/lessons/ensembles.html">Ensembles - Coming soon!</a></li>
                         </ul>
                     </li>
-                    <!-- End -->
-                    <li id="advanced" class="has-children"><a href="#"><b>Advanced Music Theory</b></a><!-- Begin -->
+
+                    <li id="advanced" class="has-children"><a href="#"><b>Advanced Music Theory</b></a>
                         <ul>
                             <li><a href="/lessons/harmonic_series.html">Harmonic Series</a></li>
-                            <li class="last"><a href="lessons/tuning_systems.html">Tuning Systems - Coming soon!</a></li>
+                            <li class="last"><a href="lessons/tuning_systems.html">Tuning Systems - Coming soon!</a>
+                            </li>
                         </ul>
                     </li>
-                    <!-- End -->
+
                 </ul>
             </li>
-            <!-- End Lessons Item -->
             <li class="has-children"><a href="#">Resources</a>
-                <!-- Begin Resources Item -->
                 <ul id="resources">
                     <li><a href="/resources/glossary.html">Music Notation Glossary</a></li>
                     <li><a href="/resources/links.html">External Links</a></li>
@@ -164,7 +159,6 @@
                     <li class="last"><a href="http://www.themeandvariations.org/" target="_blank">Theme and Variations:
                         New Perspectives in Music History</a></li>
                 </ul>
-                <!-- End Resources Item -->
             </li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/resources/search.html" target="_self">Search</a></li>
