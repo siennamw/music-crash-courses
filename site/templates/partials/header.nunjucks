@@ -25,6 +25,7 @@
                 </ul>
             </li>-->
             <!-- End Courses Item -->
+            <!-- TODO: Make a separate menu for lessons in order to avoid too many submenu levels -->
             <li class="has-children"><a href="#">Lessons</a><!-- Begin Lessons Item -->
                 <ul id="lessons">
                     <li id="pitch" class="has-children"><a href="#"><b>Pitch</b> - The Ups and Downs</a><!-- Begin -->
