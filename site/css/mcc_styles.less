@@ -636,6 +636,69 @@ iframe {
 # Page-specific styles
 --------------------------------------------------------------*/
 
+/* Extra styles for search.html (Google Custom Search) */
+#google {
+    * {
+        text-align: left;
+    }
+
+    table, td, th, tr {
+        border: none;
+        table-layout: auto;
+    }
+
+    .cse table.gsc-search-box td.gsc-clear-button,
+    table.gsc-search-box td.gsc-clear-button {
+        display: none;
+    }
+    /**
+     * Table cell containing the search input.
+     * 12 pixels added to account for the horizontal padding on the input.
+     */
+    .cse table.gsc-search-box td.gsc-input,
+    table.gsc-search-box td.gsc-input {
+        padding-right: 12px;
+    }
+    .cse .gsc-search-box,
+    .gsc-search-box {
+        border-collapse: collapse;
+    }
+    /* Search input */
+    .cse input.gsc-input,
+    input.gsc-input {
+        font-family: inherit;
+        border: 1px solid #BBB;
+        padding: 3px 6px;
+        font-size: inherit;
+    }
+    /* Search button */
+    .cse input.gsc-search-button,
+    input.gsc-search-button {
+        display: inline-block;
+        height: 38px;
+        padding: 0 30px;
+        color: @secondary;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: @global-radius;
+        border: 1px solid @border-color;
+        cursor: pointer;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+
+    .gsc-above-wrapper-area, .gsc-tabsArea, .gcsc-branding {
+        display: none;
+    }
+}
+
 /* Extra styles for contact.html */
 #contact_form {
     label.error {
