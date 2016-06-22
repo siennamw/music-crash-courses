@@ -1,66 +1,72 @@
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en"><!-- InstanceBegin template="/templates/mcc.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 <head>
 
-<!-- Basic Page Needs -->
-<meta charset="utf-8">
-<meta name="description" content="Self-paced lessons for beginners and musicians of all kinds - learn to read music, improve your music theory skills, understand musical instrument families, and more..." />
-<meta name="keywords" content="music, basics, learn, music theory, theory, scale, key, chord, western, reading music, how to read music, sienna, sienna's guide to music, sienna wood, sienna m. wood, guide to music, lesson, course, self-paced, reference, glossary" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Music Crash Courses</title>
-<!-- InstanceEndEditable -->
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Self-paced lessons for beginners and musicians of all kinds - learn to read music, improve your music theory skills, understand musical instrument families, and more..."/>
+    <meta name="keywords"
+          content="music, basics, learn, music theory, theory, scale, key, chord, western, reading music, how to read music, sienna, sienna's guide to music, sienna wood, sienna m. wood, guide to music, lesson, course, self-paced, reference, glossary"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Music Crash Courses</title>
+    <!-- InstanceEndEditable -->
 
-<!-- Mobile Specific Metas -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- Favicons-->
-<link rel="shortcut icon" href="/images/layout/favicons/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="/images/layout/favicons/apple-touch-icon.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="/images/layout/favicons/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="/images/layout/favicons/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="/images/layout/favicons/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/images/layout/favicons/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="/images/layout/favicons/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/images/layout/favicons/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="/images/layout/favicons/apple-touch-icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/images/layout/favicons/apple-touch-icon-180x180.png" />
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="/images/layout/favicons/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/images/layout/favicons/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/layout/favicons/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/layout/favicons/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/layout/favicons/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/layout/favicons/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/layout/favicons/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/layout/favicons/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/layout/favicons/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/layout/favicons/apple-touch-icon-180x180.png"/>
 
-<!-- CSS -->
-<link rel="stylesheet" href="/css/mcc_styles.css">
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/mcc_styles.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<!-- JavaScript -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://malsup.github.io/jquery.cycle2.js"></script>
-<script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
-<script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
-<script src="/js/sienna-grid-base.js"></script>
-<script src="/js/mcc_scripts.js"></script>
+    <!-- JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
+    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+    <script src="/js/sienna-grid-base.js"></script>
+    <script src="/js/mcc_scripts.js"></script>
 
-<!-- Page-Specific Head Material -->
+    <!-- Page-Specific Head Material -->
 
 </head>
 
 <body>
 <div class="container">
 
-<!-- Header and Navigation -->
-{% include "partials/header.nunjucks" %}
+    <!-- Header and Navigation -->
+    {% include "partials/header.nunjucks" %}
 
-<!-- Content -->
-<div id="main_content" class="row">
-{% block content %}
-{% endblock %}
-</div><!-- end #main_content -->
+    <!-- Content -->
+    <div id="main_content" class="row">
+        {% block content %}
+        {% endblock %}
+    </div><!-- end #main_content -->
 
-<!-- Footer -->
-{% include "partials/footer.nunjucks" %}
+    <!-- Footer -->
+    {% include "partials/footer.nunjucks" %}
 
 </div><!-- end .container -->
 </body>
