@@ -96,6 +96,7 @@
                         <!-- Begin -->
                         <ul>
                             <li><a href="/lessons/rhythm.html">Principles of Rhythm</a></li>
+                            <li><a href="/lessons/rhythm_reading.html">Reading Rhythms - Coming Soon!</a></li>
                             <li><a href="/lessons/beat.html">Beat</a></li>
                             <li><a href="/lessons/meter.html">Grouping Beats - Meter</a></li>
                             <li><a href="/lessons/pitch_meter_interaction.html">Pitch Interactions with Beat and
@@ -146,7 +147,7 @@
                     <li id="advanced" class="has-children"><a href="#"><b>Advanced Music Theory</b></a><!-- Begin -->
                         <ul>
                             <li><a href="/lessons/harmonic_series.html">Harmonic Series</a></li>
-                            <li class="last"><a href="lessons/tuning_systems.html">Tuning Systems</a></li>
+                            <li class="last"><a href="lessons/tuning_systems.html">Tuning Systems - Coming soon!</a></li>
                         </ul>
                     </li>
                     <!-- End -->

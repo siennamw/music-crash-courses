@@ -331,16 +331,17 @@ nav {
 
 table {
     .center();
+    color: @black;
+    font-size: 1.4rem;
+    line-height: 1.5;
 
     td, td:last-child, td:first-child {
-        background-color: #ffffff;
         padding: 3px 10px;
         border: solid #999 1px;
         text-align: center;
     }
 
     th, th:first-child, th:last-child, td.label, td.labeltop {
-        background-color: #ffffff;
         padding: 3px 10px;
         border: none;
         font-weight: bold;
@@ -357,6 +358,10 @@ table {
 
     td.vmiddle {
         vertical-align: middle;
+    }
+
+    td.column-min-size {
+        min-width: 10rem;
     }
 }
 

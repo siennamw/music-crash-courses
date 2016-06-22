@@ -28,14 +28,13 @@
     beat. Thus, if the conductor were to beat exactly the same tempo (beats per minute) as he had for <img
         src="../images/notation/4_4.png" alt="4/4" height="30" class="absmiddle"/> time, the piece would
     essentially go twice as fast.</p>
-<div class="score">
-    <audio controls>
-        <source src="../scores/4_4_vs_2_2.mp3" type="audio/mp3">
-        Sorry, your browser does not support the audio element.
-    </audio>
-    <a href="../scores/4_4_vs_2_2.png" target="_blank"><img src="../scores/4_4_vs_2_2.png"
-                                                            alt="4/4 time signature compared to 2/2"
-                                                            width="600"/></a></div>
+<div id="simple"><h1>Simple Meter</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#simple', '../scores/4_4_vs_2_2.png', '../scores/4_4_vs_2_2.mp3');
+    });
+</script>
+
 <h3>Compound Meter</h3>
 <p>In compound meter, things get a bit more complicated. In a measure of <img src="../images/notation/6_8.png"
                                                                               alt="6/8" height="30"
@@ -60,11 +59,10 @@
     feel like triplets. This is the fundamental difference between simple and compound meter: <b>in simple meter
         the division of the beat is duple (two equal parts)</b>, whereas <b>in compound meter the division of
         the beat is triple (three equal parts).</b></p>
-<div class="score">
-    <audio controls>
-        <source src="../scores/compound_meter.mp3" type="audio/mp3">
-        Sorry, your browser does not support the audio element.
-    </audio>
-    <a href="../scores/compound_meter.png" target="_blank"><img src="../scores/compound_meter.png"
-                                                                alt="Compound Meter" width="600"/></a></div>
+<div id="compound"><h1>Compound Meter</h1></div>
+<script>
+    $(document).ready(function () {
+        scoreInsert('#compound', '../scores/compound_meter.png', '../scores/compound_meter.mp3');
+    });
+</script>
 {% endblock %}
