@@ -1,5 +1,7 @@
 /**
- * Created by Sienna on 6/21/16.
+ * Created by Sienna M. Wood for MusicCrashCourses.com
+ *
+ * 21 June 2016
  */
 
 var gulp = require('gulp');
@@ -7,6 +9,9 @@ var gulp = require('gulp');
 /////////////////////
 /* Nunjucks Script */
 /////////////////////
+
+// run '$ gulp nunjucks' in terminal to compile static pages from templates
+
 var nunjucksRender = require('gulp-nunjucks-render');
 gulp.task('nunjucks', function() {
     // Gets .html and .nunjucks files in pages
