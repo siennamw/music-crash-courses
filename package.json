@@ -8,5 +8,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-nunjucks-render": "^2.0.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3"
   }
 }
