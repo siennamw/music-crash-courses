@@ -1,0 +1,12 @@
+node_modules
+
+# Compiled CSS
+mcc_styles.css
+sienna-boilerplate.css
+
+# Compiled HTML and SHTML
+site/*.html
+site/*.shtml
+site/courses/*.html
+site/lessons/*.html
+site/resources/*.html
