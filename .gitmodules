@@ -1,0 +1,3 @@
+[submodule "sienna-boilerplate"]
+	path = site/sienna-boilerplate
+	url = https://github.com/siennamw/sienna-boilerplate.git
