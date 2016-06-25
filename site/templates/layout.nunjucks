@@ -42,7 +42,7 @@
     <script src="http://malsup.github.io/jquery.cycle2.js"></script>
     <script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
-    <script src="/js/sienna-grid-base.js"></script>
+    <script src="/js/sienna-boilerplate.js"></script>
     <script src="/js/mcc_scripts.js"></script>
 
     <!-- TODO: allow page specific head material -->
