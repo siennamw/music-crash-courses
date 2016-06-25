@@ -7,7 +7,10 @@
   "repository": "https://github.com/siennamw/music-crash-courses.git",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-nunjucks-render": "^2.0.0"
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-watch": "^4.3.8"
   },
   "dependencies": {
     "font-awesome": "^4.6.3"

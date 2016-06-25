@@ -1,12 +1,15 @@
 node_modules
 
-# Compiled CSS
-mcc_styles.css
-sienna-boilerplate.css
+# Compiled CSS in sources
+sources/css/mcc_styles.css
+sources/css/sienna-boilerplate.css
 
-# Compiled HTML and SHTML
-site/*.html
-site/*.shtml
-site/courses/*.html
-site/lessons/*.html
-site/resources/*.html
+# Collected and compiled files in build
+build/*.html
+build/*.shtml
+build/css
+build/fonts
+build/js
+build/courses
+build/lessons
+build/resources
