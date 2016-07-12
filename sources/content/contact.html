@@ -20,21 +20,32 @@
     </div>
     <label for="message">Message:</label>
     <textarea class="u-full-width" name="message" id="message" cols="40" rows="7" tabindex="3"></textarea>
-    <!-- TODO: implement reCaptcha -->
-    <!--
     <div class="center">
+        <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
         <div class="g-recaptcha center" data-sitekey="6LcimyITAAAAAPgD3FUusssav37fnCc8yO5uhYI7" tabindex="4"></div>
     </div>
-    -->
     <div class="center">
         <input class="center" type="submit" name="submit" id="submit"
                value="Click Here to Submit Your Message"
                tabindex="4"/>
     </div>
 </form>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>
-    $("#contact_form").validate();
+    $("#contact_form").validate({
+        ignore: [],
+        rules: {
+            "hiddenRecaptcha": {
+                required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+    });
 </script>
-<p>If the submission button does not seem to be working, please verify that you have filled in your name and
-    email address at the top of the form and try again. Thank you!</p>
 {% endblock %}
