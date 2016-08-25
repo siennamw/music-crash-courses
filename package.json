@@ -11,7 +11,7 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-less": "^3.1.0",
     "gulp-nunjucks-render": "^2.0.0",
-    "gulp-watch": "^4.3.8"
+    "gulp-rsync": "0.0.6"
   },
   "dependencies": {
     "font-awesome": "^4.6.3"

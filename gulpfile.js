@@ -7,15 +7,17 @@
 var gulp = require('gulp'),
     nunjucksRender = require('gulp-nunjucks-render'),
     less = require('gulp-less'),
-    watch = require('gulp-watch'),
     ext_replace = require('gulp-ext-replace'),
     del = require('del'),
-    path = require('path');
+    gpath = require('path'),
+    rsync = require('gulp-rsync');
 
 
 /* Build
  * -----------------------------------*/
 gulp.task('build', ['nunjucks', 'ext404', 'copyFonts', 'copyCSS', 'copyJS']);
+// also make this the default
+gulp.task('default', ['build']);
 
 /* Nunjucks
  * -----------------------------------*/
@@ -54,7 +56,7 @@ gulp.task('copyFonts', function () {
 gulp.task('less', function () {
     return gulp.src('./sources/css/*.+(less|css)')
         .pipe(less({
-            paths: [path.join(__dirname, 'less', 'includes')]
+            paths: [gpath.join(__dirname, 'less', 'includes')]
         }))
         .pipe(gulp.dest('./sources/css'));
 });
@@ -75,24 +77,13 @@ gulp.task('copyJS', function () {
         .pipe(gulp.dest('./build/js'));
 });
 
-/* Watchers (default)
+/* Deploy
  * -----------------------------------*/
-gulp.task('default', function () {
-
-    var lessWatch = gulp.watch('./sources/css/**/*.+(less|css)', ['less', 'copyCSS']);
-    var contentWatch = gulp.watch('./sources/content/**/*.+(html|shtml)', ['nunjucks', 'ext404']);
-    var nunjucksWatch = gulp.watch('./sources/templates/**/*.nunjucks');
-
-    lessWatch.on('change', function (event) {
-        console.log('Less event type: ' + event.type); // added, changed, or deleted
-        console.log('Less event path: ' + event.path); // The path of the modified file
-    });
-    contentWatch.on('change', function (event) {
-        console.log('Content event type: ' + event.type); // added, changed, or deleted
-        console.log('Content event path: ' + event.path); // The path of the modified file
-    });
-    nunjucksWatch.on('change', function (event) {
-        console.log('Nunjucks event type: ' + event.type); // added, changed, or deleted
-        console.log('Nunjucks event path: ' + event.path); // The path of the modified file
-    });
+gulp.task('deploy', ['build'], function () {
+    return gulp.src('build/**')
+        .pipe(rsync({
+            root: 'build/',
+            hostname: 'siennasg@74.220.215.85',
+            destination: 'public_html/musiccrashcourses'
+        }));
 });
