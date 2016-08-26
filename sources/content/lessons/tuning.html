@@ -1,0 +1,38 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>Tuning</h1>
+<p>In order to sound good while making music together, voices and instruments must match their pitches precisely with
+    the other voices and instruments in the <a href="ensembles.html">ensemble</a>. The process of matching pitches very
+    precisely is called <b>tuning</b>.</p>
+<p>For <a href="voices.html">voices</a>, all tuning is done with the body. Instruments, on the other hand, must be
+    carefully
+    manufactured to play in tune with particular <a href="tuning_systems.html">tuning systems</a>. Most instruments also
+    require additional tuning after they are built. <a href="instrument_families.html#keyboards">Keyboard instruments
+        like the
+        piano</a> are tuned by professional tuners using precise equipment. Players of <a
+    <a href="instrument_families.html#woodwinds-and-brass">woodwind, brass</a>, and <a
+        href="instrument_families.html#strings">string instruments</a> tune their instruments prior to each
+    performance by adjusting the tension of strings, the length of tubes,
+    or the position of mouthpieces. During performances these instrumentalists (and vocalists, too!) must
+    continue to hone and maintain correct tuning, sometimes with small changes in technique and sometimes by making
+    further adjustments to their instruments.</p>
+<h3>A Reference Point: A 440</h3>
+<div class="listen">
+<a onclick="togglePlay('440hz');">A4 = 440 Hz</a>
+<audio id="440hz">
+    <source src="/scores/tones/440hz.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+</div>
+<p>Before an <a href="ensembles.html">ensemble</a> performs the musicians must tune their instruments to a common pitch.
+    In modern tuning systems, the pitch <a href="octave_numbering.html">A4</a> (the A above <a
+        href="notating_naming_pitches.html">middle C</a>) is defined as <a
+        href="pitch.html">440 Hz</a> and is the reference point for all other pitches. Because it is so central to
+    tuning, this is the pitch usually used for pre-performance tuning. A 440 is also a useful reference point when
+    discussing <a href="tuning_systems.html">tuning systems</a>.
+<p class="center-text">
+    <small>Audio examples are triangle waveforms downloaded from <a href="http://onlinetonegenerator.com/"
+                                                                    target="new">OnlineToneGenerator.com</a>.
+    </small>
+</p>
+{% endblock %}
