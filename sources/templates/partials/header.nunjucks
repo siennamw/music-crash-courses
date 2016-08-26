@@ -136,6 +136,7 @@
                         <ul>
                             <li><a href="/lessons/timbre.html">Timbre</a></li>
                             <li><a href="/lessons/instrument_families.html">Instrument Families</a></li>
+                            <li><a href="/lessons/tuning.html">Tuning</a></li>
                             <li><a href="/lessons/voices.html">Voices - Coming soon!</a></li>
                             <li class="last"><a href="/lessons/ensembles.html">Ensembles - Coming soon!</a></li>
                         </ul>
@@ -143,6 +144,7 @@
 
                     <li id="advanced" class="has-children"><a href="#"><b>Advanced Music Theory</b></a>
                         <ul>
+                            <li><a href="/lessons/octave_numbering.html">Octave Numbering</a></li>
                             <li><a href="/lessons/harmonic_series.html">Harmonic Series</a></li>
                             <li class="last"><a href="/lessons/tuning_systems.html">Tuning Systems - Coming soon!</a>
                             </li>
