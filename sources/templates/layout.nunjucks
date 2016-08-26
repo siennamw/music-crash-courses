@@ -41,6 +41,9 @@
     <script src="http://malsup.github.io/jquery.cycle2.js"></script>
     <script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+    <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script src="/js/sienna-boilerplate.js"></script>
     <script src="/js/mcc_scripts.js"></script>
 
@@ -49,20 +52,20 @@
 
 </head>
 <body>
-    <div class="container">
+<div class="container">
 
-        <!-- Header and Navigation -->
-        {% include "partials/header.nunjucks" %}
+    <!-- Header and Navigation -->
+    {% include "partials/header.nunjucks" %}
 
-        <!-- Content -->
-        <div id="main_content" class="row">
-            {% block content %}
-            {% endblock %}
-        </div><!-- end #main_content -->
+    <!-- Content -->
+    <div id="main_content" class="row">
+        {% block content %}
+        {% endblock %}
+    </div><!-- end #main_content -->
 
-        <!-- Footer -->
-        {% include "partials/footer.nunjucks" %}
+    <!-- Footer -->
+    {% include "partials/footer.nunjucks" %}
 
-    </div><!-- end .container -->
+</div><!-- end .container -->
 </body>
 </html>
