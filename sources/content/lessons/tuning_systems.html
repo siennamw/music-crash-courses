@@ -1,166 +1,52 @@
 {% extends "layout.nunjucks" %}
 {% block content %}
 <h1>Tuning Systems</h1>
-<p>This section is under construction. Check back soon!</p>
-<!--
-<p>A <b>tuning system</b> is a way to define individual pitches from the set of all possible high and low
-    sounds. We often talk about pitches simply by their note names (B, F&#x266F;, D&#x266D;), but what sounds do
-    these pitches actually make? We can answer this question by measuring the <a
-        href="pitch.html">frequencies</a> of sounds in vibrations per second, or Hertz (Hz), and matching these
-    frequencies to pitch names. Measuring pitches in this way also allows us compare the frequencies of two
-    pitches and describe their relationships to each other in fractions or ratios.</p>
-<h2>Octave Numbering</h2>
-<p>In order to talk about tuning systems, we need to be able to distinguish between pitches that are in
-    different octaves. So, instead of talking about <b>pitch classes</b> (ex. A, B&#x266D;, G&#x266F;) where the
-    octave is not considered, we will be referring to <b>absolute pitches</b>. In order to do this, we must have
-    a system for numbering the octaves. There are several systems for <b>octave numbering</b>, but this website
-    uses the <b>Scientific Pitch Notation System</b> where <a href="notating_naming_pitches.html">middle C</a>
-    is C4 and octave numbers are incremented on C as in the image below. The C below C1 is C0, and the octave
-    below that is C-1, but many of these pitches are below the typical range of human hearing (approximately 20
-    to 20,000 Hz), so they will not play a role in our discussion.</p>
-<div class="pic">
-    <img src="../images/keyboard/scientific-pitch-notation-system.png"
-         alt="scientific pitch notation system on the keyboard" border="0">
-    <br>
-    Scientific Pitch Notation System for Octave Numbering
-</div>
-<h2>Reference Point: A 440</h2>
-<p>The definition of A4 as 440 Hz is the current standard in western music. Before an orchestra performs the
-    performers will tune to A 440, as will many ensembles using traditional western instruments. We will adopt A
-    440 as our reference point in the following discussion about tuning systems as well. Click to play/stop the
-    frequencies below corresponding to A in four octaves.</p>
-<table>
-    <tr>
-        <td class="labeltop">Frequency in Hz</td>
-        <td class="labeltop">Pitch Name</td>
-    </tr>
-    <tr>
-        <td><a onclick="togglePlay('110hz');">110</a>
-            <audio id="110hz">
-                <source src="../scores/tones/110hz.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </td>
-        <td>A2</td>
-    </tr>
-    <tr>
-        <td><a onclick="togglePlay('220hz');">220</a>
-            <audio id="220hz">
-                <source src="../scores/tones/220hz.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </td>
-        <td>A3</td>
-    </tr>
-    <tr>
-        <td><a onclick="togglePlay('440hz');">440</a>
-            <audio id="440hz">
-                <source src="../scores/tones/440hz.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </td>
-        <td>A4</td>
-    </tr>
-    <tr>
-        <td><a onclick="togglePlay('880hz');">880</a>
-            <audio id="880hz">
-                <source src="../scores/tones/880hz.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </td>
-        <td>A5</td>
-    </tr>
-</table>
-<p class="center-text">
-    <small>Audio examples are triangle waveforms downloaded from <a href="http://onlinetonegenerator.com/"
-                                                                    target="new">OnlineToneGenerator.com</a>.
-    </small>
-</p>
-<p>So, western tuning systems are based on the octave, which is then divided into 12 parts. Now we will look at
-    the various strategies devised to achieve this.</p>
-<h2>Basic Principles of Tuning in Western Music</h2>
-<p>The vast majority of western music uses a tuning system with 12 notes within an octave. Not all systems are
-    based on the octave, but western music recognizes <a href="intervals.html#octave">octave equivalence</a>,
-    and the
+<p>A <b>tuning system</b>, or temperament, is a way to define individual pitches for music from the set of all possible
+    high and low tones. We often talk about pitches simply by their <a href="notating_naming_pitches.html">note
+        names</a> (B, F&#x266F;, D&#x266D;), but what sounds do these notes actually make? We can answer this question
+    in one of two ways: 1) we can describe the relationships between pitches in fractions or ratios, or 2) we can
+    measure the <a href="pitch.html">frequencies</a> of sounds in vibrations per second, or Hertz (Hz). Both approaches
+    are useful, but this lesson will focus mainly on the former so that we can observe the mathematical patterns found
+    in tuning systems.</p>
+<h2>Dividing the Octave</h2>
+<p>The vast majority of western music uses a tuning system of 12 notes within each <a href="intervals.html">octave</a>.
+    The
     <math>
         <mfrac>
             <mn>2</mn>
             <mn>1</mn>
         </mfrac>
     </math>
-    ratio between notes an octave apart make this a mathematically intuitive system as well.
+    &nbsp;
+    ratio of the octave makes this a mathematically intuitive place to start. There are other tuning systems that divide
+    an octave into a different number of parts and still others that are not based on the octave at all, but we will not
+    explore these systems here.
 </p>
-<h2>Early Tuning Systems</h2>
-<p>The earliest tuning systems in western music are based on the simple ratios found in the <a
+<p>If start with octaves defined by a
+    <math>
+        <mfrac>
+            <mn>2</mn>
+            <mn>1</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    ratio and we want to divide the space between octaves into 12 parts, how do we do this?
+</p>
+<p>Early tuning systems in western music divided the octave according to the simple ratios found in the <a
     href="harmonic_series.html">harmonic series</a>. These ratios were observed by comparing the sounds produced
-    by objects of different sizes, like a length of string that was plucked or hammered and then divided into
-    smaller parts in order to compare the resulting frequencies. Frequencies related to one another with simple
-    ratios such as
-    <math>
-        <mfrac>
-            <mn>2</mn>
-            <mn>1</mn>
-        </mfrac>
-    </math>
-    (octave),
-    <math>
-        <mfrac>
-            <mn>3</mn>
-            <mn>2</mn>
-        </mfrac>
-    </math>
-    (perfect fifth), and
-    <math>
-        <mfrac>
-            <mn>4</mn>
-            <mn>3</mn>
-        </mfrac>
-    </math>
-    (perfect fourth) were considered harmonious and pleasing. This view still has a profound influence on music
-    in western cultures and all over the world.
+    by objects of different sizes, like plucking or hammering a length of string and then dividing the string into
+    smaller parts to compare the resulting frequencies.
 </p>
-<p>Many tuning systems are based entirely on the
-    <math>
-        <mfrac>
-            <mn>3</mn>
-            <mn>2</mn>
-        </mfrac>
-    </math>
-    ratio of the perfect fifth. Pitches are found by going up or down by fifths, then raising or lowering the
-    result by octaves. For example,
-</p>
-
-
-<p>The system of tuning that currently dominates </p>
-<h2>Tuning Systems and the Harmonic Series</h2>
-<p>There are several different tuning systems based on the simple ratios found in the harmonic series. The ratio
-    <math>
-        <mfrac>
-            <mn>3</mn>
-            <mn>2</mn>
-        </mfrac>
-    </math>
-    , for example, represents the perfect fifth. For example, if E is 330 Hz and A is 220 Hz, then
-    <math>
-        <mfrac>
-            <mn>330</mn>
-            <mn>220</mn>
-        </mfrac>
-    </math>
-    =
-    <math>
-        <mfrac>
-            <mn>3</mn>
-            <mn>2</mn>
-        </mfrac>
-    </math>
-    .
-</p>
-<p>If we extract further ratios from the harmonic series, we find the following ratios:</p>
 <table>
+    <thead>
+    <tr>
+        <th colspan="3">Ratios for Intervals in the <a href="harmonic_series.html">Harmonic Series</a></th>
+    </tr>
+    </thead>
+    <tbody>
     <tr>
         <th>Interval</th>
-        <th>Ratio from Harmonic Series</th>
+        <th>Ratio</th>
     </tr>
     <tr>
         <td>Unison</td>
@@ -170,8 +56,9 @@
                     <mn>1</mn>
                     <mn>1</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>1.000</mn>
             </math>
-            = 1.000
         </td>
     </tr>
     <tr>
@@ -179,18 +66,12 @@
         <td>
             <math>
                 <mfrac>
-                    <mn>220</mn>
-                    <mn>110</mn>
-                </mfrac>
-            </math>
-            =
-            <math>
-                <mfrac>
                     <mn>2</mn>
                     <mn>1</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>2.000</mn>
             </math>
-            = 2.000
         </td>
     </tr>
     <tr>
@@ -198,18 +79,12 @@
         <td>
             <math>
                 <mfrac>
-                    <mn>330</mn>
-                    <mn>220</mn>
-                </mfrac>
-            </math>
-            =
-            <math>
-                <mfrac>
                     <mn>3</mn>
                     <mn>2</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>1.500</mn>
             </math>
-            = 1.000
         </td>
     </tr>
     <tr>
@@ -217,18 +92,12 @@
         <td>
             <math>
                 <mfrac>
-                    <mn>440</mn>
-                    <mn>330</mn>
-                </mfrac>
-            </math>
-            =
-            <math>
-                <mfrac>
                     <mn>4</mn>
                     <mn>3</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>1.333...</mn>
             </math>
-            = 1.000
         </td>
     </tr>
     <tr>
@@ -236,18 +105,12 @@
         <td>
             <math>
                 <mfrac>
-                    <mn>550</mn>
-                    <mn>440</mn>
-                </mfrac>
-            </math>
-            =
-            <math>
-                <mfrac>
                     <mn>5</mn>
                     <mn>4</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>1.250</mn>
             </math>
-            = 1.000
         </td>
     </tr>
     <tr>
@@ -255,227 +118,384 @@
         <td>
             <math>
                 <mfrac>
-                    <mn>660</mn>
-                    <mn>550</mn>
-                </mfrac>
-            </math>
-            =
-            <math>
-                <mfrac>
                     <mn>6</mn>
                     <mn>5</mn>
                 </mfrac>
+                <mo>=</mo>
+                <mn>1.200</mn>
             </math>
-            = 1.000
         </td>
     </tr>
+    </tbody>
 </table>
+<p>Using the ratios of the <a
+    href="harmonic_series.html">harmonic series</a> for tuning creates beautifully pure-sounding intervals, but
+    there is a problem with this system: the ratios don't line up with each other. This short video illustrates this
+    problem and describes the modern solution to it: <b>equal temperament</b>.</p>
+<div class="video">
+    <h1>"Why It's Impossible to Tune a Piano" by <a href="https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg">MinutePhysics</a>
+    </h1>
+    <iframe class="noprint" width="560" height="315"
+            src="https://www.youtube.com/embed/1Hqm0dYKUx4?rel=0&showinfo=0&end=3m47s"
+            frameborder="0" allowfullscreen></iframe>
+    <div class="links show_when_narrow"><a href="https://youtu.be/1Hqm0dYKUx4" target="new"><img
+        src="../images/layout/youtube.png" alt="YouTube"></a></div>
+</div>
+<h2>Equal Temperament</h2>
+<p>The tuning system that is standard in western music is <b>equal temperament</b>. In this system, the octave is
+    divided into twelve equal
+    parts, making the interval between each half step identical and allowing music to be <a href="transposition.html">transposed</a>
+    freely between all <a href="keys.html">twelve keys</a>. The table below shows the ratios of all the intervals in
+    equal temperament. It also shows <b>cents</b>, a unit of measure used for intervals that is defined by the
+    equal temperament system: 100 cents is equal to an equally-tempered half step.</p>
 <table>
+    <thead>
+    <tr>
+        <th colspan="3">Intervals in Equal Temperament</th>
+    </tr>
+    </thead>
+    <tbody>
     <tr>
         <th>Interval</th>
-        <th>Ratio in Just Intonation</th>
-        <th>Cents in JI</th>
-        <th>Difference in Cents</th>
+        <th>Ratio</th>
+        <th>Cents</th>
     </tr>
     <tr>
         <td>Unison (C to C)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>1</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>0</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mn>1.000000</mn>
             </math>
-            = 1.000
         </td>
-        <td>0.00</td>
         <td>0</td>
     </tr>
     <tr>
-        <td>Minor second (C to C<span class="music-symbol">♯</span>/D<span class="music-symbol">♭</span>)</td>
+        <td>Minor second (C to C&#x266F;/D&#x266D;)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>16</mn>
-                    <mn>15</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                    <mn>12</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.059463</mn>
             </math>
-            = 1.066…
         </td>
-        <td>111.73</td>
-        <td>−11.73</td>
+        <td>100</td>
     </tr>
     <tr>
         <td>Major second (C to D)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>9</mn>
-                    <mn>8</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>2</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                    <mn>6</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.122462</mn>
             </math>
-            = 1.125
         </td>
-        <td>203.91</td>
-        <td>−3.91</td>
+        <td>200</td>
     </tr>
     <tr>
-        <td>Minor third (C to D<span class="music-symbol">♯</span>/E<span class="music-symbol">♭</span></a>)
+        <td>Minor third (C to D&#x266F;/E&#x266D;</a>)
         </td>
         <td>
             <math>
-                <mfrac>
-                    <mn>6</mn>
-                    <mn>5</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>3</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                    <mn>4</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.189207</mn>
             </math>
-            = 1.200
         </td>
-        <td>315.64</td>
-        <td>−15.64</td>
+        <td>300</td>
     </tr>
     <tr>
         <td>Major third (C to E)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>5</mn>
-                    <mn>4</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                    <mn>3</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.259921</mn>
             </math>
-            = 1.250
         </td>
-        <td>386.31</td>
-        <td>+13.69</td>
+        <td>400</td>
     </tr>
     <tr>
         <td>Perfect fourth (C to F)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>4</mn>
-                    <mn>3</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>5</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>32</mn>
+                    </mrow>
+                    <mn>12</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.334840</mn>
             </math>
-            = 1.333…
         </td>
-        <td>498.04</td>
-        <td>+1.96</td>
+        <td>500</td>
     </tr>
     <tr>
-        <td>Tritone (C to F<span class="music-symbol">♯</span>/G<span class="music-symbol">♭</span>)</td>
+        <td>Tritone (C to F&#x266F;/G&#x266D;)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>7</mn>
-                    <mn>5</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>6</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <msqrt>
+                    <mn>2</mn>
+                </msqrt>
+                <mo>=</mo>
+                <mn>1.414214</mn>
             </math>
-            = 1.400
         </td>
-        <td>582.51</td>
-        <td>+17.49</td>
+        <td>600</td>
     </tr>
     <tr>
         <td>Perfect fifth (C to G)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>3</mn>
+                <msup>
                     <mn>2</mn>
-                </mfrac>
+                    <mrow>
+                        <mn>7</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>128</mn>
+                    </mrow>
+                    <mn>12</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.498307</mn>
             </math>
-            = 1.500
         </td>
-        <td>701.96</td>
-        <td>−1.96</td>
+        <td>700</td>
     </tr>
     <tr>
-        <td>Minor sixth (C to G<span class="music-symbol">♯</span>/A<span class="music-symbol">♭</span>)</td>
+        <td>Minor sixth (C to G&#x266F;/A&#x266D;)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>8</mn>
-                    <mn>5</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>8</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>4</mn>
+                    </mrow>
+                    <mn>3</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.587401</mn>
             </math>
-            = 1.600
         </td>
-        <td>813.69</td>
-        <td>−13.69</td>
+        <td>800</td>
     </tr>
     <tr>
         <td>Major sixth (C to A)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>5</mn>
-                    <mn>3</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>9</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>8</mn>
+                    </mrow>
+                    <mn>4</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.681793</mn>
             </math>
-            = 1.666…
         </td>
-        <td>884.36</td>
-        <td>+15.64</td>
+        <td>900</td>
     </tr>
     <tr>
-        <td>Minor seventh (C to A<span class="music-symbol">♯</span>/B<span class="music-symbol">♭</span>)</td>
+        <td>Minor seventh (C to A&#x266F;/B&#x266D;)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>16</mn>
-                    <mn>9</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>10</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>32</mn>
+                    </mrow>
+                    <mn>6</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.781797</mn>
             </math>
-            = 1.777…
         </td>
-        <td>996.09</td>
-        <td>+3.91</td>
+        <td>1000</td>
     </tr>
     <tr>
         <td>Major seventh (C to B)</td>
         <td>
             <math>
-                <mfrac>
-                    <mn>15</mn>
-                    <mn>8</mn>
-                </mfrac>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mn>11</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mroot>
+                    <mrow>
+                        <mn>2048</mn>
+                    </mrow>
+                    <mn>12</mn>
+                </mroot>
+                <mo>=</mo>
+                <mn>1.887749</mn>
             </math>
-            = 1.875
         </td>
-        <td>1088.27</td>
-        <td>+11.73</td>
+        <td>1100</td>
     </tr>
     <tr>
         <td>Octave (C to C an octave higher)</td>
         <td>
             <math>
-                <mfrac>
+                <msup>
                     <mn>2</mn>
-                    <mn>1</mn>
-                </mfrac>
+                    <mrow>
+                        <mn>12</mn>
+                        <mo>/</mo>
+                        <mn>12</mn>
+                    </mrow>
+                </msup>
+                <mo>=</mo>
+                <mn>2.000000</mn>
             </math>
-            = 2.000
         </td>
-        <td>1200.00</td>
-        <td>0</td>
+        <td>1200</td>
     </tr>
+    </tbody>
 </table>
-<p>The tuning system that has dominated western music since the time of J.S. Bach (the Baroque period, roughly
-    1600-1750) is called <b>equal temperament</b>. In this system, the octave is devided into twelve equal
-    parts, making the interval between each half step identical.</p>
+<p> Although it does not include the pure fifths, fourths, and thirds found in earlier tuning systems, equal
+    temperament solves the problems found in tuning systems based on the ratios of the harmonic series. Together with
+    the <a href="tuning.html">reference pitch A4 = 440Hz</a>, equal temperament provides a clear standard by which all
+    instruments can be tuned, which is essential when <a href="ensembles.html">many instruments play together</a>. Given
+    these advantages, it is easy to understand why equal temperament has been the standard tuning western music for
+    about 300 years. The table below shows the equal temperament tunings for the octave starting at middle C (<a
+        href="octave_numbering.html">C4</a>), including <a href="tuning.html">A4 at 440Hz</a>.</p>
 <table>
-
-    <th>Note</th>
+    <thead>
+    <tr>
+        <th colspan="3">Frequencies and Wavelengths of Pitches in Equal Temperament</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th>Pitch</th>
     <th>Frequency (Hz)</th>
     <th>Wavelength (cm)</th>
+    <!--
     <tr>
         <td align=center>C<sub>0</sub></td>
         <td align=center> 16.35</td>
         <td align=center> 2109.89</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>0</sub>/D<sup>b</sup><sub>0</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>0</sub>/D&#x266D;<sub>0</sub></td>
         <td align=center> 17.32</td>
         <td align=center> 1991.47</td>
     </tr>
@@ -485,7 +505,7 @@
         <td align=center> 1879.69</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>0</sub>/E<sup>b</sup><sub>0</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>0</sub>/E&#x266D;<sub>0</sub></td>
         <td align=center> 19.45</td>
         <td align=center> 1774.20</td>
     </tr>
@@ -500,7 +520,7 @@
         <td align=center> 1580.63</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>0</sub>/G<sup>b</sup><sub>0</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>0</sub>/G&#x266D;<sub>0</sub></td>
         <td align=center> 23.12</td>
         <td align=center> 1491.91</td>
     </tr>
@@ -510,7 +530,7 @@
         <td align=center> 1408.18</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>0</sub>/A<sup>b</sup><sub>0</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>0</sub>/A&#x266D;<sub>0</sub></td>
         <td align=center> 25.96</td>
         <td align=center> 1329.14</td>
     </tr>
@@ -520,7 +540,7 @@
         <td align=center> 1254.55</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>0</sub>/B<sup>b</sup><sub>0</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>0</sub>/B&#x266D;<sub>0</sub></td>
         <td align=center> 29.14</td>
         <td align=center> 1184.13</td>
     </tr>
@@ -535,7 +555,7 @@
         <td align=center> 1054.94</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>1</sub>/D<sup>b</sup><sub>1</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>1</sub>/D&#x266D;<sub>1</sub></td>
         <td align=center> 34.65</td>
         <td align=center> 995.73</td>
     </tr>
@@ -545,7 +565,7 @@
         <td align=center> 939.85</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>1</sub>/E<sup>b</sup><sub>1</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>1</sub>/E&#x266D;<sub>1</sub></td>
         <td align=center> 38.89</td>
         <td align=center> 887.10</td>
     </tr>
@@ -560,7 +580,7 @@
         <td align=center> 790.31</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>1</sub>/G<sup>b</sup><sub>1</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>1</sub>/G&#x266D;<sub>1</sub></td>
         <td align=center> 46.25</td>
         <td align=center> 745.96</td>
     </tr>
@@ -570,7 +590,7 @@
         <td align=center> 704.09</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>1</sub>/A<sup>b</sup><sub>1</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>1</sub>/A&#x266D;<sub>1</sub></td>
         <td align=center> 51.91</td>
         <td align=center> 664.57</td>
     </tr>
@@ -580,7 +600,7 @@
         <td align=center> 627.27</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>1</sub>/B<sup>b</sup><sub>1</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>1</sub>/B&#x266D;<sub>1</sub></td>
         <td align=center> 58.27</td>
         <td align=center> 592.07</td>
     </tr>
@@ -595,7 +615,7 @@
         <td align=center> 527.47</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>2</sub>/D<sup>b</sup><sub>2</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>2</sub>/D&#x266D;<sub>2</sub></td>
         <td align=center> 69.30</td>
         <td align=center> 497.87</td>
     </tr>
@@ -605,7 +625,7 @@
         <td align=center> 469.92</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>2</sub>/E<sup>b</sup><sub>2</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>2</sub>/E&#x266D;<sub>2</sub></td>
         <td align=center> 77.78</td>
         <td align=center> 443.55</td>
     </tr>
@@ -620,7 +640,7 @@
         <td align=center> 395.16</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>2</sub>/G<sup>b</sup><sub>2</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>2</sub>/G&#x266D;<sub>2</sub></td>
         <td align=center> 92.50</td>
         <td align=center> 372.98</td>
     </tr>
@@ -630,7 +650,7 @@
         <td align=center> 352.04</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>2</sub>/A<sup>b</sup><sub>2</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>2</sub>/A&#x266D;<sub>2</sub></td>
         <td align=center> 103.83</td>
         <td align=center> 332.29</td>
     </tr>
@@ -640,7 +660,7 @@
         <td align=center> 313.64</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>2</sub>/B<sup>b</sup><sub>2</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>2</sub>/B&#x266D;<sub>2</sub></td>
         <td align=center> 116.54</td>
         <td align=center> 296.03</td>
     </tr>
@@ -655,7 +675,7 @@
         <td align=center> 263.74</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>3</sub>/D<sup>b</sup><sub>3</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>3</sub>/D&#x266D;<sub>3</sub></td>
         <td align=center> 138.59</td>
         <td align=center> 248.93</td>
     </tr>
@@ -665,7 +685,7 @@
         <td align=center> 234.96</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>3</sub>/E<sup>b</sup><sub>3</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>3</sub>/E&#x266D;<sub>3</sub></td>
         <td align=center> 155.56</td>
         <td align=center> 221.77</td>
     </tr>
@@ -680,7 +700,7 @@
         <td align=center> 197.58</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>3</sub>/G<sup>b</sup><sub>3</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>3</sub>/G&#x266D;<sub>3</sub></td>
         <td align=center> 185.00</td>
         <td align=center> 186.49</td>
     </tr>
@@ -690,7 +710,7 @@
         <td align=center> 176.02</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>3</sub>/A<sup>b</sup><sub>3</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>3</sub>/A&#x266D;<sub>3</sub></td>
         <td align=center> 207.65</td>
         <td align=center> 166.14</td>
     </tr>
@@ -700,7 +720,7 @@
         <td align=center> 156.82</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>3</sub>/B<sup>b</sup><sub>3</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>3</sub>/B&#x266D;<sub>3</sub></td>
         <td align=center> 233.08</td>
         <td align=center> 148.02</td>
     </tr>
@@ -709,13 +729,14 @@
         <td align=center> 246.94</td>
         <td align=center> 139.71</td>
     </tr>
-    <tr>
-        <td align=center>C<sub>4</sub></td>
+    -->
+    <tr class="highlight">
+        <td align=center>C<sub>4</sub> (middle C)</td>
         <td align=center> 261.63</td>
         <td align=center> 131.87</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>4</sub>/D<sup>b</sup><sub>4</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>4</sub>/D&#x266D;<sub>4</sub></td>
         <td align=center> 277.18</td>
         <td align=center> 124.47</td>
     </tr>
@@ -725,7 +746,7 @@
         <td align=center> 117.48</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>4</sub>/E<sup>b</sup><sub>4</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>4</sub>/E&#x266D;<sub>4</sub></td>
         <td align=center> 311.13</td>
         <td align=center> 110.89</td>
     </tr>
@@ -740,7 +761,7 @@
         <td align=center> 98.79</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>4</sub>/G<sup>b</sup><sub>4</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>4</sub>/G&#x266D;<sub>4</sub></td>
         <td align=center> 369.99</td>
         <td align=center> 93.24</td>
     </tr>
@@ -750,17 +771,17 @@
         <td align=center> 88.01</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>4</sub>/A<sup>b</sup><sub>4</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>4</sub>/A&#x266D;<sub>4</sub></td>
         <td align=center> 415.30</td>
         <td align=center> 83.07</td>
     </tr>
-    <tr>
-        <td align=center>A<sub>4</sub></td>
+    <tr class="highlight">
+        <td align=center>A<sub>4</sub> (reference pitch)</td>
         <td align=center> 440.00</td>
         <td align=center> 78.41</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>4</sub>/B<sup>b</sup><sub>4</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>4</sub>/B&#x266D;<sub>4</sub></td>
         <td align=center> 466.16</td>
         <td align=center> 74.01</td>
     </tr>
@@ -774,8 +795,9 @@
         <td align=center> 523.25</td>
         <td align=center> 65.93</td>
     </tr>
+    <!--
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>5</sub>/D<sup>b</sup><sub>5</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>5</sub>/D&#x266D;<sub>5</sub></td>
         <td align=center> 554.37</td>
         <td align=center> 62.23</td>
     </tr>
@@ -785,7 +807,7 @@
         <td align=center> 58.74</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>5</sub>/E<sup>b</sup><sub>5</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>5</sub>/E&#x266D;<sub>5</sub></td>
         <td align=center> 622.25</td>
         <td align=center> 55.44</td>
     </tr>
@@ -800,7 +822,7 @@
         <td align=center> 49.39</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>5</sub>/G<sup>b</sup><sub>5</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>5</sub>/G&#x266D;<sub>5</sub></td>
         <td align=center> 739.99</td>
         <td align=center> 46.62</td>
     </tr>
@@ -810,7 +832,7 @@
         <td align=center> 44.01</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>5</sub>/A<sup>b</sup><sub>5</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>5</sub>/A&#x266D;<sub>5</sub></td>
         <td align=center> 830.61</td>
         <td align=center> 41.54</td>
     </tr>
@@ -820,7 +842,7 @@
         <td align=center> 39.20</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>5</sub>/B<sup>b</sup><sub>5</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>5</sub>/B&#x266D;<sub>5</sub></td>
         <td align=center> 932.33</td>
         <td align=center> 37.00</td>
     </tr>
@@ -835,7 +857,7 @@
         <td align=center> 32.97</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>6</sub>/D<sup>b</sup><sub>6</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>6</sub>/D&#x266D;<sub>6</sub></td>
         <td align=center> 1108.73</td>
         <td align=center> 31.12</td>
     </tr>
@@ -845,7 +867,7 @@
         <td align=center> 29.37</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>6</sub>/E<sup>b</sup><sub>6</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>6</sub>/E&#x266D;<sub>6</sub></td>
         <td align=center> 1244.51</td>
         <td align=center> 27.72</td>
     </tr>
@@ -860,7 +882,7 @@
         <td align=center> 24.70</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>6</sub>/G<sup>b</sup><sub>6</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>6</sub>/G&#x266D;<sub>6</sub></td>
         <td align=center> 1479.98</td>
         <td align=center> 23.31</td>
     </tr>
@@ -870,7 +892,7 @@
         <td align=center> 22.00</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>6</sub>/A<sup>b</sup><sub>6</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>6</sub>/A&#x266D;<sub>6</sub></td>
         <td align=center> 1661.22</td>
         <td align=center> 20.77</td>
     </tr>
@@ -880,7 +902,7 @@
         <td align=center> 19.60</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>6</sub>/B<sup>b</sup><sub>6</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>6</sub>/B&#x266D;<sub>6</sub></td>
         <td align=center> 1864.66</td>
         <td align=center> 18.50</td>
     </tr>
@@ -895,7 +917,7 @@
         <td align=center> 16.48</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>7</sub>/D<sup>b</sup><sub>7</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>7</sub>/D&#x266D;<sub>7</sub></td>
         <td align=center> 2217.46</td>
         <td align=center> 15.56</td>
     </tr>
@@ -905,7 +927,7 @@
         <td align=center> 14.69</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>7</sub>/E<sup>b</sup><sub>7</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>7</sub>/E&#x266D;<sub>7</sub></td>
         <td align=center> 2489.02</td>
         <td align=center> 13.86</td>
     </tr>
@@ -920,7 +942,7 @@
         <td align=center> 12.35</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>7</sub>/G<sup>b</sup><sub>7</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>7</sub>/G&#x266D;<sub>7</sub></td>
         <td align=center> 2959.96</td>
         <td align=center> 11.66</td>
     </tr>
@@ -930,7 +952,7 @@
         <td align=center> 11.00</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>7</sub>/A<sup>b</sup><sub>7</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>7</sub>/A&#x266D;<sub>7</sub></td>
         <td align=center> 3322.44</td>
         <td align=center> 10.38</td>
     </tr>
@@ -940,7 +962,7 @@
         <td align=center> 9.80</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>7</sub>/B<sup>b</sup><sub>7</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>7</sub>/B&#x266D;<sub>7</sub></td>
         <td align=center> 3729.31</td>
         <td align=center> 9.25</td>
     </tr>
@@ -955,7 +977,7 @@
         <td align=center> 8.24</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;C<sup>#</sup><sub>8</sub>/D<sup>b</sup><sub>8</sub>&nbsp;</td>
+        <td align=center>C&#x266F;<sub>8</sub>/D&#x266D;<sub>8</sub></td>
         <td align=center> 4434.92</td>
         <td align=center> 7.78</td>
     </tr>
@@ -965,7 +987,7 @@
         <td align=center> 7.34</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;D<sup>#</sup><sub>8</sub>/E<sup>b</sup><sub>8</sub>&nbsp;</td>
+        <td align=center>D&#x266F;<sub>8</sub>/E&#x266D;<sub>8</sub></td>
         <td align=center> 4978.03</td>
         <td align=center> 6.93</td>
     </tr>
@@ -980,7 +1002,7 @@
         <td align=center> 6.17</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;F<sup>#</sup><sub>8</sub>/G<sup>b</sup><sub>8</sub>&nbsp;</td>
+        <td align=center>F&#x266F;<sub>8</sub>/G&#x266D;<sub>8</sub></td>
         <td align=center> 5919.91</td>
         <td align=center> 5.83</td>
     </tr>
@@ -990,7 +1012,7 @@
         <td align=center> 5.50</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;G<sup>#</sup><sub>8</sub>/A<sup>b</sup><sub>8</sub>&nbsp;</td>
+        <td align=center>G&#x266F;<sub>8</sub>/A&#x266D;<sub>8</sub></td>
         <td align=center> 6644.88</td>
         <td align=center> 5.19</td>
     </tr>
@@ -1000,7 +1022,7 @@
         <td align=center> 4.90</td>
     </tr>
     <tr>
-        <td align=center>&nbsp;A<sup>#</sup><sub>8</sub>/B<sup>b</sup><sub>8</sub>&nbsp;</td>
+        <td align=center>A&#x266F;<sub>8</sub>/B&#x266D;<sub>8</sub></td>
         <td align=center> 7458.62</td>
         <td align=center> 4.63</td>
     </tr>
@@ -1009,354 +1031,759 @@
         <td align=center> 7902.13</td>
         <td align=center> 4.37</td>
     </tr>
+    -->
+    </tbody>
 </table>
-<p>This table uses <b>cents</b>, a unit of measure used for intervals that is defined according to the equal
-    temperament system: 100 cents is equal to an equally-tempered half step.</p>
+
+<h2>Other Tuning Systems</h2>
+<p>Before equal temperament, there were many tuning systems based on the ratios of the harmonic series, each with a
+    unique solution for dividing up the octave and accounting for discrepancies between ratios. Some of these systems
+    are quite complex, and much can be said about their advantages and disadvantages. For the sake of clarity and
+    simplicity, we will look at only one earlier system: Pythagorean tuning.</p>
+<h3>Pythagorean Tuning</h3>
+<p>Like many early tuning systems, <b>Pythagorean tuning</b> was based on the
+    <math>
+        <mfrac>
+            <mn>3</mn>
+            <mn>2</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    ratio of the perfect fifth and the
+    <math>
+        <mfrac>
+            <mn>4</mn>
+            <mn>3</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    ratio of the perfect fourth. Pitches were found by going up (multiplying by
+    <math>
+        <mfrac>
+            <mn>3</mn>
+            <mn>2</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    or
+    <math>
+        <mfrac>
+            <mn>4</mn>
+            <mn>3</mn>
+        </mfrac>
+    </math>
+    ) or down (multiplying by
+    <math>
+        <mfrac>
+            <mn>2</mn>
+            <mn>3</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    or
+    <math>
+        <mfrac>
+            <mn>3</mn>
+            <mn>4</mn>
+        </mfrac>
+    </math>
+    )
+    by these intervals and adjusting by octaves (multiplying by
+    <math>
+        <mfrac>
+            <mn>2</mn>
+            <mn>1</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    to go up an octave and
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    to go down an octave) as needed. Notice how each ratio involves only powers of 2 and 3. Also notice how these
+    pitches compare to their equally-tempered equivalents, and how the differences are distributed symmetrically.
+</p>
 <table>
+    <thead>
+    <tr>
+        <th colspan="4">Pythagorean Tuning</th>
+    </tr>
+    </thead>
+    <tbody>
     <tr>
         <th>Interval</th>
-        <th>Ratio in Equal Temperament</th>
-        <th>Cents in ET</th>
+        <th>Ratio</th>
+        <th>Cents</th>
+        <th>Difference in Cents from Equal Temperament</th>
     </tr>
     <tr>
         <td>Unison (C to C)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>0</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>1</mn>
+                    <mn>1</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.000</mn>
             </math>
-            = 1.000000
+
         </td>
+        <td>0.00</td>
         <td>0</td>
     </tr>
-    <tr>
-        <td>Minor second (C to C<span class="music-symbol">♯</span>/D<span class="music-symbol">♭</span>)</td>
+    <tr class="lowlight">
+        <td>Minor second (C to C&#x266F;/D&#x266D;)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>1</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
-            </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
+                <mfrac>
+                    <mn>256</mn>
+                    <mn>243</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
                         <mn>2</mn>
-                    </mrow>
-                    <mn>12</mn>
-                </mroot>
+                        <mrow>
+                            <mn>8</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>5</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.053</mn>
             </math>
-            = 1.059463
+
         </td>
-        <td>100</td>
+        <td>90.225</td>
+        <td>+9.775</td>
     </tr>
-    <tr>
+    <tr class="lowlight2">
         <td>Major second (C to D)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
+                <mfrac>
+                    <mn>9</mn>
+                    <mn>8</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
                         <mn>2</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                        <mrow>
+                            <mn>3</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.125</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>2</mn>
-                    </mrow>
-                    <mn>6</mn>
-                </mroot>
-            </math>
-            = 1.122462
+
         </td>
-        <td>200</td>
+        <td>203.910</td>
+        <td>-3.910</td>
     </tr>
-    <tr>
-        <td>Minor third (C to D<span class="music-symbol">♯</span>/E<span class="music-symbol">♭</span></a>)
-        </td>
+    <tr class="lowlight2">
+        <td>Minor third (C to D&#x266F;/E&#x266D;</a>)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>3</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
-            </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
+                <mfrac>
+                    <mn>32</mn>
+                    <mn>27</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
                         <mn>2</mn>
-                    </mrow>
-                    <mn>4</mn>
-                </mroot>
+                        <mrow>
+                            <mn>5</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>3</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.185</mn>
             </math>
-            = 1.189207
+
         </td>
-        <td>300</td>
+        <td>294.135</td>
+        <td>+5.865</td>
     </tr>
-    <tr>
+    <tr class="lowlight2">
         <td>Major third (C to E)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>4</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
-            </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
+                <mfrac>
+                    <mn>81</mn>
+                    <mn>64</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>4</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
                         <mn>2</mn>
-                    </mrow>
-                    <mn>3</mn>
-                </mroot>
+                        <mrow>
+                            <mn>6</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.266</mn>
             </math>
-            = 1.259921
+
         </td>
-        <td>400</td>
+        <td>407.820</td>
+        <td>-7.820</td>
     </tr>
-    <tr>
+    <tr class="lowlight2">
         <td>Perfect fourth (C to F)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>5</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>4</mn>
+                    <mn>3</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msup>
+                    <mn>3</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.333…</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>32</mn>
-                    </mrow>
-                    <mn>12</mn>
-                </mroot>
-            </math>
-            = 1.334840
+
         </td>
-        <td>500</td>
+        <td>498.045</td>
+        <td>+1.955</td>
     </tr>
-    <tr>
-        <td>Tritone (C to F<span class="music-symbol">♯</span>/G<span class="music-symbol">♭</span>)</td>
+    <tr class="lowlight">
+        <td>Tritone (C to G&#x266D;)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>6</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>1024</mn>
+                    <mn>729</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>10</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>6</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.405</mn>
             </math>
-            =
-            <math>
-                <msqrt>
-                    <mn>2</mn>
-                </msqrt>
-            </math>
-            = 1.414214
         </td>
-        <td>600</td>
+        <td>588.270</td>
+        <td>+11.730</td>
     </tr>
-    <tr>
+    <tr class="lowlight">
+        <td>Tritone (C to F&#x266F;)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>729</mn>
+                    <mn>512</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>6</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>9</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.424</mn>
+            </math>
+        </td>
+        <td>611.730</td>
+        <td>-11.730</td>
+    </tr>
+    <tr class="lowlight2">
         <td>Perfect fifth (C to G)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>7</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>3</mn>
+                    <mn>2</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.500</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>128</mn>
-                    </mrow>
-                    <mn>12</mn>
-                </mroot>
-            </math>
-            = 1.498307
+
         </td>
-        <td>700</td>
+        <td>701.955</td>
+        <td>-1.955</td>
     </tr>
-    <tr>
-        <td>Minor sixth (C to G<span class="music-symbol">♯</span>/A<span class="music-symbol">♭</span>)</td>
+    <tr class="lowlight2">
+        <td>Minor sixth (C to G&#x266F;/A&#x266D;)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>8</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>128</mn>
+                    <mn>81</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>7</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>4</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.580</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>4</mn>
-                    </mrow>
-                    <mn>3</mn>
-                </mroot>
-            </math>
-            = 1.587401
+
         </td>
-        <td>800</td>
+        <td>792.180</td>
+        <td>+7.820</td>
     </tr>
-    <tr>
+    <tr class="lowlight2">
         <td>Major sixth (C to A)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>9</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>27</mn>
+                    <mn>16</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>3</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>4</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.688</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>8</mn>
-                    </mrow>
-                    <mn>4</mn>
-                </mroot>
-            </math>
-            = 1.681793
+
         </td>
-        <td>900</td>
+        <td>905.865</td>
+        <td>-5.865</td>
     </tr>
-    <tr>
-        <td>Minor seventh (C to A<span class="music-symbol">♯</span>/B<span class="music-symbol">♭</span>)</td>
+    <tr class="lowlight2">
+        <td>Minor seventh (C to A&#x266F;/B&#x266D;)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>10</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>16</mn>
+                    <mn>9</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>4</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.777…</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>32</mn>
-                    </mrow>
-                    <mn>6</mn>
-                </mroot>
-            </math>
-            = 1.781797
+
         </td>
-        <td>1000</td>
+        <td>996.090</td>
+        <td>+3.910</td>
     </tr>
-    <tr>
+    <tr class="lowlight">
         <td>Major seventh (C to B)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>11</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>243</mn>
+                    <mn>128</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <msup>
+                        <mn>3</mn>
+                        <mrow>
+                            <mn>5</mn>
+                        </mrow>
+                    </msup>
+                    <msup>
+                        <mn>2</mn>
+                        <mrow>
+                            <mn>7</mn>
+                        </mrow>
+                    </msup>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.898</mn>
             </math>
-            =
-            <math>
-                <mroot>
-                    <mrow>
-                        <mn>2048</mn>
-                    </mrow>
-                    <mn>12</mn>
-                </mroot>
-            </math>
-            = 1.887749
+
         </td>
-        <td>1100</td>
+        <td>1109.775</td>
+        <td>-9.775</td>
     </tr>
     <tr>
         <td>Octave (C to C an octave higher)</td>
         <td>
             <math>
-                <msup>
-                    <mi>2</mi>
-                    <mrow>
-                        <mn>12</mn>
-                        <mo>/</mo>
-                        <mn>12</mn>
-                    </mrow>
-                </msup>
+                <mfrac>
+                    <mn>2</mn>
+                    <mn>1</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>2.000</mn>
             </math>
-            = 2.000000
-        </td>
-        <td>1200</td>
-    </tr>
-</table>
-<p> This system seems very intuitive, but it does not align precisely with the harmonic series, which was the
-    basis of previous tuning systems.</p>
-<p>The differences between the two systems are shown in the table below.</p>
-<h2>Timbre and the Harmonic Series</h2>
-<p>The harmonic series affects timbre because each type of instrument produces a distinctive pattern of loud and
-    soft overtones. As we move farther from the fundamental pitch, overtones have a tendency to become more
-    quiet, but on some instruments particular overtones are more or less powerful than this tendency suggests.
-    The graphs below are frequency power spectrums that show the strengths of the first eight harmonics of a D
-    (294 Hz) at the same volume on a flute and on a violin.</p>
-<div class="pic"><img src="../images/other/fourier_flute_violin.png"
-                      alt="frequency power spectrum of harmonics for D 294 Hz on a flute and a violin"
-                      border="0"/><br/>
-    strengths of the first eight harmonics on a flute and a violin<br/>
-    (frequency power spectrums of D at 294 Hz)
-</div>
-<p>The first two harmonics on the flute are very strong, but the remaining harmonics are quite weak. This is
-    what gives the flute its characteristic pure timbre. On the violin, the second harmonic is much weaker than
-    the flute's second harmonic, but the 3<sup>rd</sup> through 8<sup>th</sup> harmonics are much stronger than
-    the flute's. This pattern makes the timbre of the violin sound much more complex and rich than that of the
-    flute.</p>
 
+        </td>
+        <td>1200.00</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+<p>The discrepancy between the two tritone tunings is called the <b>Pythagorean comma</b>. The G&#x266D; tuning is found
+    by multiplying
+    <math>
+        <mfrac>
+            <mn>256</mn>
+            <mn>243</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    (the ratio of the minor second) by
+    <math>
+        <mfrac>
+            <mn>4</mn>
+            <mn>3</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    (an ascending fourth) resulting in
+    <math>
+        <mfrac>
+            <mn>1024</mn>
+            <mn>729</mn>
+        </mfrac>
+    </math>
+    . The F&#x266F; tuning is found
+    by multiplying
+    <math>
+        <mfrac>
+            <mn>243</mn>
+            <mn>128</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    (the ratio of the major seventh) by
+    <math>
+        <mfrac>
+            <mn>3</mn>
+            <mn>4</mn>
+        </mfrac>
+    </math>
+    &nbsp;
+    (a descending fourth) resulting in
+    <math>
+        <mfrac>
+            <mn>729</mn>
+            <mn>512</mn>
+        </mfrac>
+    </math>
+    . In practice, one of these two tunings is discarded, creating a fifth that is very out of tune. This is
+    known as the <b>wolf fifth</b> and is found between F&#x266F; and D&#x266D; if G&#x266D; is discarded, or B and G&#x266D;
+    if F&#x266F;
+    is discarded.
+</p>
+<!--
+<h3>Just Intonation</h3>
+<p>Any system of tuning that is based on simple ratios can be called <b>just intonation</b>. Here is an example of one
+    such system compared to equal temperament:</p>
+<table>
+    <thead>
+    <tr>
+        <th colspan="4">An Example of Just Intonation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Interval</th>
+        <th>Ratio</th>
+        <th>Cents</th>
+        <th>Difference in Cents from Equal Temperament</th>
+    </tr>
+    <tr>
+        <td>Unison (C to C)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>1</mn>
+                    <mn>1</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.000</mn>
+            </math>
+
+        </td>
+        <td>0.00</td>
+        <td>0</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Minor second (C to C&#x266F;/D&#x266D;)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>16</mn>
+                    <mn>15</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.066...</mn>
+            </math>
+        </td>
+        <td>111.731</td>
+        <td>-11.731</td>
+    </tr>
+    <tr class="lowlight2">
+        <td>Major second (C to D)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>9</mn>
+                    <mn>8</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.125</mn>
+            </math>
+
+        </td>
+        <td>203.910</td>
+        <td>-3.910</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Minor third (C to D&#x266F;/E&#x266D;</a>)
+        </td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>6</mn>
+                    <mn>5</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.200</mn>
+            </math>
+
+        </td>
+        <td>315.641</td>
+        <td>-15.641</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Major third (C to E)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>5</mn>
+                    <mn>4</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.250</mn>
+            </math>
+
+        </td>
+        <td>386.314</td>
+        <td>+13.686</td>
+    </tr>
+    <tr class="lowlight2">
+        <td>Perfect fourth (C to F)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>4</mn>
+                    <mn>3</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.333…</mn>
+            </math>
+
+        </td>
+        <td>498.045</td>
+        <td>+1.955</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Tritone (C to F&#x266F;/G&#x266D;)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>7</mn>
+                    <mn>5</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.400</mn>
+            </math>
+
+        </td>
+        <td>582.512</td>
+        <td>+17.488</td>
+    </tr>
+    <tr class="lowlight2">
+        <td>Perfect fifth (C to G)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>3</mn>
+                    <mn>2</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.500</mn>
+            </math>
+
+        </td>
+        <td>701.955</td>
+        <td>-1.955</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Minor sixth (C to G&#x266F;/A&#x266D;)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>8</mn>
+                    <mn>5</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.600</mn>
+            </math>
+
+        </td>
+        <td>813.686</td>
+        <td>-13.686</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Major sixth (C to A)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>5</mn>
+                    <mn>3</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.666…</mn>
+            </math>
+
+        </td>
+        <td>884.359</td>
+        <td>+15.641</td>
+    </tr>
+    <tr class="lowlight2">
+        <td>Minor seventh (C to A&#x266F;/B&#x266D;)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>16</mn>
+                    <mn>9</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.777…</mn>
+            </math>
+
+        </td>
+        <td>996.090</td>
+        <td>+3.910</td>
+    </tr>
+    <tr class="lowlight">
+        <td>Major seventh (C to B)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>15</mn>
+                    <mn>8</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1.875</mn>
+            </math>
+
+        </td>
+        <td>1088.269</td>
+        <td>+11.731</td>
+    </tr>
+    <tr>
+        <td>Octave (C to C an octave higher)</td>
+        <td>
+            <math>
+                <mfrac>
+                    <mn>2</mn>
+                    <mn>1</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>2.000</mn>
+            </math>
+
+        </td>
+        <td>1200.00</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
 -->
+
 {% endblock %}
