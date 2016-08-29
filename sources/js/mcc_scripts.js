@@ -273,7 +273,15 @@ function clonelist(sourceobj, destinationobj) {
     }
 }
 
-
+// Function to play/pause audio recordings (for waveform playback) by audio ID
+function togglePlay(sourceID) {
+    audioSource = document.getElementById(sourceID);
+    if (audioSource.paused == false){
+        audioSource.pause();
+    } else {
+        audioSource.play();
+    }
+}
 
 $(document).ready(function () {
 
