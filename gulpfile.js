@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     ext_replace = require('gulp-ext-replace'),
     del = require('del'),
     gpath = require('path'),
+    webserver = require('gulp-webserver'),
     rsync = require('gulp-rsync');
 
 
@@ -43,7 +44,6 @@ gulp.task('ext404', ['nunjucks'], function () {
     ])
 });
 
-
 /* Copy Font-Awesome Fonts to build
  * -----------------------------------*/
 gulp.task('copyFonts', function () {
@@ -75,6 +75,21 @@ gulp.task('copyJS', function () {
         .pipe(gulp.dest('./build/js'));
     gulp.src('./sources/sienna-boilerplate/sienna-boilerplate.js')
         .pipe(gulp.dest('./build/js'));
+});
+
+/* Local Server
+ * ---------------------------------- */
+gulp.task('serve', function () {
+    gulp.src('build')
+        .pipe(webserver({
+            port: '9090',
+            livereload: true,
+            directoryListing: {
+                enable: true,
+                path: 'build'
+            },
+            open: true
+        }));
 });
 
 /* Deploy
