@@ -576,16 +576,22 @@ iframe {
     margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
+    min-height: 80px; // height of tallest icon is 78px
 }
 
 .listen, .look, .video, .website, .book, .mobile {
     clear: both;
-}
+    
+    h1 {
+        font-size: 150%;
+        margin-top: 20px;
+        border: none;
+    }
 
-.listen h1, .look h1, .video h1, .website h1, .book h1, .mobile h1 {
-    font-size: 150%;
-    margin-top: 20px;
-    border: none;
+    audio, audio:not([controls]) {
+        height: 3.5rem;
+        margin: 1rem auto;
+    }
 }
 
 .listen {
