@@ -37,14 +37,19 @@
     <![endif]-->
 
     <!-- JavaScript -->
+    <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://malsup.github.io/jquery.cycle2.js"></script>
     <script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+    <!-- MathJax -->
     <script type="text/javascript" async
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
+    <!-- Verovio -->
+    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+    <!-- Boilerplate -->
     <script src="/js/sienna-boilerplate.js"></script>
+    <!-- MCC -->
     <script src="/js/mcc_scripts.js"></script>
 
     <!-- TODO: allow page-specific head material -->
