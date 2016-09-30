@@ -14,7 +14,7 @@ var all_scores = [];
 /* Function to insert a score with Verovio including playback controls and page navigation */
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-function scoreInsert(target, fileurl, soundurl, paginated) {
+function scoreInsert(target, fileurl, soundurl = '', paginated = false) {
     /*
      * target: string; ID of div that will contain the score, including initial '#'
      * fileurl: string; URL of MEI or image (.jpg, .png, etc.) file containing notation data
@@ -28,15 +28,11 @@ function scoreInsert(target, fileurl, soundurl, paginated) {
     var fileExt = fileurl.slice(fileurl.lastIndexOf('.') + 1);
 
     // pagination defaults to false, and is always false for scores that are not MEI
-    if (paginated === undefined || fileExt !== 'mei') {
+    if (fileExt !== 'mei') {
         paginated = false;
     }
 
     var zoom = 45;
-
-    if (soundurl === undefined) {
-        soundurl = '';
-    }
 
     var score = {
         id: prefix,
@@ -51,8 +47,14 @@ function scoreInsert(target, fileurl, soundurl, paginated) {
         pageWidth: 500,   // default, actual value is calculated after html elements are rendered 
         data: '',
         svg: '',
+        // midi: '',
         pagecount: 1
     };
+
+    // if MEI and no soundurl given, generate MIDI data and MIDI player
+    // if (soundurl === '' && score.type === 'mei') {
+    //     score.midi = 'data:audio/midi;base64,' + vrvToolkit.renderToMidi();
+    // }
 
     all_scores.push(score); // add new score to master array of scores
 
@@ -100,17 +102,21 @@ function create_html(score) {
             .append('<img src="' + score.url + '" id="' + score.id + '-score-img" class="score-img" alt="' + score.id + '" />');
     }
 
-
-    if (score.soundurl !== '' && score.soundurl !== 'midi') {
-        $(score.target + '-score-controls').append('<div id="' + score.id + '-playback-controls" class="playback-controls"><audio controls><source src="' + score.soundurl + '" type="audio/mp3">Sorry, your browser does not support the audio element.</audio></div>');
-
-        // if paginated (meaning that both #[prefix]-page-nav and #[prefix]-playback-controls are visible) add .half-width class to both
-        if (score.paginated === true) {
-            $(score.target + '-page-nav').addClass('half-width');
-            $(score.target + '-playback-controls').addClass('half-width');
-        }
+    // render audio controls if soundurl is given
+    if (score.soundurl !== '') {
+        $(score.target + '-score-controls').append('<div id="' + score.id + '-playback-controls" class="playback-controls">' +
+            '<audio controls><source src="' + score.soundurl + '" type="audio/mp3">' +
+            'Sorry, your browser does not support the audio element.</audio></div>');
+    // if format is MEI and MIDI has been rendered, append HTML structures needed to play back the MIDI
+    // } else if (score.midi !== '') {
     }
 
+    // if soundurl is provided and music is paginated (both #[prefix]-page-nav and #[prefix]-playback-controls are
+    // visible) add .half-width class to both
+    if (score.paginated === true && score.soundurl !== '') {
+        $(score.target + '-page-nav').addClass('half-width');
+        $(score.target + '-playback-controls').addClass('half-width');
+    }
 }
 
 
@@ -193,10 +199,9 @@ function load_page(score) {
 
 }
 
-
-//////////////////////////////////////
+///////////////////////////////////////
 /* Verovio page navigation functions */
-//////////////////////////////////////
+///////////////////////////////////////
 
 // update page count display
 function pageXofY(score) {
@@ -276,7 +281,7 @@ function clonelist(sourceobj, destinationobj) {
 // Function to play/pause audio recordings (for waveform playback) by audio ID
 function togglePlay(sourceID) {
     audioSource = document.getElementById(sourceID);
-    if (audioSource.paused == false){
+    if (audioSource.paused == false) {
         audioSource.pause();
     } else {
         audioSource.play();
