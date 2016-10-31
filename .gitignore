@@ -5,11 +5,4 @@ sources/css/mcc_styles.css
 sources/css/sienna-boilerplate.css
 
 # Collected and compiled files in build
-build/*.html
-build/*.shtml
-build/css
-build/fonts
-build/js
-build/courses
-build/lessons
-build/resources
+build/*

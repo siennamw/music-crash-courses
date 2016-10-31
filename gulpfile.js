@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 
 /* Build
  * -----------------------------------*/
-gulp.task('build', ['nunjucks', 'ext404', 'copyFonts', 'copyCSS', 'copyJS']);
+gulp.task('build', ['nunjucks', 'ext404', 'copyFonts', 'copyCSS', 'copyJS', 'copyImages', 'copyScores']);
 // also make this the default
 gulp.task('default', ['build']);
 
@@ -78,6 +78,22 @@ gulp.task('copyJS', function () {
     gulp.src(['./sources/js/mcc_scripts.js',
         './sources/sienna-boilerplate/sienna-boilerplate.js'])
         .pipe(gulp.dest('./build/js')
+    );
+});
+
+/* Copy images to build
+ * -----------------------------------*/
+gulp.task('copyImages', ['less'], function () {
+    gulp.src('./sources/images/**/*')
+        .pipe(gulp.dest('./build/images')
+    );
+});
+
+/* Copy scores to build
+ * -----------------------------------*/
+gulp.task('copyScores', function () {
+    gulp.src('./sources/scores/**/*')
+        .pipe(gulp.dest('./build/scores')
     );
 });
 
