@@ -127,7 +127,7 @@ gulp.task('deploy', ['build'], function () {
     return gulp.src('build/**')
         .pipe(rsync({
             root: 'build/',
-            hostname: 'siennasg@74.220.215.85',
+            hostname: 'siennasg@siennasguidetomusic.com',
             destination: 'public_html/musiccrashcourses'
         })
     );
