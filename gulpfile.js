@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 
 /* Build
  * -----------------------------------*/
-gulp.task('build', ['nunjucks', 'ext404', 'copyFonts', 'copyCSS', 'copyJS', 'copyImages', 'copyScores']);
+gulp.task('build', ['nunjucks', 'ext404', 'copyFonts', 'copyCSS', 'copyJS', 'copyPHP', 'copyImages', 'copyScores']);
 // also make this the default
 gulp.task('default', ['build']);
 
@@ -81,6 +81,14 @@ gulp.task('copyJS', function () {
     );
 });
 
+/* Copy PHP to build
+ * -----------------------------------*/
+gulp.task('copyPHP', function () {
+    gulp.src('./sources/php/mail.php')
+        .pipe(gulp.dest('./build/php')
+        );
+});
+
 /* Copy images to build
  * -----------------------------------*/
 gulp.task('copyImages', ['less'], function () {
@@ -99,7 +107,7 @@ gulp.task('copyScores', function () {
 
 /* Local Server
  * ---------------------------------- */
-gulp.task('serve', function () {
+gulp.task('serve', ['build'], function () {
     gulp.src('build')
         .pipe(webserver({
             port: '9090',

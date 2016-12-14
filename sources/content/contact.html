@@ -2,56 +2,26 @@
 {% block content %}
 <h1>Contact</h1>
 <p>Please use this form to make comments or report problems. Thanks!</p>
-
-<form id="contact_form" name="contact_form" action="http://musiccrashcourses.com/cgi-sys/FormMail.cgi"
-      enctype="multipart/form-data" method="post">
-    <input type="hidden" name="recipient" value="contact@siennamwood.com"/>
-    <input type="hidden" name="redirect" value="http://www.musiccrashcourses.com/thanks.html"/>
-    <input type="hidden" name="subject" value="Message from Music Crash Courses Website"/>
+<form id="contact_form" name="contact_form" method="post" action="/php/mail.php">
     <div class="row">
         <div class="six columns">
-            <label for="name">*Name:</label>
+            <label>*Name:</label>
             <input class="text u-full-width" name="name" type="text" id="name" tabindex="1" size="15"/>
         </div>
         <div class="six columns">
-            <label for="email">*Email:</label>
+            <label>*Email:</label>
             <input class="text u-full-width" name="email" type="email" id="email" tabindex="2" size="15"/>
         </div>
     </div>
-    <label for="message">Message:</label>
+    <label>Message:</label>
     <textarea class="u-full-width" name="message" id="message" cols="40" rows="7" tabindex="3"></textarea>
     <div class="center-text">
-        <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
         <div class="g-recaptcha center" data-sitekey="6LcimyITAAAAAPgD3FUusssav37fnCc8yO5uhYI7" tabindex="4"></div>
     </div>
     <div class="center-text">
         <input class="center" type="submit" name="submit" id="submit" value="Click Here to Submit Your Message"
-               tabindex="4"/>
+               tabindex="5"/>
     </div>
 </form>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-<script>
-    $("#contact_form").validate({
-        ignore: [],
-        rules: {
-            hiddenRecaptcha: {
-                required: function () {
-                    if (grecaptcha.getResponse() == '') {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            name: {
-                required: true
-            }
-        }
-    });
-</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 {% endblock %}
