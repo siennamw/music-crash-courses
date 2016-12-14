@@ -8,4 +8,4 @@ sources/css/sienna-boilerplate.css
 build/*
 
 # PHP file with security information
-# sources/php/mail.php
+sources/php/mail.php
