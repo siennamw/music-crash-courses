@@ -120,15 +120,3 @@ gulp.task('serve', ['build'], function () {
         })
     );
 });
-
-/* Deploy
- * -----------------------------------*/
-gulp.task('deploy', ['build'], function () {
-    return gulp.src('build/**')
-        .pipe(rsync({
-            root: 'build/',
-            hostname: 'siennasg@siennasguidetomusic.com',
-            destination: 'public_html/musiccrashcourses'
-        })
-    );
-});
