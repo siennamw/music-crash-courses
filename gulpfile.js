@@ -120,3 +120,15 @@ gulp.task('serve', ['build'], function () {
         })
     );
 });
+
+/* Deploy
+ * -----------------------------------*/
+gulp.task('deploy', ['build'], function () {
+  return gulp.src('build/**')
+    .pipe(rsync({
+        root: 'build/',
+        hostname: 'USER@HOST',
+        destination: 'DIR'
+      })
+    );
+});
