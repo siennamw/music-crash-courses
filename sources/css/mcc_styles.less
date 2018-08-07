@@ -578,6 +578,10 @@ iframe {
     width: 100%;
     box-sizing: border-box;
     min-height: 80px; // height of tallest icon is 78px
+
+    &:after {
+        clear: both;
+    }
 }
 
 .listen, .look, .video, .website, .book, .mobile {
@@ -626,18 +630,6 @@ iframe {
 
 .listen p, .look p {
     margin: 25px 5px;
-}
-
-.links {
-    margin-bottom: 10px;
-}
-
-.links a {
-}
-
-.links img {
-    margin: 5px;
-    vertical-align: middle;
 }
 
 .upcoming:before {
