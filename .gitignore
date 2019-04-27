@@ -6,3 +6,6 @@ sources/css/sienna-boilerplate.css
 
 # Collected and compiled files in build
 build/*
+
+# ENV
+.env

@@ -1,17 +1,13 @@
-/* Gulp definitions for Music Crash Courses
- *
- * Copyright (C) Sienna M. Wood 2016
- * 25 June 2016
- */
+require('dotenv').config();
 
-var gulp = require('gulp'),
-    nunjucksRender = require('gulp-nunjucks-render'),
-    less = require('gulp-less'),
-    ext_replace = require('gulp-ext-replace'),
-    del = require('del'),
-    gpath = require('path'),
-    webserver = require('gulp-webserver'),
-    rsync = require('gulp-rsync');
+var del = require('del');
+var ext_replace = require('gulp-ext-replace');
+var gpath = require('path');
+var gulp = require('gulp');
+var less = require('gulp-less');
+var nunjucksRender = require('gulp-nunjucks-render');
+var rsync = require('gulp-rsync');
+var webserver = require('gulp-webserver');
 
 
 /* Build
@@ -105,17 +101,20 @@ gulp.task('copyScores', function () {
     );
 });
 
+/* Watch styles
+ * ---------------------------------- */
+gulp.task('watchStyles', function () {
+  gulp.watch('sources/css/mcc_styles.less', ['copyCSS']);
+});
+
 /* Local Server
  * ---------------------------------- */
-gulp.task('serve', ['build'], function () {
+gulp.task('serve', ['watchStyles', 'build'], function () {
     gulp.src('build')
         .pipe(webserver({
             port: '9090',
             livereload: true,
-            directoryListing: {
-                enable: true,
-                path: 'build'
-            },
+            fallback: 'build/index.html',
             open: true
         })
     );
@@ -127,8 +126,8 @@ gulp.task('deploy', ['build'], function () {
   return gulp.src('build/**')
     .pipe(rsync({
         root: 'build/',
-        hostname: 'USER@HOST',
-        destination: 'DIR'
+        hostname: process.env.HOSTNAME,
+        destination: process.env.DESTINATION,
       })
     );
 });
