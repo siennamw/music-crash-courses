@@ -110,7 +110,7 @@ gulp.task('watchStyles', function () {
 /* Watch content and templates
  * ---------------------------------- */
 gulp.task('watchTemplates', function () {
-  gulp.watch(['sources/content/**/*', 'templates/**/*'], ['nunjucks']);
+  gulp.watch(['sources/content/**/*', 'sources/templates/**/*'], ['nunjucks']);
 });
 
 /* Local Server
