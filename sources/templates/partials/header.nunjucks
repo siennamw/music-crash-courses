@@ -13,14 +13,6 @@
             <!--
             <li class="has-children"><a href="#">Courses</a>
                 <ul id="courses">
-                    <li class="has-children"><a href="#"><b>Putting Sounds into Writing</b> - Music Reading for Beginners</a>
-                        <ul>
-                            <li><a href="/courses/music_reading.html">About the Course</a></li>
-                            <li><a href="/lessons/notation_principles.html">A First Look at Sheet Music - Principles of Music Notation</a></li>
-                            <li><a href="/lessons/notating_naming_pitches.html">Notating and Naming Pitches</a></li>
-                            <li><a href="/lessons/rhythm.html">Principles of Rhythm</a></li>
-                        </ul>
-                    </li>
                     <li class="has-children last"><a href="#"><b>Music Theory for Songwriting</b> - Coming soon!</a>
                         <ul>
                             <li><a href="/courses/songwriting.html">About the Course</a></li>
@@ -35,8 +27,7 @@
                     <li id="pitch" class="has-children"><a href="#"><b>Pitch</b> - The Ups and Downs</a>
                         <ul>
                             <li><a href="/lessons/pitch.html">Introduction to Pitch</a></li>
-                            <li><a href="/lessons/notation_principles.html">A First Look at Sheet Music -
-                                Principles of Music Notation</a></li>
+                            <li><a href="/lessons/notation_intro.html">Introduction to Music Notation</a></li>
                             <li><a href="/lessons/notating_naming_pitches.html">Notating and Naming Pitches</a>
                             </li>
                             <li class="has-children"><a href="#"><b>Intervals</b> - The Space Between</a>
