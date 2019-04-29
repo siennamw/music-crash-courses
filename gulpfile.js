@@ -107,6 +107,12 @@ gulp.task('watchStyles', function () {
   gulp.watch('sources/css/mcc_styles.less', ['copyCSS']);
 });
 
+/* Watch JS
+ * ---------------------------------- */
+gulp.task('watchJS', function () {
+  gulp.watch('sources/js/**/*', ['copyJS']);
+});
+
 /* Watch content and templates
  * ---------------------------------- */
 gulp.task('watchTemplates', function () {
@@ -127,7 +133,7 @@ gulp.task('watchScores', function () {
 
 /* Local Server
  * ---------------------------------- */
-gulp.task('serve', ['watchStyles', 'watchTemplates', 'watchImages', 'watchScores', 'build'], function () {
+gulp.task('serve', ['watchStyles', 'watchJS', 'watchTemplates', 'watchImages', 'watchScores', 'build'], function () {
   gulp.src('build')
     .pipe(webserver({
         port: '9090',
