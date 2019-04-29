@@ -113,9 +113,21 @@ gulp.task('watchTemplates', function () {
   gulp.watch(['sources/content/**/*', 'sources/templates/**/*'], ['nunjucks']);
 });
 
+/* Watch images
+ * ---------------------------------- */
+gulp.task('watchImages', function () {
+  gulp.watch('sources/images/**/*', ['copyImages']);
+});
+
+/* Watch scores
+ * ---------------------------------- */
+gulp.task('watchScores', function () {
+  gulp.watch('sources/scores/**/*', ['copyScores']);
+});
+
 /* Local Server
  * ---------------------------------- */
-gulp.task('serve', ['watchStyles', 'watchTemplates', 'build'], function () {
+gulp.task('serve', ['watchStyles', 'watchTemplates', 'watchImages', 'watchScores', 'build'], function () {
   gulp.src('build')
     .pipe(webserver({
         port: '9090',
