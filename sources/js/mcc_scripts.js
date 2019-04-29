@@ -44,7 +44,7 @@ function scoreInsert(target, fileurl, soundurl = '', paginated = false) {
         paginated: paginated,
         zoom: zoom,
         pageHeight: 500,  // default, actual value is calculated after html elements are rendered
-        pageWidth: 500,   // default, actual value is calculated after html elements are rendered 
+        pageWidth: 500,   // default, actual value is calculated after html elements are rendered
         data: '',
         svg: '',
         // midi: '',
@@ -260,6 +260,24 @@ function toPage(scoreid, targetpg) {
 /* non-Verovio functions */
 ///////////////////////////
 
+
+// Function to embed a YouTube video
+function embedYouTube(targetSelector, videoID) {
+    var target = $(targetSelector);
+    target.append(
+      '<div class="noprint">' +
+      '<iframe' +
+      ' width="560"' +
+      ' height="315"' +
+      ' src="https://www.youtube.com/embed/' + videoID + '"' +
+      ' frameborder="0"' +
+      ' allowfullscreen></iframe>' +
+      '</div>'
+    );
+    target.append(
+      '<p class="forprint">http://youtu.be/' + videoID + '</p>'
+    );
+}
 
 // Function to clone a list and append it to a destination
 // used for /index.html and /lessons/index.html to populate page content from nav menus
