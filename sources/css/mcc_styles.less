@@ -212,6 +212,10 @@ footer {
     color: @dark-gray;
 }
 
+ul ul, ol ul, ul ol, ol ol {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -637,6 +641,14 @@ iframe {
 /*--------------------------------------------------------------
 # Page-specific styles
 --------------------------------------------------------------*/
+
+
+/* Extra styles for index.html */
+// nav list used in body of page
+#main_content ul li.has-children {
+    list-style: none;
+    padding-top: 1rem;
+}
 
 /* Extra styles for search.html (Google Custom Search) */
 #google {
