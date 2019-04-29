@@ -66,6 +66,14 @@
     background: #111 url('@{base-url}/images/layout/black_denim.png');
 }
 
+.shadow () {
+    border: solid 1px @light-gray;
+    -webkit-box-shadow: 0 0 15px -5px rgba(red(@black), green(@black), blue(@black), .3);
+    -moz-box-shadow: 0 0 15px -5px rgba(red(@black), green(@black), blue(@black), .3);
+    box-shadow: 0 0 15px -5px rgba(red(@black), green(@black), blue(@black), .3);
+}
+
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -599,6 +607,11 @@ iframe {
     audio, audio:not([controls]) {
         margin: 1rem auto;
     }
+
+    .links img {
+        margin: 5px;
+        vertical-align: middle;
+    }
 }
 
 .listen {
@@ -909,16 +922,30 @@ span.highlight, span.highlight2, span.lowlight, span.lowlight2 {
 
 /* Tables of Contents */
 
-#toc {
+.toc {
     display: none;
 }
 
 @media (min-width: @bp-larger-than-phablet), print {
-
-    #toc {
+    .toc {
         display: block;
+        max-width: 50%;
+        float: right;
+        background-color: @white;
+        margin-top: 0;
+        margin-right: 0;
+
+        ~ h1 {
+            clear: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+
     }
 }
+
 
 /* Media */
 
@@ -933,7 +960,7 @@ img {
 }
 
 .video iframe {
-    display: none;
+    max-width: 100%;
 }
 
 .c_narrow {
@@ -942,11 +969,6 @@ img {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: @bp-larger-than-phablet), print {
-
-    .video iframe {
-        display: block;
-    }
-
     .c_narrow {
         display: none;
     }
@@ -1040,7 +1062,7 @@ img {
         text-decoration: underline;
     }
 
-    #main_content {
+    #main_content, #attr {
         p a:after, blockquote a:after, .links a:after, ul a:after {
             content: " [" attr(href) "] ";
             font-weight: normal;
