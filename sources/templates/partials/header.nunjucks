@@ -132,6 +132,22 @@
                             <li class="last"><a href="/lessons/genre_vocal.html">Vocal Genres</a></li>
                         </ul>
                     </li>
+
+                    <li id="history" class="has-children"><a href="#"><b>Topics in Music History</b> - Varied Lessons Spanning Many Historical Periods</a>
+                        <ul>
+                            <!--<li><a href="/lessons/art.html">Music and Visual Art</a></li>-->
+                            <!--<li><a href="/lessons/borrowing.html">Musical Borrowing and Appropriation</a></li>-->
+                            <!--<li><a href="/lessons/dance.html">Dance Music</a></li>-->
+                            <!--<li><a href="/lessons/drama.html">Music and Drama</a></li>-->
+                            <!--<li><a href="/lessons/experimental.html">Extended Techniques and Experimental Music</a></li>-->
+                            <!--<li><a href="/lessons/humor.html">Humor in Music</a></li>-->
+                            <!--<li><a href="/lessons/improvisation.html">Improvisation</a></li>-->
+                            <!--<li><a href="/lessons/philosophy.html">Music and Philosophy</a></li>-->
+                            <li><a href="/lessons/politics.html">Music in Politics and Revolution</a></li>
+                            <li><a href="/lessons/words.html">Music and Words</a></li>
+                            <li><a href="/lessons/writing_about_music.html">Writing About Music</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="has-children"><a href="#">Resources</a>
