@@ -1,17 +1,10 @@
 <footer class="row">
-    <div class="three columns">
+    <div class="six columns">
         <h1><a href="/resources/glossary.html">Music Notation Glossary</a></h1>
         <p>This <a href="/resources/glossary.html">visual glossary</a> is a great resource for learning to read music.
         </p>
     </div>
     <div class="six columns">
-        <h1><a href="http://www.themeandvariations.org/" target="_blank">Companion Website</a></h1>
-        <p><a href="/">Music Crash Courses</a> is the new home of the music theory pages from <a
-            href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations: New Perspectives in Music
-            History</a>. Visit <a href="http://www.themeandvariations.org/" target="_blank">Theme &amp; Variations</a>
-            to explore the history of western music!</p>
-    </div>
-    <div class="three columns">
         <h1><a href="/contact.html">Contact</a></h1>
         <p>If you're enjoying this site, if you find an error, or if you want more, <a href="/contact.html">let us
             know</a>!</p>
