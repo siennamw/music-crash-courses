@@ -156,7 +156,7 @@
                     <li><a href="/resources/glossary.html">Music Notation Glossary</a></li>
                     <li><a href="/resources/links.html">External Links</a></li>
                     <li><a href="/resources/help.html">Listening to Audio Examples</a></li>
-                    <li class="last"><a href="http://www.themeandvariations.org/" target="_blank">Theme and Variations:
+                    <li class="last"><a href="http://www.themeandvariations.org/" target="_blank" rel="noopener noreferrer">Theme and Variations:
                         New Perspectives in Music History</a></li>
                 </ul>
             </li>
