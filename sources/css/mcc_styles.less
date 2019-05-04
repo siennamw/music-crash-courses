@@ -585,7 +585,7 @@ iframe {
     background-position: 15px;
     background-repeat: no-repeat;
     color: #222;
-    padding: 5px 10px 5px 85px;
+    padding: 5px 10px;
     margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
@@ -598,6 +598,7 @@ iframe {
 .listen, .look, .video, .website, .book, .mobile {
     clear: both;
     min-height: 80px; // height of tallest icon is 78px
+    padding-left: 85px; // for icon
 
     h1 {
         font-size: 150%;
@@ -625,7 +626,6 @@ iframe {
 
 .video {
     background-image: url('@{base-url}/images/layout/video.png');
-    padding: 15px 10px 10px 85px;
 }
 
 .website {
