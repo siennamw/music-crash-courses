@@ -136,7 +136,7 @@
                     <li id="history" class="has-children"><a href="#"><b>Topics in Music History</b> - Varied Lessons Spanning Many Historical Periods</a>
                         <ul>
                             <!--<li><a href="/lessons/art.html">Music and Visual Art</a></li>-->
-                            <!--<li><a href="/lessons/borrowing.html">Musical Borrowing and Appropriation</a></li>-->
+                            <li><a href="/lessons/borrowing.html">Musical Borrowing and Appropriation</a></li>
                             <li><a href="/lessons/dance.html">Dance Music</a></li>
                             <li><a href="/lessons/drama.html">Music and Drama</a></li>
                             <li><a href="/lessons/experimental.html">Extended Techniques and Experimental Music</a></li>
