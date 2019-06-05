@@ -136,8 +136,7 @@ function set_options(score) {
         score.pageHeight = 60000; // max height allowed by Verovio, creates long load times for large files!
     }
 
-
-    options = JSON.stringify({
+    options = {
         inputFormat: 'mei',
         border: 50,
         adjustPageHeight: 1,
@@ -145,7 +144,7 @@ function set_options(score) {
         pageWidth: score.pageWidth,
         pageHeight: score.pageHeight,
         scale: score.zoom
-    });
+    };
 
     vrvToolkit.setOptions(options);
 }
