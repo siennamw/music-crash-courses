@@ -326,4 +326,10 @@ $(document).ready(function () {
         var newAnchor = $('<a id=\"' + anchorName + '\" name=\"' + anchorName + '\">');
         newAnchor.insertBefore($(elem));
     });
+
+    // Copyright ***************************
+
+    // add current year to copyright notice in footer
+    const currentYear = new Date().getFullYear();
+    $('#footer-copyright').append('-' + currentYear);
 });

@@ -25,6 +25,15 @@
         </p>
         <p><i>"Music is nothing else but wild sounds civilized into time and tune."</i> - Thomas Fuller</p>
     </div>
-    <p><a href="http://www.siennamwood.com/" target="_blank" rel="noopener noreferrer">Copyright &copy; Sienna M. Wood, 2015-2022</a></p>
+    <p>
+      <a
+        id="footer-copyright"
+        href="http://www.siennamwood.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Copyright &copy; Sienna M. Wood, 2015
+      </a>
+    </p>
     <p class="forprint">www.MusicCrashCourses.com</p>
 </div>
