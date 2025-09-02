@@ -130,7 +130,7 @@ function set_options(score) {
     var pageWidth = $(score.target + '-svg-output').width() * 100 / score.zoom;
     score.pageWidth = pageWidth;
 
-    if (score.paginated == true) {
+    if (score.paginated === true) {
         score.pageHeight = pageWidth;
     } else {
         score.pageHeight = 60000; // max height allowed by Verovio, creates long load times for large files!
@@ -177,8 +177,8 @@ function load_page(score) {
 
     // if pagination controls were created, but there is only one page, hide them
     // otherwise, show them
-    if (score.paginated == true) {
-        if (score.pagecount == 1) {
+    if (score.paginated === true) {
+        if (score.pagecount === 1) {
             $(score.target + '-page-nav').addClass('hide_me');
 
             // if #[prefix]-playback-controls exists, remove .half-width class while #[prefix]-page-nav is hidden
@@ -232,15 +232,15 @@ function toPage(scoreid, targetpg) {
         }
     } else {
         targetpage = targetpage.toLowerCase();
-        if (targetpage == 'first') {
+        if (targetpage === 'first') {
             thisScore.page = 1
-        } else if (targetpage == 'last') {
+        } else if (targetpage === 'last') {
             thisScore.page = pgcount
-        } else if (targetpage == 'next') {
+        } else if (targetpage === 'next') {
             if (thisScore.page < pgcount) {
                 thisScore.page++;
             }
-        } else if (targetpage == 'prev') {
+        } else if (targetpage === 'prev') {
             if (thisScore.page > 1) {
                 thisScore.page--;
             }
@@ -274,7 +274,7 @@ function embedYouTube(targetSelector, videoID) {
       '</div>'
     );
     target.append(
-      '<p class="forprint">http://youtu.be/' + videoID + '</p>'
+      '<p class="forprint">https://youtu.be/' + videoID + '</p>'
     );
 }
 
@@ -284,13 +284,13 @@ function clonelist(sourceobj, destinationobj) {
     var item_list = $(sourceobj).clone();
     item_list.each(function () {
         $(this).find('a').each(function () {
-            if ($(this).attr('href') == "#") {
+            if ($(this).attr('href') === "#") {
                 $(this).contents().unwrap();
             }
         })
     });
     item_list.appendTo(destinationobj);
-    if ($(sourceobj).prop("tagName") != "UL") {
+    if ($(sourceobj).prop("tagName") !== "UL") {
         item_list.wrap("<ul></ul>");
     }
 }
@@ -298,7 +298,7 @@ function clonelist(sourceobj, destinationobj) {
 // Function to play/pause audio recordings (for waveform playback) by audio ID
 function togglePlay(sourceID) {
     audioSource = document.getElementById(sourceID);
-    if (audioSource.paused == false) {
+    if (audioSource.paused === false) {
         audioSource.pause();
     } else {
         audioSource.play();
