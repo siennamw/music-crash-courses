@@ -81,11 +81,11 @@ function scoreInsert(target, fileUrl, soundUrl = '') {
     return;
   }
 
-  createHtml(id, target, fileExt, soundUrl);
+  createHtml(id, target, fileExt, soundUrl, 0, fileUrl);
 }
 
-// create HTML structures to contain and control Verovio output
-function createHtml(id, target, fileExt, soundUrl, pageCount = 1) {
+// create HTML structures to contain and control scores, both those in MEI format and those that are images
+function createHtml(id, target, fileExt, soundUrl, pageCount = 1, imageFileUrl = null) {
   const hasMultiplePages = pageCount && pageCount > 1;
 
   $(target)
@@ -117,9 +117,12 @@ function createHtml(id, target, fileExt, soundUrl, pageCount = 1) {
           '-lastpg-button" class="lastpg-button" title="Last Page" onclick="toPage(\'' + id +
           '\', \'last\')"><i class="fa fa-fast-forward" aria-hidden="true"></i><span class="sr-only">Last Page</span></span></button>');
     }
-  } else {
+  } else if (imageFileUrl) {
     $(target)
-      .append('<img src="' + url + '" id="' + id + '-score-img" class="score-img" alt="' + id + '" />');
+      .append('<img src="' + imageFileUrl + '" id="' + id + '-score-img" class="score-img" alt="' + id + '" />');
+  } else {
+    console.warn('Score is not MEI and no image file URL was provided.');
+    return;
   }
 
   // render audio controls if soundUrl is given
