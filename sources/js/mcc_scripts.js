@@ -35,8 +35,8 @@ const allScores = [];
 function scoreInsert(target, fileUrl, soundUrl = '') {
   if (!vrvToolkit) {
     // if the Verovio toolkit instance hasn't been initialized, wait 1 second and re-call self with the same args
+    console.log('Waiting for Verovio to load...');
     setTimeout(() => {
-      console.log('Waiting for Verovio to load...');
       scoreInsert(target, fileUrl, soundUrl);
     }, 1000);
     return;
